@@ -1,0 +1,31 @@
+C:\Users\dimitar.gaydardzhiev\Desktop\SoftUni\C# MVC Frameworks - ASP.NET Core - юли 2018\EmployeeSystem\DTOs\obj\Debug\netcoreapp2.0\DTOs.csproj.CoreCompileInputs.cache
+C:\Users\dimitar.gaydardzhiev\Desktop\SoftUni\C# MVC Frameworks - ASP.NET Core - юли 2018\EmployeeSystem\DTOs\obj\Debug\netcoreapp2.0\DTOs.AssemblyInfoInputs.cache
+C:\Users\dimitar.gaydardzhiev\Desktop\SoftUni\C# MVC Frameworks - ASP.NET Core - юли 2018\EmployeeSystem\DTOs\obj\Debug\netcoreapp2.0\DTOs.AssemblyInfo.cs
+C:\Users\dimitar.gaydardzhiev\Desktop\SoftUni\C# MVC Frameworks - ASP.NET Core - юли 2018\EmployeeSystem\DTOs\bin\Debug\netcoreapp2.0\DTOs.deps.json
+C:\Users\dimitar.gaydardzhiev\Desktop\SoftUni\C# MVC Frameworks - ASP.NET Core - юли 2018\EmployeeSystem\DTOs\bin\Debug\netcoreapp2.0\DTOs.dll
+C:\Users\dimitar.gaydardzhiev\Desktop\SoftUni\C# MVC Frameworks - ASP.NET Core - юли 2018\EmployeeSystem\DTOs\bin\Debug\netcoreapp2.0\DTOs.pdb
+C:\Users\dimitar.gaydardzhiev\Desktop\SoftUni\C# MVC Frameworks - ASP.NET Core - юли 2018\EmployeeSystem\DTOs\bin\Debug\netcoreapp2.0\Microsoft.AspNetCore.Mvc.Core.dll
+C:\Users\dimitar.gaydardzhiev\Desktop\SoftUni\C# MVC Frameworks - ASP.NET Core - юли 2018\EmployeeSystem\DTOs\bin\Debug\netcoreapp2.0\Microsoft.AspNetCore.Mvc.Core.xml
+C:\Users\dimitar.gaydardzhiev\Desktop\SoftUni\C# MVC Frameworks - ASP.NET Core - юли 2018\EmployeeSystem\DTOs\obj\Debug\netcoreapp2.0\DTOs.csproj.CopyComplete
+C:\Users\dimitar.gaydardzhiev\Desktop\SoftUni\C# MVC Frameworks - ASP.NET Core - юли 2018\EmployeeSystem\DTOs\obj\Debug\netcoreapp2.0\DTOs.dll
+C:\Users\dimitar.gaydardzhiev\Desktop\SoftUni\C# MVC Frameworks - ASP.NET Core - юли 2018\EmployeeSystem\DTOs\obj\Debug\netcoreapp2.0\DTOs.pdb
+C:\Users\Dimiter\Desktop\New folder (3)\EmployeeSystem\DTOs\bin\Debug\netcoreapp2.0\DTOs.deps.json
+C:\Users\Dimiter\Desktop\New folder (3)\EmployeeSystem\DTOs\bin\Debug\netcoreapp2.0\DTOs.dll
+C:\Users\Dimiter\Desktop\New folder (3)\EmployeeSystem\DTOs\bin\Debug\netcoreapp2.0\DTOs.pdb
+C:\Users\Dimiter\Desktop\New folder (3)\EmployeeSystem\DTOs\bin\Debug\netcoreapp2.0\Microsoft.AspNetCore.Mvc.Core.dll
+C:\Users\Dimiter\Desktop\New folder (3)\EmployeeSystem\DTOs\bin\Debug\netcoreapp2.0\Microsoft.AspNetCore.Mvc.Core.xml
+C:\Users\Dimiter\Desktop\New folder (3)\EmployeeSystem\DTOs\obj\Debug\netcoreapp2.0\DTOs.csprojAssemblyReference.cache
+C:\Users\Dimiter\Desktop\New folder (3)\EmployeeSystem\DTOs\obj\Debug\netcoreapp2.0\DTOs.csproj.CoreCompileInputs.cache
+C:\Users\Dimiter\Desktop\New folder (3)\EmployeeSystem\DTOs\obj\Debug\netcoreapp2.0\DTOs.AssemblyInfoInputs.cache
+C:\Users\Dimiter\Desktop\New folder (3)\EmployeeSystem\DTOs\obj\Debug\netcoreapp2.0\DTOs.AssemblyInfo.cs
+C:\Users\Dimiter\Desktop\New folder (3)\EmployeeSystem\DTOs\obj\Debug\netcoreapp2.0\DTOs.csproj.CopyComplete
+C:\Users\Dimiter\Desktop\New folder (3)\EmployeeSystem\DTOs\obj\Debug\netcoreapp2.0\DTOs.dll
+C:\Users\Dimiter\Desktop\New folder (3)\EmployeeSystem\DTOs\obj\Debug\netcoreapp2.0\DTOs.pdb
+E:\Repositories\EmployeeSystem\EmployeeSystem\DTOs\obj\Debug\netcoreapp2.0\DTOs.csproj.CoreCompileInputs.cache
+E:\Repositories\EmployeeSystem\EmployeeSystem\DTOs\obj\Debug\netcoreapp2.0\DTOs.AssemblyInfoInputs.cache
+E:\Repositories\EmployeeSystem\EmployeeSystem\DTOs\obj\Debug\netcoreapp2.0\DTOs.AssemblyInfo.cs
+E:\Repositories\EmployeeSystem\EmployeeSystem\DTOs\obj\Debug\netcoreapp2.0\DTOs.dll
+E:\Repositories\EmployeeSystem\EmployeeSystem\DTOs\obj\Debug\netcoreapp2.0\DTOs.pdb
+E:\Repositories\EmployeeSystem\EmployeeSystem\DTOs\bin\Debug\netcoreapp2.0\DTOs.deps.json
+E:\Repositories\EmployeeSystem\EmployeeSystem\DTOs\bin\Debug\netcoreapp2.0\DTOs.dll
+E:\Repositories\EmployeeSystem\EmployeeSystem\DTOs\bin\Debug\netcoreapp2.0\DTOs.pdb

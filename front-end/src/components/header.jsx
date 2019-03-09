@@ -13,8 +13,8 @@ const Header = () => (
                     <NavDropdown.Item href="/positions/all">Positions</NavDropdown.Item>
                 </NavDropdown>
                 <NavDropdown title="Employees" id="employees">
-                    <NavDropdown.Item href="#action/3.1">Current Employees</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">Former Employees</NavDropdown.Item>
+                    <NavDropdown.Item href="/employees/all">Current Employees</NavDropdown.Item>
+                    <NavDropdown.Item href="/employees/former">Former Employees</NavDropdown.Item>
                     <NavDropdown.Item href="#action/3.2">Add Employee</NavDropdown.Item>
                 </NavDropdown>
                 <NavDropdown title="Requests" id="requests">

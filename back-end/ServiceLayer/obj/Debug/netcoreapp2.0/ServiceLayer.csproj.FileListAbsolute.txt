@@ -1,0 +1,25 @@
+C:\Users\dimitar.gaydardzhiev\Desktop\SoftUni\C# MVC Frameworks - ASP.NET Core - юли 2018\EmployeeSystem\ServiceLayer\bin\Debug\netcoreapp2.0\ServiceLayer.deps.json
+C:\Users\dimitar.gaydardzhiev\Desktop\SoftUni\C# MVC Frameworks - ASP.NET Core - юли 2018\EmployeeSystem\ServiceLayer\bin\Debug\netcoreapp2.0\ServiceLayer.dll
+C:\Users\dimitar.gaydardzhiev\Desktop\SoftUni\C# MVC Frameworks - ASP.NET Core - юли 2018\EmployeeSystem\ServiceLayer\bin\Debug\netcoreapp2.0\ServiceLayer.pdb
+C:\Users\dimitar.gaydardzhiev\Desktop\SoftUni\C# MVC Frameworks - ASP.NET Core - юли 2018\EmployeeSystem\ServiceLayer\obj\Debug\netcoreapp2.0\ServiceLayer.csproj.CoreCompileInputs.cache
+C:\Users\dimitar.gaydardzhiev\Desktop\SoftUni\C# MVC Frameworks - ASP.NET Core - юли 2018\EmployeeSystem\ServiceLayer\obj\Debug\netcoreapp2.0\ServiceLayer.AssemblyInfoInputs.cache
+C:\Users\dimitar.gaydardzhiev\Desktop\SoftUni\C# MVC Frameworks - ASP.NET Core - юли 2018\EmployeeSystem\ServiceLayer\obj\Debug\netcoreapp2.0\ServiceLayer.AssemblyInfo.cs
+C:\Users\dimitar.gaydardzhiev\Desktop\SoftUni\C# MVC Frameworks - ASP.NET Core - юли 2018\EmployeeSystem\ServiceLayer\obj\Debug\netcoreapp2.0\ServiceLayer.dll
+C:\Users\dimitar.gaydardzhiev\Desktop\SoftUni\C# MVC Frameworks - ASP.NET Core - юли 2018\EmployeeSystem\ServiceLayer\obj\Debug\netcoreapp2.0\ServiceLayer.pdb
+C:\Users\Dimiter\Desktop\New folder (3)\EmployeeSystem\ServiceLayer\bin\Debug\netcoreapp2.0\ServiceLayer.deps.json
+C:\Users\Dimiter\Desktop\New folder (3)\EmployeeSystem\ServiceLayer\bin\Debug\netcoreapp2.0\ServiceLayer.dll
+C:\Users\Dimiter\Desktop\New folder (3)\EmployeeSystem\ServiceLayer\bin\Debug\netcoreapp2.0\ServiceLayer.pdb
+C:\Users\Dimiter\Desktop\New folder (3)\EmployeeSystem\ServiceLayer\obj\Debug\netcoreapp2.0\ServiceLayer.csprojAssemblyReference.cache
+C:\Users\Dimiter\Desktop\New folder (3)\EmployeeSystem\ServiceLayer\obj\Debug\netcoreapp2.0\ServiceLayer.csproj.CoreCompileInputs.cache
+C:\Users\Dimiter\Desktop\New folder (3)\EmployeeSystem\ServiceLayer\obj\Debug\netcoreapp2.0\ServiceLayer.AssemblyInfoInputs.cache
+C:\Users\Dimiter\Desktop\New folder (3)\EmployeeSystem\ServiceLayer\obj\Debug\netcoreapp2.0\ServiceLayer.AssemblyInfo.cs
+C:\Users\Dimiter\Desktop\New folder (3)\EmployeeSystem\ServiceLayer\obj\Debug\netcoreapp2.0\ServiceLayer.dll
+C:\Users\Dimiter\Desktop\New folder (3)\EmployeeSystem\ServiceLayer\obj\Debug\netcoreapp2.0\ServiceLayer.pdb
+E:\Repositories\EmployeeSystem\EmployeeSystem\ServiceLayer\bin\Debug\netcoreapp2.0\ServiceLayer.deps.json
+E:\Repositories\EmployeeSystem\EmployeeSystem\ServiceLayer\bin\Debug\netcoreapp2.0\ServiceLayer.dll
+E:\Repositories\EmployeeSystem\EmployeeSystem\ServiceLayer\bin\Debug\netcoreapp2.0\ServiceLayer.pdb
+E:\Repositories\EmployeeSystem\EmployeeSystem\ServiceLayer\obj\Debug\netcoreapp2.0\ServiceLayer.csproj.CoreCompileInputs.cache
+E:\Repositories\EmployeeSystem\EmployeeSystem\ServiceLayer\obj\Debug\netcoreapp2.0\ServiceLayer.AssemblyInfoInputs.cache
+E:\Repositories\EmployeeSystem\EmployeeSystem\ServiceLayer\obj\Debug\netcoreapp2.0\ServiceLayer.AssemblyInfo.cs
+E:\Repositories\EmployeeSystem\EmployeeSystem\ServiceLayer\obj\Debug\netcoreapp2.0\ServiceLayer.dll
+E:\Repositories\EmployeeSystem\EmployeeSystem\ServiceLayer\obj\Debug\netcoreapp2.0\ServiceLayer.pdb

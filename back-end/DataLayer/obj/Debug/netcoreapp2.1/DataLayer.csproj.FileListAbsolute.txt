@@ -1,0 +1,24 @@
+E:\Repositories\EmployeeSystem\EmployeeSystem\DataLayer\bin\Debug\netcoreapp2.1\DataLayer.deps.json
+E:\Repositories\EmployeeSystem\EmployeeSystem\DataLayer\bin\Debug\netcoreapp2.1\DataLayer.dll
+E:\Repositories\EmployeeSystem\EmployeeSystem\DataLayer\bin\Debug\netcoreapp2.1\DataLayer.pdb
+E:\Repositories\EmployeeSystem\EmployeeSystem\DataLayer\bin\Debug\netcoreapp2.1\DbEntities.dll
+E:\Repositories\EmployeeSystem\EmployeeSystem\DataLayer\bin\Debug\netcoreapp2.1\DbEntities.pdb
+E:\Repositories\EmployeeSystem\EmployeeSystem\DataLayer\obj\Debug\netcoreapp2.1\DataLayer.csprojAssemblyReference.cache
+E:\Repositories\EmployeeSystem\EmployeeSystem\DataLayer\obj\Debug\netcoreapp2.1\DataLayer.csproj.CoreCompileInputs.cache
+E:\Repositories\EmployeeSystem\EmployeeSystem\DataLayer\obj\Debug\netcoreapp2.1\DataLayer.AssemblyInfoInputs.cache
+E:\Repositories\EmployeeSystem\EmployeeSystem\DataLayer\obj\Debug\netcoreapp2.1\DataLayer.AssemblyInfo.cs
+E:\Repositories\EmployeeSystem\EmployeeSystem\DataLayer\obj\Debug\netcoreapp2.1\DataLayer.csproj.CopyComplete
+E:\Repositories\EmployeeSystem\EmployeeSystem\DataLayer\obj\Debug\netcoreapp2.1\DataLayer.dll
+E:\Repositories\EmployeeSystem\EmployeeSystem\DataLayer\obj\Debug\netcoreapp2.1\DataLayer.pdb
+E:\__SoftUni\07.JS Web\02.ReactJs\EmployeeSystem-React\back-end\DataLayer\bin\Debug\netcoreapp2.1\DataLayer.deps.json
+E:\__SoftUni\07.JS Web\02.ReactJs\EmployeeSystem-React\back-end\DataLayer\bin\Debug\netcoreapp2.1\DataLayer.dll
+E:\__SoftUni\07.JS Web\02.ReactJs\EmployeeSystem-React\back-end\DataLayer\bin\Debug\netcoreapp2.1\DataLayer.pdb
+E:\__SoftUni\07.JS Web\02.ReactJs\EmployeeSystem-React\back-end\DataLayer\bin\Debug\netcoreapp2.1\DbEntities.dll
+E:\__SoftUni\07.JS Web\02.ReactJs\EmployeeSystem-React\back-end\DataLayer\bin\Debug\netcoreapp2.1\DbEntities.pdb
+E:\__SoftUni\07.JS Web\02.ReactJs\EmployeeSystem-React\back-end\DataLayer\obj\Debug\netcoreapp2.1\DataLayer.csprojAssemblyReference.cache
+E:\__SoftUni\07.JS Web\02.ReactJs\EmployeeSystem-React\back-end\DataLayer\obj\Debug\netcoreapp2.1\DataLayer.csproj.CoreCompileInputs.cache
+E:\__SoftUni\07.JS Web\02.ReactJs\EmployeeSystem-React\back-end\DataLayer\obj\Debug\netcoreapp2.1\DataLayer.AssemblyInfoInputs.cache
+E:\__SoftUni\07.JS Web\02.ReactJs\EmployeeSystem-React\back-end\DataLayer\obj\Debug\netcoreapp2.1\DataLayer.AssemblyInfo.cs
+E:\__SoftUni\07.JS Web\02.ReactJs\EmployeeSystem-React\back-end\DataLayer\obj\Debug\netcoreapp2.1\DataLayer.csproj.CopyComplete
+E:\__SoftUni\07.JS Web\02.ReactJs\EmployeeSystem-React\back-end\DataLayer\obj\Debug\netcoreapp2.1\DataLayer.dll
+E:\__SoftUni\07.JS Web\02.ReactJs\EmployeeSystem-React\back-end\DataLayer\obj\Debug\netcoreapp2.1\DataLayer.pdb

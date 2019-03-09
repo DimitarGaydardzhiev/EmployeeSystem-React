@@ -1,0 +1,33 @@
+C:\Users\dimitar.gaydardzhiev\Desktop\SoftUni\C# MVC Frameworks - ASP.NET Core - юли 2018\EmployeeSystem\DbEntities\bin\Debug\netcoreapp2.0\DbEntities.deps.json
+C:\Users\dimitar.gaydardzhiev\Desktop\SoftUni\C# MVC Frameworks - ASP.NET Core - юли 2018\EmployeeSystem\DbEntities\bin\Debug\netcoreapp2.0\DbEntities.dll
+C:\Users\dimitar.gaydardzhiev\Desktop\SoftUni\C# MVC Frameworks - ASP.NET Core - юли 2018\EmployeeSystem\DbEntities\bin\Debug\netcoreapp2.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\dimitar.gaydardzhiev\Desktop\SoftUni\C# MVC Frameworks - ASP.NET Core - юли 2018\EmployeeSystem\DbEntities\bin\Debug\netcoreapp2.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.xml
+C:\Users\dimitar.gaydardzhiev\Desktop\SoftUni\C# MVC Frameworks - ASP.NET Core - юли 2018\EmployeeSystem\DbEntities\obj\Debug\netcoreapp2.0\DbEntities.csproj.CoreCompileInputs.cache
+C:\Users\dimitar.gaydardzhiev\Desktop\SoftUni\C# MVC Frameworks - ASP.NET Core - юли 2018\EmployeeSystem\DbEntities\obj\Debug\netcoreapp2.0\DbEntities.AssemblyInfoInputs.cache
+C:\Users\dimitar.gaydardzhiev\Desktop\SoftUni\C# MVC Frameworks - ASP.NET Core - юли 2018\EmployeeSystem\DbEntities\obj\Debug\netcoreapp2.0\DbEntities.AssemblyInfo.cs
+C:\Users\dimitar.gaydardzhiev\Desktop\SoftUni\C# MVC Frameworks - ASP.NET Core - юли 2018\EmployeeSystem\DbEntities\obj\Debug\netcoreapp2.0\DbEntities.csproj.CopyComplete
+C:\Users\dimitar.gaydardzhiev\Desktop\SoftUni\C# MVC Frameworks - ASP.NET Core - юли 2018\EmployeeSystem\DbEntities\bin\Debug\netcoreapp2.0\DbEntities.pdb
+C:\Users\dimitar.gaydardzhiev\Desktop\SoftUni\C# MVC Frameworks - ASP.NET Core - юли 2018\EmployeeSystem\DbEntities\obj\Debug\netcoreapp2.0\DbEntities.dll
+C:\Users\dimitar.gaydardzhiev\Desktop\SoftUni\C# MVC Frameworks - ASP.NET Core - юли 2018\EmployeeSystem\DbEntities\obj\Debug\netcoreapp2.0\DbEntities.pdb
+C:\Users\dimitar.gaydardzhiev\Desktop\SoftUni\C# MVC Frameworks - ASP.NET Core - юли 2018\EmployeeSystem\DbEntities\obj\Debug\netcoreapp2.0\DbEntities.csprojAssemblyReference.cache
+C:\Users\Dimiter\Desktop\New folder (3)\EmployeeSystem\DbEntities\bin\Debug\netcoreapp2.0\DbEntities.deps.json
+C:\Users\Dimiter\Desktop\New folder (3)\EmployeeSystem\DbEntities\bin\Debug\netcoreapp2.0\DbEntities.dll
+C:\Users\Dimiter\Desktop\New folder (3)\EmployeeSystem\DbEntities\bin\Debug\netcoreapp2.0\DbEntities.pdb
+C:\Users\Dimiter\Desktop\New folder (3)\EmployeeSystem\DbEntities\bin\Debug\netcoreapp2.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Dimiter\Desktop\New folder (3)\EmployeeSystem\DbEntities\bin\Debug\netcoreapp2.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.xml
+C:\Users\Dimiter\Desktop\New folder (3)\EmployeeSystem\DbEntities\obj\Debug\netcoreapp2.0\DbEntities.csprojAssemblyReference.cache
+C:\Users\Dimiter\Desktop\New folder (3)\EmployeeSystem\DbEntities\obj\Debug\netcoreapp2.0\DbEntities.csproj.CoreCompileInputs.cache
+C:\Users\Dimiter\Desktop\New folder (3)\EmployeeSystem\DbEntities\obj\Debug\netcoreapp2.0\DbEntities.AssemblyInfoInputs.cache
+C:\Users\Dimiter\Desktop\New folder (3)\EmployeeSystem\DbEntities\obj\Debug\netcoreapp2.0\DbEntities.AssemblyInfo.cs
+C:\Users\Dimiter\Desktop\New folder (3)\EmployeeSystem\DbEntities\obj\Debug\netcoreapp2.0\DbEntities.csproj.CopyComplete
+C:\Users\Dimiter\Desktop\New folder (3)\EmployeeSystem\DbEntities\obj\Debug\netcoreapp2.0\DbEntities.dll
+C:\Users\Dimiter\Desktop\New folder (3)\EmployeeSystem\DbEntities\obj\Debug\netcoreapp2.0\DbEntities.pdb
+E:\Repositories\EmployeeSystem\EmployeeSystem\DbEntities\obj\Debug\netcoreapp2.0\DbEntities.csproj.CoreCompileInputs.cache
+E:\Repositories\EmployeeSystem\EmployeeSystem\DbEntities\obj\Debug\netcoreapp2.0\DbEntities.AssemblyInfoInputs.cache
+E:\Repositories\EmployeeSystem\EmployeeSystem\DbEntities\obj\Debug\netcoreapp2.0\DbEntities.AssemblyInfo.cs
+E:\Repositories\EmployeeSystem\EmployeeSystem\DbEntities\obj\Debug\netcoreapp2.0\DbEntities.dll
+E:\Repositories\EmployeeSystem\EmployeeSystem\DbEntities\obj\Debug\netcoreapp2.0\DbEntities.pdb
+E:\Repositories\EmployeeSystem\EmployeeSystem\DbEntities\bin\Debug\netcoreapp2.0\DbEntities.deps.json
+E:\Repositories\EmployeeSystem\EmployeeSystem\DbEntities\bin\Debug\netcoreapp2.0\DbEntities.dll
+E:\Repositories\EmployeeSystem\EmployeeSystem\DbEntities\bin\Debug\netcoreapp2.0\DbEntities.pdb
+E:\Repositories\EmployeeSystem\EmployeeSystem\DbEntities\obj\Debug\netcoreapp2.0\DbEntities.csprojAssemblyReference.cache

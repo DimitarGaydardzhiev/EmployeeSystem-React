@@ -1,0 +1,36 @@
+C:\Users\dimitar.gaydardzhiev\Desktop\SoftUni\C# MVC Frameworks - ASP.NET Core - юли 2018\EmployeeSystem\DataLayer\bin\Debug\netcoreapp2.0\DataLayer.deps.json
+C:\Users\dimitar.gaydardzhiev\Desktop\SoftUni\C# MVC Frameworks - ASP.NET Core - юли 2018\EmployeeSystem\DataLayer\bin\Debug\netcoreapp2.0\DataLayer.dll
+C:\Users\dimitar.gaydardzhiev\Desktop\SoftUni\C# MVC Frameworks - ASP.NET Core - юли 2018\EmployeeSystem\DataLayer\obj\Debug\netcoreapp2.0\DataLayer.csprojAssemblyReference.cache
+C:\Users\dimitar.gaydardzhiev\Desktop\SoftUni\C# MVC Frameworks - ASP.NET Core - юли 2018\EmployeeSystem\DataLayer\obj\Debug\netcoreapp2.0\DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\dimitar.gaydardzhiev\Desktop\SoftUni\C# MVC Frameworks - ASP.NET Core - юли 2018\EmployeeSystem\DataLayer\obj\Debug\netcoreapp2.0\DataLayer.AssemblyInfoInputs.cache
+C:\Users\dimitar.gaydardzhiev\Desktop\SoftUni\C# MVC Frameworks - ASP.NET Core - юли 2018\EmployeeSystem\DataLayer\obj\Debug\netcoreapp2.0\DataLayer.AssemblyInfo.cs
+C:\Users\dimitar.gaydardzhiev\Desktop\SoftUni\C# MVC Frameworks - ASP.NET Core - юли 2018\EmployeeSystem\DataLayer\bin\Debug\netcoreapp2.0\DataLayer.pdb
+C:\Users\dimitar.gaydardzhiev\Desktop\SoftUni\C# MVC Frameworks - ASP.NET Core - юли 2018\EmployeeSystem\DataLayer\bin\Debug\netcoreapp2.0\DbEntities.dll
+C:\Users\dimitar.gaydardzhiev\Desktop\SoftUni\C# MVC Frameworks - ASP.NET Core - юли 2018\EmployeeSystem\DataLayer\bin\Debug\netcoreapp2.0\DbEntities.pdb
+C:\Users\dimitar.gaydardzhiev\Desktop\SoftUni\C# MVC Frameworks - ASP.NET Core - юли 2018\EmployeeSystem\DataLayer\obj\Debug\netcoreapp2.0\DataLayer.csproj.CopyComplete
+C:\Users\dimitar.gaydardzhiev\Desktop\SoftUni\C# MVC Frameworks - ASP.NET Core - юли 2018\EmployeeSystem\DataLayer\obj\Debug\netcoreapp2.0\DataLayer.dll
+C:\Users\dimitar.gaydardzhiev\Desktop\SoftUni\C# MVC Frameworks - ASP.NET Core - юли 2018\EmployeeSystem\DataLayer\obj\Debug\netcoreapp2.0\DataLayer.pdb
+C:\Users\Dimiter\Desktop\New folder (3)\EmployeeSystem\DataLayer\bin\Debug\netcoreapp2.0\DataLayer.deps.json
+C:\Users\Dimiter\Desktop\New folder (3)\EmployeeSystem\DataLayer\bin\Debug\netcoreapp2.0\DataLayer.dll
+C:\Users\Dimiter\Desktop\New folder (3)\EmployeeSystem\DataLayer\bin\Debug\netcoreapp2.0\DataLayer.pdb
+C:\Users\Dimiter\Desktop\New folder (3)\EmployeeSystem\DataLayer\bin\Debug\netcoreapp2.0\DbEntities.dll
+C:\Users\Dimiter\Desktop\New folder (3)\EmployeeSystem\DataLayer\bin\Debug\netcoreapp2.0\DbEntities.pdb
+C:\Users\Dimiter\Desktop\New folder (3)\EmployeeSystem\DataLayer\obj\Debug\netcoreapp2.0\DataLayer.csprojAssemblyReference.cache
+C:\Users\Dimiter\Desktop\New folder (3)\EmployeeSystem\DataLayer\obj\Debug\netcoreapp2.0\DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\Dimiter\Desktop\New folder (3)\EmployeeSystem\DataLayer\obj\Debug\netcoreapp2.0\DataLayer.AssemblyInfoInputs.cache
+C:\Users\Dimiter\Desktop\New folder (3)\EmployeeSystem\DataLayer\obj\Debug\netcoreapp2.0\DataLayer.AssemblyInfo.cs
+C:\Users\Dimiter\Desktop\New folder (3)\EmployeeSystem\DataLayer\obj\Debug\netcoreapp2.0\DataLayer.csproj.CopyComplete
+C:\Users\Dimiter\Desktop\New folder (3)\EmployeeSystem\DataLayer\obj\Debug\netcoreapp2.0\DataLayer.dll
+C:\Users\Dimiter\Desktop\New folder (3)\EmployeeSystem\DataLayer\obj\Debug\netcoreapp2.0\DataLayer.pdb
+E:\Repositories\EmployeeSystem\EmployeeSystem\DataLayer\bin\Debug\netcoreapp2.0\DataLayer.deps.json
+E:\Repositories\EmployeeSystem\EmployeeSystem\DataLayer\bin\Debug\netcoreapp2.0\DataLayer.dll
+E:\Repositories\EmployeeSystem\EmployeeSystem\DataLayer\bin\Debug\netcoreapp2.0\DataLayer.pdb
+E:\Repositories\EmployeeSystem\EmployeeSystem\DataLayer\bin\Debug\netcoreapp2.0\DbEntities.dll
+E:\Repositories\EmployeeSystem\EmployeeSystem\DataLayer\bin\Debug\netcoreapp2.0\DbEntities.pdb
+E:\Repositories\EmployeeSystem\EmployeeSystem\DataLayer\obj\Debug\netcoreapp2.0\DataLayer.csprojAssemblyReference.cache
+E:\Repositories\EmployeeSystem\EmployeeSystem\DataLayer\obj\Debug\netcoreapp2.0\DataLayer.csproj.CoreCompileInputs.cache
+E:\Repositories\EmployeeSystem\EmployeeSystem\DataLayer\obj\Debug\netcoreapp2.0\DataLayer.AssemblyInfoInputs.cache
+E:\Repositories\EmployeeSystem\EmployeeSystem\DataLayer\obj\Debug\netcoreapp2.0\DataLayer.AssemblyInfo.cs
+E:\Repositories\EmployeeSystem\EmployeeSystem\DataLayer\obj\Debug\netcoreapp2.0\DataLayer.csproj.CopyComplete
+E:\Repositories\EmployeeSystem\EmployeeSystem\DataLayer\obj\Debug\netcoreapp2.0\DataLayer.dll
+E:\Repositories\EmployeeSystem\EmployeeSystem\DataLayer\obj\Debug\netcoreapp2.0\DataLayer.pdb

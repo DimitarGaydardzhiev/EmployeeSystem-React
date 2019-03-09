@@ -1,0 +1,18 @@
+E:\Repositories\EmployeeSystem\EmployeeSystem\DbEntities\bin\Debug\netcoreapp2.1\DbEntities.deps.json
+E:\Repositories\EmployeeSystem\EmployeeSystem\DbEntities\bin\Debug\netcoreapp2.1\DbEntities.dll
+E:\Repositories\EmployeeSystem\EmployeeSystem\DbEntities\bin\Debug\netcoreapp2.1\DbEntities.pdb
+E:\Repositories\EmployeeSystem\EmployeeSystem\DbEntities\obj\Debug\netcoreapp2.1\DbEntities.csproj.CoreCompileInputs.cache
+E:\Repositories\EmployeeSystem\EmployeeSystem\DbEntities\obj\Debug\netcoreapp2.1\DbEntities.AssemblyInfoInputs.cache
+E:\Repositories\EmployeeSystem\EmployeeSystem\DbEntities\obj\Debug\netcoreapp2.1\DbEntities.AssemblyInfo.cs
+E:\Repositories\EmployeeSystem\EmployeeSystem\DbEntities\obj\Debug\netcoreapp2.1\DbEntities.dll
+E:\Repositories\EmployeeSystem\EmployeeSystem\DbEntities\obj\Debug\netcoreapp2.1\DbEntities.pdb
+E:\Repositories\EmployeeSystem\EmployeeSystem\DbEntities\obj\Debug\netcoreapp2.1\DbEntities.csprojAssemblyReference.cache
+E:\__SoftUni\07.JS Web\02.ReactJs\EmployeeSystem-React\back-end\DbEntities\bin\Debug\netcoreapp2.1\DbEntities.deps.json
+E:\__SoftUni\07.JS Web\02.ReactJs\EmployeeSystem-React\back-end\DbEntities\bin\Debug\netcoreapp2.1\DbEntities.dll
+E:\__SoftUni\07.JS Web\02.ReactJs\EmployeeSystem-React\back-end\DbEntities\bin\Debug\netcoreapp2.1\DbEntities.pdb
+E:\__SoftUni\07.JS Web\02.ReactJs\EmployeeSystem-React\back-end\DbEntities\obj\Debug\netcoreapp2.1\DbEntities.csprojAssemblyReference.cache
+E:\__SoftUni\07.JS Web\02.ReactJs\EmployeeSystem-React\back-end\DbEntities\obj\Debug\netcoreapp2.1\DbEntities.csproj.CoreCompileInputs.cache
+E:\__SoftUni\07.JS Web\02.ReactJs\EmployeeSystem-React\back-end\DbEntities\obj\Debug\netcoreapp2.1\DbEntities.AssemblyInfoInputs.cache
+E:\__SoftUni\07.JS Web\02.ReactJs\EmployeeSystem-React\back-end\DbEntities\obj\Debug\netcoreapp2.1\DbEntities.AssemblyInfo.cs
+E:\__SoftUni\07.JS Web\02.ReactJs\EmployeeSystem-React\back-end\DbEntities\obj\Debug\netcoreapp2.1\DbEntities.dll
+E:\__SoftUni\07.JS Web\02.ReactJs\EmployeeSystem-React\back-end\DbEntities\obj\Debug\netcoreapp2.1\DbEntities.pdb
