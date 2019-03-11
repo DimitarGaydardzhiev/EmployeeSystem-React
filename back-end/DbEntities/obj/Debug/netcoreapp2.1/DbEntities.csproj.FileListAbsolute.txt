@@ -16,3 +16,12 @@ E:\__SoftUni\07.JS Web\02.ReactJs\EmployeeSystem-React\back-end\DbEntities\obj\D
 E:\__SoftUni\07.JS Web\02.ReactJs\EmployeeSystem-React\back-end\DbEntities\obj\Debug\netcoreapp2.1\DbEntities.AssemblyInfo.cs
 E:\__SoftUni\07.JS Web\02.ReactJs\EmployeeSystem-React\back-end\DbEntities\obj\Debug\netcoreapp2.1\DbEntities.dll
 E:\__SoftUni\07.JS Web\02.ReactJs\EmployeeSystem-React\back-end\DbEntities\obj\Debug\netcoreapp2.1\DbEntities.pdb
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\DbEntities\bin\Debug\netcoreapp2.1\DbEntities.deps.json
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\DbEntities\bin\Debug\netcoreapp2.1\DbEntities.dll
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\DbEntities\bin\Debug\netcoreapp2.1\DbEntities.pdb
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\DbEntities\obj\Debug\netcoreapp2.1\DbEntities.csprojAssemblyReference.cache
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\DbEntities\obj\Debug\netcoreapp2.1\DbEntities.csproj.CoreCompileInputs.cache
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\DbEntities\obj\Debug\netcoreapp2.1\DbEntities.AssemblyInfoInputs.cache
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\DbEntities\obj\Debug\netcoreapp2.1\DbEntities.AssemblyInfo.cs
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\DbEntities\obj\Debug\netcoreapp2.1\DbEntities.dll
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\DbEntities\obj\Debug\netcoreapp2.1\DbEntities.pdb

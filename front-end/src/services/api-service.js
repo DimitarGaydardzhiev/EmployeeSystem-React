@@ -20,6 +20,21 @@ async function getAllFormerEmployees() {
     return res.json()
 }
 
+async function login(email, password) {
+    const res = await window.fetch(host + 'account/login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            email,
+            password
+        })
+    })
+
+    return res.json()
+}
+
 
 // async function register(username, email, password) {
 //     const res = await window.fetch(host + 'auth/signup', {
@@ -180,5 +195,6 @@ export {
     getAllDepartments,
     getAllPositions,
     getAllEmployees,
-    getAllFormerEmployees
+    getAllFormerEmployees,
+    login
 }

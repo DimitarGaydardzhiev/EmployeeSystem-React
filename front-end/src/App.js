@@ -7,20 +7,32 @@ import DepartmentManagement from './views/department-management';
 import PositionManagement from './views/position-management';
 import EmployeeManagement from './views/employee-management.jsx';
 import FormerEmployeeManagement from './views/former-employee-management.jsx';
+import Login from './views/login';
+import PrivateRoute from './Routes/PrivateRoute';
+import Auth from './utils/auth';
 
 class App extends Component {
   render() {
+    const isAdmin = Auth.isUserAdmin()
+
+    this.state = {
+      loggedIn: false
+    }
+
     return (
       <div>
         <Router>
           <Fragment>
-            <Header />
+            <Header
+              loggedIn={this.state.loggedIn}
+              isAdmin={isAdmin} />
             <Switch>
-              <Route path="/" exact component={Home}></Route>
-              <Route path="/departments/all" exact component={DepartmentManagement}></Route>
-              <Route path="/positions/all" exact component={PositionManagement}></Route>
-              <Route path="/employees/all" exact component={EmployeeManagement}></Route>
-              <Route path="/employees/former" exact component={FormerEmployeeManagement}></Route>
+              <Route path='/login' component={Login} />
+              <PrivateRoute path="/departments/all" exact component={DepartmentManagement}></PrivateRoute>
+              <PrivateRoute path="/positions/all" exact component={PositionManagement}></PrivateRoute>
+              <PrivateRoute path="/employees/all" exact component={EmployeeManagement}></PrivateRoute>
+              <PrivateRoute path="/employees/former" exact component={FormerEmployeeManagement}></PrivateRoute>
+              <PrivateRoute path='/' component={Home} />
             </Switch>
             <Footer />
           </Fragment>

@@ -30,3 +30,19 @@ E:\__SoftUni\07.JS Web\02.ReactJs\EmployeeSystem-React\back-end\ServiceLayer\obj
 E:\__SoftUni\07.JS Web\02.ReactJs\EmployeeSystem-React\back-end\ServiceLayer\obj\Debug\netcoreapp2.1\ServiceLayer.csproj.CopyComplete
 E:\__SoftUni\07.JS Web\02.ReactJs\EmployeeSystem-React\back-end\ServiceLayer\obj\Debug\netcoreapp2.1\ServiceLayer.dll
 E:\__SoftUni\07.JS Web\02.ReactJs\EmployeeSystem-React\back-end\ServiceLayer\obj\Debug\netcoreapp2.1\ServiceLayer.pdb
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\ServiceLayer\bin\Debug\netcoreapp2.1\ServiceLayer.deps.json
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\ServiceLayer\bin\Debug\netcoreapp2.1\ServiceLayer.dll
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\ServiceLayer\bin\Debug\netcoreapp2.1\ServiceLayer.pdb
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\ServiceLayer\bin\Debug\netcoreapp2.1\DataLayer.dll
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\ServiceLayer\bin\Debug\netcoreapp2.1\DbEntities.dll
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\ServiceLayer\bin\Debug\netcoreapp2.1\DTOs.dll
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\ServiceLayer\bin\Debug\netcoreapp2.1\DataLayer.pdb
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\ServiceLayer\bin\Debug\netcoreapp2.1\DTOs.pdb
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\ServiceLayer\bin\Debug\netcoreapp2.1\DbEntities.pdb
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\ServiceLayer\obj\Debug\netcoreapp2.1\ServiceLayer.csprojAssemblyReference.cache
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\ServiceLayer\obj\Debug\netcoreapp2.1\ServiceLayer.csproj.CoreCompileInputs.cache
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\ServiceLayer\obj\Debug\netcoreapp2.1\ServiceLayer.AssemblyInfoInputs.cache
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\ServiceLayer\obj\Debug\netcoreapp2.1\ServiceLayer.AssemblyInfo.cs
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\ServiceLayer\obj\Debug\netcoreapp2.1\ServiceLayer.csproj.CopyComplete
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\ServiceLayer\obj\Debug\netcoreapp2.1\ServiceLayer.dll
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\ServiceLayer\obj\Debug\netcoreapp2.1\ServiceLayer.pdb

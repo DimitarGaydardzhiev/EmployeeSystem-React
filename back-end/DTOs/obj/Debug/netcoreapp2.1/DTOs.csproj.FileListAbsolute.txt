@@ -22,3 +22,15 @@ E:\__SoftUni\07.JS Web\02.ReactJs\EmployeeSystem-React\back-end\DTOs\obj\Debug\n
 E:\__SoftUni\07.JS Web\02.ReactJs\EmployeeSystem-React\back-end\DTOs\obj\Debug\netcoreapp2.1\DTOs.csproj.CopyComplete
 E:\__SoftUni\07.JS Web\02.ReactJs\EmployeeSystem-React\back-end\DTOs\obj\Debug\netcoreapp2.1\DTOs.dll
 E:\__SoftUni\07.JS Web\02.ReactJs\EmployeeSystem-React\back-end\DTOs\obj\Debug\netcoreapp2.1\DTOs.pdb
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\DTOs\bin\Debug\netcoreapp2.1\DTOs.deps.json
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\DTOs\bin\Debug\netcoreapp2.1\DTOs.dll
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\DTOs\bin\Debug\netcoreapp2.1\DTOs.pdb
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\DTOs\bin\Debug\netcoreapp2.1\DbEntities.dll
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\DTOs\bin\Debug\netcoreapp2.1\DbEntities.pdb
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\DTOs\obj\Debug\netcoreapp2.1\DTOs.csprojAssemblyReference.cache
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\DTOs\obj\Debug\netcoreapp2.1\DTOs.csproj.CoreCompileInputs.cache
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\DTOs\obj\Debug\netcoreapp2.1\DTOs.AssemblyInfoInputs.cache
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\DTOs\obj\Debug\netcoreapp2.1\DTOs.AssemblyInfo.cs
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\DTOs\obj\Debug\netcoreapp2.1\DTOs.csproj.CopyComplete
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\DTOs\obj\Debug\netcoreapp2.1\DTOs.dll
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\DTOs\obj\Debug\netcoreapp2.1\DTOs.pdb

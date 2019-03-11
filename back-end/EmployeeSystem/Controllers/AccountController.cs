@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace EmployeeSystem.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("[controller]/[action]")]
     public class AccountController : BaseController
     {
@@ -38,28 +38,22 @@ namespace EmployeeSystem.Controllers
             return View();
         }
 
-
         [HttpPost]
         [AllowAnonymous]
-        public async Task<IActionResult> Login(LoginViewModel model, string returnUrl = null)
+        public async Task<IActionResult> Login([FromBody] LoginViewModel model)
         {
-            ViewData["ReturnUrl"] = returnUrl;
             if (ModelState.IsValid)
             {
                 var result = await service.Login(model);
                 if (result.Succeeded)
                 {
-                    return RedirectToLocal(returnUrl);
+                    return Ok();
                 }
-                else
-                {
-                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
-                    return View(model);
-                }
-            }
 
-            // If we got this far, something failed, redisplay form
-            return View(model);
+                return BadRequest();
+            }
+            
+            return BadRequest();
         }
 
         [HttpGet]

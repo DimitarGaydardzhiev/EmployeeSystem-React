@@ -106,3 +106,29 @@ E:\__SoftUni\07.JS Web\02.ReactJs\EmployeeSystem-React\back-end\EmployeeSystem\o
 E:\__SoftUni\07.JS Web\02.ReactJs\EmployeeSystem-React\back-end\EmployeeSystem\obj\Debug\netcoreapp2.1\EmployeeSystem.csproj.CopyComplete
 E:\__SoftUni\07.JS Web\02.ReactJs\EmployeeSystem-React\back-end\EmployeeSystem\obj\Debug\netcoreapp2.1\EmployeeSystem.dll
 E:\__SoftUni\07.JS Web\02.ReactJs\EmployeeSystem-React\back-end\EmployeeSystem\obj\Debug\netcoreapp2.1\EmployeeSystem.pdb
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\EmployeeSystem\bin\Debug\netcoreapp2.1\EmployeeSystem.deps.json
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\EmployeeSystem\bin\Debug\netcoreapp2.1\EmployeeSystem.runtimeconfig.json
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\EmployeeSystem\bin\Debug\netcoreapp2.1\EmployeeSystem.runtimeconfig.dev.json
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\EmployeeSystem\bin\Debug\netcoreapp2.1\EmployeeSystem.dll
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\EmployeeSystem\bin\Debug\netcoreapp2.1\EmployeeSystem.pdb
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\EmployeeSystem\bin\Debug\netcoreapp2.1\EmployeeSystem.Views.dll
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\EmployeeSystem\bin\Debug\netcoreapp2.1\EmployeeSystem.Views.pdb
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\EmployeeSystem\bin\Debug\netcoreapp2.1\DataLayer.dll
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\EmployeeSystem\bin\Debug\netcoreapp2.1\DbEntities.dll
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\EmployeeSystem\bin\Debug\netcoreapp2.1\DTOs.dll
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\EmployeeSystem\bin\Debug\netcoreapp2.1\ServiceLayer.dll
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\EmployeeSystem\bin\Debug\netcoreapp2.1\DataLayer.pdb
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\EmployeeSystem\bin\Debug\netcoreapp2.1\DbEntities.pdb
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\EmployeeSystem\bin\Debug\netcoreapp2.1\DTOs.pdb
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\EmployeeSystem\bin\Debug\netcoreapp2.1\ServiceLayer.pdb
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\EmployeeSystem\obj\Debug\netcoreapp2.1\EmployeeSystem.csprojAssemblyReference.cache
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\EmployeeSystem\obj\Debug\netcoreapp2.1\EmployeeSystem.csproj.CoreCompileInputs.cache
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\EmployeeSystem\obj\Debug\netcoreapp2.1\EmployeeSystem.RazorAssemblyInfo.cache
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\EmployeeSystem\obj\Debug\netcoreapp2.1\EmployeeSystem.RazorAssemblyInfo.cs
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\EmployeeSystem\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\EmployeeSystem\obj\Debug\netcoreapp2.1\EmployeeSystem.AssemblyInfoInputs.cache
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\EmployeeSystem\obj\Debug\netcoreapp2.1\EmployeeSystem.AssemblyInfo.cs
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\EmployeeSystem\obj\Debug\netcoreapp2.1\EmployeeSystem.RazorTargetAssemblyInfo.cache
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\EmployeeSystem\obj\Debug\netcoreapp2.1\EmployeeSystem.csproj.CopyComplete
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\EmployeeSystem\obj\Debug\netcoreapp2.1\EmployeeSystem.dll
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\EmployeeSystem\obj\Debug\netcoreapp2.1\EmployeeSystem.pdb
