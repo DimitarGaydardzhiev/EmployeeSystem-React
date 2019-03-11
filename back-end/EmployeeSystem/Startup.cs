@@ -5,6 +5,7 @@ using DatLayer;
 using DatLayer.Interfaces;
 using EmployeeSystem.Data;
 using EmployeeSystem.Models;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -13,9 +14,12 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Tokens;
 using NToastNotify;
 using ServiceLayer.Interfaces;
 using ServiceLayer.Services;
+using System;
+using System.Text;
 
 namespace EmployeeSystem
 {
@@ -44,6 +48,27 @@ namespace EmployeeSystem
             })
             .AddEntityFrameworkStores<EmployeeSystemContext>()
             .AddDefaultTokenProviders();
+
+            services
+                .AddAuthentication(options =>
+                {
+                    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+                    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+
+                })
+                .AddJwtBearer(cfg =>
+                {
+                    cfg.RequireHttpsMetadata = false;
+                    cfg.SaveToken = true;
+                    cfg.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidIssuer = Configuration.GetSection("Jwt")["JwtIssuer"],
+                        ValidAudience = Configuration.GetSection("Jwt")["JwtIssuer"],
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration.GetSection("Jwt")["JwtKey"])),
+                        ClockSkew = TimeSpan.Zero // remove delay of token when expire
+                    };
+                });
 
             // Add application services.
             services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));

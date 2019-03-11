@@ -422,7 +422,7 @@ namespace DbEntities.Migrations
 
             migrationBuilder.Sql(mapUserToAdminCommand);
 
-            string requestTypesCommand = File.ReadAllText(@"..\..\EmployeeSystem\DbEntities\Seed\RequestTypes.sql");
+            string requestTypesCommand = File.ReadAllText(@"..\..\back-end\DbEntities\Seed\RequestTypes.sql");
             migrationBuilder.Sql(requestTypesCommand);
         }
 

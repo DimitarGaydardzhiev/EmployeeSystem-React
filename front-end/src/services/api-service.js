@@ -31,8 +31,8 @@ async function login(email, password) {
             password
         })
     })
-
-    return res.json()
+    debugger
+    return res
 }
 
 

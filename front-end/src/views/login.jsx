@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import loginValidator from '../utils/loginValidator';
 import { connect } from 'react-redux'
 import { loginAction } from '../store/actions/auth-actions';
+import { Redirect } from 'react-router-dom'
 
 class Login extends Component {
   constructor(props) {
@@ -14,6 +15,13 @@ class Login extends Component {
 
     this.onChange = this.onChange.bind(this)
     this.onSubmit = this.onSubmit.bind(this)
+
+    this.renderRedirect = () => {
+      debugger
+      if (props.loggedIn) {
+        return <Redirect to='/' />
+      }
+    }
   }
 
   onChange(e) {
@@ -29,6 +37,7 @@ class Login extends Component {
   render() {
     return (
       <div className="row text-center">
+        {this.renderRedirect()}
         <br />
         <div className="col-md-4"></div>
         <div className="col-md-4 border-shadow">
@@ -56,14 +65,14 @@ class Login extends Component {
   }
 }
 
-function mapStateToProps (state) {
+function mapStateToProps(state) {
   return {
     loginSuccess: state.login.success,
     loginError: state.loginError
   }
 }
 
-function mapDispatchToProps (dispatch) {
+function mapDispatchToProps(dispatch) {
   return {
     login: (email, password) => dispatch(loginAction(email, password)),
     //redirect: () => dispatch(redirectAction())

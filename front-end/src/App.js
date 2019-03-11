@@ -12,12 +12,25 @@ import PrivateRoute from './Routes/PrivateRoute';
 import Auth from './utils/auth';
 
 class App extends Component {
-  render() {
-    const isAdmin = Auth.isUserAdmin()
+  constructor(props) {
+    super(props)
 
     this.state = {
       loggedIn: false
     }
+
+    //this.logout = this.logout.bind(this)
+  }
+
+  componentWillMount() {
+    debugger
+    if (Auth.isUserAuthenticated()) {
+      this.setState({ loggedIn: true })
+    }
+  }
+
+  render() {
+    const isAdmin = Auth.isUserAdmin()
 
     return (
       <div>
@@ -27,7 +40,7 @@ class App extends Component {
               loggedIn={this.state.loggedIn}
               isAdmin={isAdmin} />
             <Switch>
-              <Route path='/login' component={Login} />
+              <Route path='/login' component={() => <Login loggedIn={this.state.loggedIn} />} />
               <PrivateRoute path="/departments/all" exact component={DepartmentManagement}></PrivateRoute>
               <PrivateRoute path="/positions/all" exact component={PositionManagement}></PrivateRoute>
               <PrivateRoute path="/employees/all" exact component={EmployeeManagement}></PrivateRoute>

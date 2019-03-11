@@ -7,7 +7,7 @@ namespace ServiceLayer.Interfaces
 {
     public interface IAccountService
     {
-        Task<SignInResult> Login(LoginViewModel model);
+        Task<object> Login(LoginViewModel model);
 
         Task<IdentityResult> Register(EmployeeDto model);
 

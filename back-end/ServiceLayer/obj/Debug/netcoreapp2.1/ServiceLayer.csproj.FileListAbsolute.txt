@@ -46,3 +46,7 @@ C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\
 C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\ServiceLayer\obj\Debug\netcoreapp2.1\ServiceLayer.csproj.CopyComplete
 C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\ServiceLayer\obj\Debug\netcoreapp2.1\ServiceLayer.dll
 C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\ServiceLayer\obj\Debug\netcoreapp2.1\ServiceLayer.pdb
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\ServiceLayer\bin\Debug\netcoreapp2.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\ServiceLayer\bin\Debug\netcoreapp2.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\ServiceLayer\bin\Debug\netcoreapp2.1\Microsoft.IdentityModel.Tokens.xml
+C:\Users\dimitar.gaydardzhiev\Desktop\EmployeeSystem-React\EmployeeSystem-React\back-end\ServiceLayer\bin\Debug\netcoreapp2.1\System.IdentityModel.Tokens.Jwt.xml

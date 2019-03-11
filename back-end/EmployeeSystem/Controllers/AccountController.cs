@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using NToastNotify;
 using ServiceLayer.Interfaces;
 using ServiceLayer.Utils;
+using System;
 using System.Threading.Tasks;
 
 namespace EmployeeSystem.Controllers
@@ -42,18 +43,23 @@ namespace EmployeeSystem.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> Login([FromBody] LoginViewModel model)
         {
-            if (ModelState.IsValid)
-            {
-                var result = await service.Login(model);
-                if (result.Succeeded)
-                {
-                    return Ok();
-                }
+            object result;
 
-                return BadRequest();
+            if (!this.ModelState.IsValid)
+            {
+                return this.BadRequest(this.ModelState);
             }
-            
-            return BadRequest();
+
+            try
+            {
+                result = await this.service.Login(model);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
+            return Json(result);
         }
 
         [HttpGet]
