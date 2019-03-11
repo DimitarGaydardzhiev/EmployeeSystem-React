@@ -2,7 +2,7 @@ import React from 'react'
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
 
 const Header = (props) => {
-    const { loggedIn, isAdmin } = props
+    const { loggedIn, isAdmin, logout } = props
 
     return (
         < Navbar bg="light" expand="lg" >
@@ -43,6 +43,7 @@ const Header = (props) => {
                             <NavDropdown.Item href="#action/3.2">Add Project</NavDropdown.Item>
                         </NavDropdown>
                     }
+                    {loggedIn && <a href='javascript:void(0)' className="btn btn-info" onClick={logout}>Logout</a>}
                 </Nav>
             </Navbar.Collapse>
         </Navbar >

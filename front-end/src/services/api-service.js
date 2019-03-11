@@ -31,7 +31,7 @@ async function login(email, password) {
             password
         })
     })
-    debugger
+    
     return res
 }
 

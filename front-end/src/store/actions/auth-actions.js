@@ -1,4 +1,4 @@
-import { LOGIN_SUCCESS, LOGIN_ERROR } from "../constants/action-types";
+import { LOGIN_SUCCESS, LOGIN_ERROR, LOGOUT_SUCCESS } from "../constants/action-types";
 import { login } from "../../services/api-service";
 import errorHandler from "../../utils/errorHandler";
 import * as decode from 'jwt-decode';
@@ -7,15 +7,12 @@ function loginAction(email, password) {
   return (dispatch) => {
     return login(email, password)
       .then(res => {
-        authenticateUser(res)
-        dispatch(loginSuccess())
-        // if (json.success) {
-        //   authenticateUser(json)
-        //   dispatch(loginSuccess())
-        // } else {
-        //   const error = errorHandler(json)
-        //   dispatch(loginError(error))
-        // }
+        if (res.status == 200) {
+          authenticateUser(res)
+          dispatch(loginSuccess())
+        } else {
+
+        }
       })
   }
 }
@@ -26,6 +23,12 @@ function loginSuccess() {
   }
 }
 
+function logoutSuccess() {
+  return {
+    type: LOGOUT_SUCCESS
+  }
+}
+
 function loginError(error) {
   return {
     type: LOGIN_ERROR,
@@ -33,18 +36,28 @@ function loginError(error) {
   }
 }
 
+function logoutAction() {
+  return (dispatch) => {
+    deauthenticateUser()
+    dispatch(logoutSuccess())
+  }
+}
+
 function authenticateUser(res) {
   res.json()
     .then(json => {
-      debugger
       const tokenPayload = decode(json)
-
-      window.localStorage.setItem('authToken', tokenPayload)
+      window.localStorage.setItem('authToken', json)
       window.localStorage.setItem('username', tokenPayload.sub)
       window.localStorage.setItem('roles', tokenPayload.role)
     })
 }
 
+function deauthenticateUser() {
+  window.localStorage.clear()
+}
+
 export {
-  loginAction
+  loginAction,
+  logoutAction
 }

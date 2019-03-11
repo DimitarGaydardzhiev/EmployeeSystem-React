@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Header from './components/header';
 import Footer from './components/footer';
 import Home from './views/home';
@@ -10,6 +10,9 @@ import FormerEmployeeManagement from './views/former-employee-management.jsx';
 import Login from './views/login';
 import PrivateRoute from './Routes/PrivateRoute';
 import Auth from './utils/auth';
+import { withRouter } from 'react-router-dom'
+import { connect } from 'react-redux'
+import { logoutAction } from './store/actions/auth-actions';
 
 class App extends Component {
   constructor(props) {
@@ -19,14 +22,26 @@ class App extends Component {
       loggedIn: false
     }
 
-    //this.logout = this.logout.bind(this)
+    this.logout = this.logout.bind(this)
   }
 
   componentWillMount() {
-    debugger
     if (Auth.isUserAuthenticated()) {
       this.setState({ loggedIn: true })
     }
+  }
+
+  componentWillReceiveProps(props) {
+    if (props.loginSuccess) {
+      this.setState({ loggedIn: true })
+    }
+  }
+
+  logout() {
+    this.props.logout()
+    //toastr.success('Logout successful')
+    this.props.history.push('/login')
+    this.setState({ loggedIn: false })
   }
 
   render() {
@@ -34,25 +49,38 @@ class App extends Component {
 
     return (
       <div>
-        <Router>
+        <BrowserRouter>
           <Fragment>
             <Header
               loggedIn={this.state.loggedIn}
-              isAdmin={isAdmin} />
+              isAdmin={isAdmin}
+              logout={this.logout} />
             <Switch>
               <Route path='/login' component={() => <Login loggedIn={this.state.loggedIn} />} />
               <PrivateRoute path="/departments/all" exact component={DepartmentManagement}></PrivateRoute>
               <PrivateRoute path="/positions/all" exact component={PositionManagement}></PrivateRoute>
               <PrivateRoute path="/employees/all" exact component={EmployeeManagement}></PrivateRoute>
               <PrivateRoute path="/employees/former" exact component={FormerEmployeeManagement}></PrivateRoute>
-              <PrivateRoute path='/' component={Home} />
+              <Route path='/' component={() => <Home loggedIn={this.state.loggedIn} />} />
             </Switch>
             <Footer />
           </Fragment>
-        </Router>
+        </BrowserRouter>
       </div>
     );
   }
 }
 
-export default App;
+function mapStateToProps(state) {
+  return {
+    loginSuccess: state.login.success
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    logout: () => dispatch(logoutAction()),
+  }
+}
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App))
