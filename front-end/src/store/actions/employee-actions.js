@@ -1,5 +1,5 @@
-import { GET_ALL_EMPLOYEES_SUCCESS, GET_ALL_FORMER_EMPLOYEES_SUCCESS } from '../constants/action-types';
-import { getAllEmployees, getAllFormerEmployees } from '../../services/api-service';
+import { GET_ALL_EMPLOYEES_SUCCESS, GET_ALL_FORMER_EMPLOYEES_SUCCESS, REGISTER_SUCCESS } from '../constants/action-types';
+import { getAllEmployees, getAllFormerEmployees, register } from '../../services/api-service';
 
 function getAllEmployeesAction() {
     return async (dispatch) => {
@@ -33,7 +33,24 @@ function getAllFormerEmployeesSuccess(payload) {
     }
 }
 
+function registerAction(firstName, lastName, email, password, confirmPassword, roleId, positionId, departmentId, description) {
+    return async (dispatch) => {
+        return register(firstName, lastName, email, password, confirmPassword, roleId, positionId, departmentId, description)
+            .then(payload => {
+                dispatch(registerSuccess(payload))
+            })
+    }
+}
+
+function registerSuccess(payload) {
+    return {
+        type: REGISTER_SUCCESS,
+        payload
+    }
+}
+
 export {
     getAllEmployeesAction,
-    getAllFormerEmployeesAction
+    getAllFormerEmployeesAction,
+    registerAction
 }

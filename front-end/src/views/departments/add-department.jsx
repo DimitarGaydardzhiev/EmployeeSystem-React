@@ -3,6 +3,8 @@ import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { addDepartmentAction } from '../../store/actions/department-actions';
 import { toastr } from 'toastr';
+import Input from '../../common/Input';
+import Button from '../../common/Button';
 
 class AddDepartment extends Component {
   constructor(props) {
@@ -26,7 +28,7 @@ class AddDepartment extends Component {
     this.props.addDepartment(this.state.name)
   }
 
-  componentWillReceiveProps (nextProps) {
+  componentWillReceiveProps(nextProps) {
     debugger
     if (nextProps.addDepartmentError.hasError) {
       //toastr.error(nextProps.createProductError.message)
@@ -44,13 +46,14 @@ class AddDepartment extends Component {
         <div className="col-md-4">
           <section>
             <form method="post" onSubmit={this.onSubmit}>
-              <div className="form-group">
-                <label htmlFor="name">Name</label>
-                <input type="name" id="name" name="name" className="form-control" onChange={this.onChange} />
-              </div>
-              <div className="form-group">
-                <button type="submit" className="btn btn-primary">Save</button>
-              </div>
+              <Input
+                className='form-control'
+                type='text'
+                name='name'
+                label='Name'
+                placeholder='Department name'
+                onChange={this.onChange} />
+              <Button type='submit' className='btn btn-primary' value='Save' />
             </form>
           </section>
         </div>

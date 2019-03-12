@@ -1,19 +1,19 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
-import EmployeeDataRow from '../components/employee-data-row';
-import { getAllEmployeesAction } from '../store/actions/employee-actions';
+import { getAllFormerEmployeesAction } from '../../store/actions/employee-actions';
+import FormerEmployeeDataRow from '../../components/former-employee-data-row';
 
-class EmployeeManagement extends Component {
+class FormerEmployeeManagement extends Component {
     componentWillMount() {
-        this.props.getAllEmployees()
+        this.props.getAllFormerEmployees()
     }
 
     render() {
-        const { employees } = this.props.employees
+        const { formerEmployees } = this.props.formerEmployees
 
         return (
             <Fragment>
-                <h3 className="d-mgmt text-center">Employees Management</h3>
+                <h3 className="d-mgmt text-center">Former Employees Management</h3>
                 <table className="table table-hover">
                     <thead>
                         <tr>
@@ -23,13 +23,12 @@ class EmployeeManagement extends Component {
                             <th>In Company From</th>
                             <th>Department</th>
                             <th>Description</th>
-                            <th>TODO: Check isAdmin</th>
                         </tr>
                     </thead>
                     <tbody>
                         {
-                            employees.map(e => (
-                                <EmployeeDataRow key={e.id} data={e} />
+                            formerEmployees.map(fe => (
+                                <FormerEmployeeDataRow key={fe.id} data={fe} />
                             ))
                         }
                     </tbody>
@@ -41,14 +40,14 @@ class EmployeeManagement extends Component {
 
 function mapStateToProps(state) {
     return {
-        employees: state.employees
+        formerEmployees: state.formerEmployees
     }
 }
 
 function mapDispatchToProps(dispatch) {
     return {
-        getAllEmployees: () => dispatch(getAllEmployeesAction()),
+        getAllFormerEmployees: () => dispatch(getAllFormerEmployeesAction()),
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(EmployeeManagement);
+export default connect(mapStateToProps, mapDispatchToProps)(FormerEmployeeManagement);

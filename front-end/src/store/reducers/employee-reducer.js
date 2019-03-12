@@ -1,4 +1,4 @@
-import { GET_ALL_EMPLOYEES_SUCCESS, GET_ALL_FORMER_EMPLOYEES_SUCCESS } from "../constants/action-types";
+import { GET_ALL_EMPLOYEES_SUCCESS, GET_ALL_FORMER_EMPLOYEES_SUCCESS, REGISTER_SUCCESS } from "../constants/action-types";
 
 const initialState = {
     employees: [],
@@ -15,6 +15,8 @@ function employeeReducer(state = initialState, action) {
             return Object.assign({}, state, {
                 formerEmployees: state.formerEmployees.concat(action.payload)
             });
+        case REGISTER_SUCCESS:
+            return Object.assign({}, state, { success: true })
         default:
             return state
     }

@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { addPositionAction } from '../../store/actions/position-actions';
+import Input from '../../common/Input';
+import Button from '../../common/Button';
 
 class AddPosition extends Component {
   constructor(props) {
@@ -14,7 +16,7 @@ class AddPosition extends Component {
     this.onChange = this.onChange.bind(this)
     this.onSubmit = this.onSubmit.bind(this)
   }
-  
+
   onChange(e) {
     this.setState({ [e.target.name]: e.target.value })
   }
@@ -25,6 +27,17 @@ class AddPosition extends Component {
     this.props.addPosition(this.state.name)
   }
 
+  componentWillReceiveProps(nextProps) {
+    debugger
+    if (nextProps.addPositionError.hasError) {
+      //toastr.error(nextProps.createProductError.message)
+    } else if (nextProps.addPositionSuccess) {
+      //this.props.redirect()
+      //toastr.success('Department created successfully')
+      this.props.history.push('/positions/all')
+    }
+  }
+
   render() {
     return (
       <div className="row">
@@ -32,13 +45,14 @@ class AddPosition extends Component {
         <div className="col-md-4">
           <section>
             <form method="post" onSubmit={this.onSubmit}>
-              <div className="form-group">
-                <label htmlFor="name">Name</label>
-                <input type="name" id="name" name="name" className="form-control" onChange={this.onChange} />
-              </div>
-              <div className="form-group">
-                <button type="submit" className="btn btn-primary">Save</button>
-              </div>
+              <Input
+                className='form-control'
+                type='text'
+                name='name'
+                label='Name'
+                placeholder='Position name'
+                onChange={this.onChange} />
+              <Button type='submit' className='btn btn-primary' value='Save' />
             </form>
           </section>
         </div>
@@ -50,7 +64,7 @@ class AddPosition extends Component {
 
 function mapStateToProps(state) {
   return {
-    addPositionSuccess: state.addPositionSuccess,
+    addPositionSuccess: state.addPosition.success,
     addPositionError: state.addPositionError
   }
 }
@@ -58,7 +72,6 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {
     addPosition: (name) => dispatch(addPositionAction(name)),
-    //redirect: () => dispatch(redirectAction())
   }
 }
 

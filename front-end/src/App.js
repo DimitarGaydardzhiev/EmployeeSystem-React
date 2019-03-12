@@ -3,18 +3,19 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Header from './components/header';
 import Footer from './components/footer';
 import Home from './views/home';
-import DepartmentManagement from './views/department-management';
-import PositionManagement from './views/position-management';
-import EmployeeManagement from './views/employee-management.jsx';
-import FormerEmployeeManagement from './views/former-employee-management.jsx';
+import EmployeeManagement from './views/employees/employee-management.jsx';
+import FormerEmployeeManagement from './views/employees/former-employee-management.jsx';
 import Login from './views/login';
 import PrivateRoute from './Routes/PrivateRoute';
 import Auth from './utils/auth';
 import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { logoutAction } from './store/actions/auth-actions';
-import AddDepartment from './views/departments/add';
-import AddPosition from './views/positions/add';
+import AddDepartment from './views/departments/add-department.jsx';
+import AddPosition from './views/positions/add-position.jsx';
+import DepartmentManagement from './views/departments/department-management';
+import positionManagement from './views/positions/position-management';
+import AddEmployee from './views/employees/add-employee';
 
 class App extends Component {
   constructor(props) {
@@ -61,10 +62,11 @@ class App extends Component {
               <Route path='/login' component={() => <Login loggedIn={this.state.loggedIn} />} />
               <PrivateRoute path="/departments/all" exact component={DepartmentManagement}></PrivateRoute>
               <PrivateRoute path="/departments/add" exact component={AddDepartment}></PrivateRoute>
-              <PrivateRoute path="/positions/all" exact component={PositionManagement}></PrivateRoute>
+              <PrivateRoute path="/positions/all" exact component={positionManagement}></PrivateRoute>
               <PrivateRoute path="/positions/add" exact component={AddPosition}></PrivateRoute>
               <PrivateRoute path="/employees/all" exact component={EmployeeManagement}></PrivateRoute>
               <PrivateRoute path="/employees/former" exact component={FormerEmployeeManagement}></PrivateRoute>
+              <PrivateRoute path="/employees/add" exact component={AddEmployee}></PrivateRoute>
               <Route path='/' component={() => <Home loggedIn={this.state.loggedIn} />} />
             </Switch>
             <Footer />

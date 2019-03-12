@@ -20,6 +20,11 @@ async function getAllFormerEmployees() {
     return res.json()
 }
 
+async function getAllRoles() {
+    const res = await window.fetch(host + 'employee/getRoles')
+    return res.json()
+}
+
 async function login(email, password) {
     const res = await window.fetch(host + 'account/login', {
         method: 'POST',
@@ -31,7 +36,22 @@ async function login(email, password) {
             password
         })
     })
-    
+
+    return res
+}
+
+async function register(firstName, lastName, email, password, confirmPassword, roleId, positionId, departmentId, description) {
+    debugger
+    const res = await window.fetch(host + 'account/register', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            firstName, lastName, email, password, confirmPassword, roleId, positionId, departmentId, description
+        })
+    })
+
     return res
 }
 
@@ -45,7 +65,21 @@ async function addDepartment(name) {
             name
         })
     })
-    
+
+    return res
+}
+
+async function addPosition(name) {
+    const res = await window.fetch(host + 'position/save', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            name
+        })
+    })
+
     return res
 }
 
@@ -211,5 +245,8 @@ export {
     getAllEmployees,
     getAllFormerEmployees,
     login,
-    addDepartment
+    register,
+    addDepartment,
+    addPosition,
+    getAllRoles
 }

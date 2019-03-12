@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
-import { getAllPositionsAction } from '../store/actions/position-actions';
-import AdministrationDataRow from '../components/administration-data-row';
+import { getAllPositionsAction } from '../../store/actions/position-actions';
 import { Button } from 'react-bootstrap';
+import AdministrationDataRow from '../../components/administration-data-row';
 
 class PositionManagement extends Component {
     constructor(props) {
@@ -41,7 +41,7 @@ class PositionManagement extends Component {
                         }
                     </tbody>
                 </table>
-                <div class="text-right">
+                <div className="text-right">
                     <Button className="px-4"
                         onClick={this.routeChange}>
                         Add

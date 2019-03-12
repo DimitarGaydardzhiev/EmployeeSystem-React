@@ -23,7 +23,7 @@ const Header = (props) => {
                         <NavDropdown title="Employees" id="employees">
                             <NavDropdown.Item href="/employees/all">Current Employees</NavDropdown.Item>
                             <NavDropdown.Item href="/employees/former">Former Employees</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Add Employee</NavDropdown.Item>
+                            <NavDropdown.Item href="/employees/add">Add Employee</NavDropdown.Item>
                         </NavDropdown>
                     }
                     {

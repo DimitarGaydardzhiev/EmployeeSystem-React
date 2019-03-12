@@ -1,4 +1,4 @@
-import { GET_ALL_POSITIONS_SUCCESS } from "../constants/action-types";
+import { GET_ALL_POSITIONS_SUCCESS, ADD_POSITION_SUCCESS, ADD_POSITION_ERROR } from "../constants/action-types";
 
 const initialState = {
     positions: []
@@ -10,6 +10,10 @@ function positionReducer(state = initialState, action) {
             return Object.assign({}, state, {
                 positions: state.positions.concat(action.payload)
             });
+        case ADD_POSITION_SUCCESS:
+            return Object.assign({}, state, { success: true })
+        case ADD_POSITION_ERROR:
+            return Object.assign({}, state, { hasError: true, message: action.error })
         default:
             return state
     }

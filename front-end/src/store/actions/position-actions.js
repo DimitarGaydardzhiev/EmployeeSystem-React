@@ -1,5 +1,5 @@
-import { GET_ALL_POSITIONS_SUCCESS } from '../constants/action-types';
-import { getAllPositions } from '../../services/api-service';
+import { GET_ALL_POSITIONS_SUCCESS, ADD_POSITION_SUCCESS } from '../constants/action-types';
+import { getAllPositions, addPosition } from '../../services/api-service';
 
 function getAllPositionsSuccess(payload) {
     return {
@@ -17,13 +17,21 @@ function getAllPositionsAction() {
     }
 }
 
-function addPositionAction() {
-    // return async (dispatch) => {
-    //     return getAllDepartments()
-    //         .then(payload => {
-    //             dispatch(getAllDepartmentsSuccess(payload))
-    //         })
-    // }
+function addPositionAction(name) {
+    return async (dispatch) => {
+        debugger
+        return addPosition(name)
+            .then(payload => {
+                dispatch(addPositionSuccess(payload))
+            })
+    }
+}
+
+function addPositionSuccess(payload) {
+    return {
+        type: ADD_POSITION_SUCCESS,
+        payload
+    }
 }
 
 export {

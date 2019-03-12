@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from 'react'
-import { getAllDepartmentsAction } from '../store/actions/department-actions';
+import { getAllDepartmentsAction } from '../../store/actions/department-actions';
 import { connect } from 'react-redux'
-import AdministrationDataRow from '../components/administration-data-row';
 import { Button } from 'react-bootstrap';
+import AdministrationDataRow from '../../components/administration-data-row';
 
 class DepartmentManagement extends Component {
     constructor(props) {
