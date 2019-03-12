@@ -1,9 +1,21 @@
 import React, { Component, Fragment } from 'react'
-import getAllDepartmentsAction from '../store/actions/department-actions';
+import { getAllDepartmentsAction } from '../store/actions/department-actions';
 import { connect } from 'react-redux'
 import AdministrationDataRow from '../components/administration-data-row';
+import { Button } from 'react-bootstrap';
 
 class DepartmentManagement extends Component {
+    constructor(props) {
+        super(props)
+
+        this.routeChange = this.routeChange.bind(this);
+    }
+
+    routeChange() {
+        let path = `/departments/add`;
+        this.props.history.push(path);
+    }
+
     componentWillMount() {
         this.props.getAllDepartments()
     }
@@ -29,6 +41,12 @@ class DepartmentManagement extends Component {
                         }
                     </tbody>
                 </table>
+                <div className="text-right">
+                    <Button className="px-4"
+                        onClick={this.routeChange}>
+                        Add
+                    </Button>
+                </div>
             </Fragment>
         )
     }

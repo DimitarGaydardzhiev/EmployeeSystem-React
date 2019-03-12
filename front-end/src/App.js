@@ -13,6 +13,8 @@ import Auth from './utils/auth';
 import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { logoutAction } from './store/actions/auth-actions';
+import AddDepartment from './views/departments/add';
+import AddPosition from './views/positions/add';
 
 class App extends Component {
   constructor(props) {
@@ -58,7 +60,9 @@ class App extends Component {
             <Switch>
               <Route path='/login' component={() => <Login loggedIn={this.state.loggedIn} />} />
               <PrivateRoute path="/departments/all" exact component={DepartmentManagement}></PrivateRoute>
+              <PrivateRoute path="/departments/add" exact component={AddDepartment}></PrivateRoute>
               <PrivateRoute path="/positions/all" exact component={PositionManagement}></PrivateRoute>
+              <PrivateRoute path="/positions/add" exact component={AddPosition}></PrivateRoute>
               <PrivateRoute path="/employees/all" exact component={EmployeeManagement}></PrivateRoute>
               <PrivateRoute path="/employees/former" exact component={FormerEmployeeManagement}></PrivateRoute>
               <Route path='/' component={() => <Home loggedIn={this.state.loggedIn} />} />

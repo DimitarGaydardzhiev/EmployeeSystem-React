@@ -17,4 +17,16 @@ function getAllPositionsAction() {
     }
 }
 
-export default getAllPositionsAction
+function addPositionAction() {
+    // return async (dispatch) => {
+    //     return getAllDepartments()
+    //         .then(payload => {
+    //             dispatch(getAllDepartmentsSuccess(payload))
+    //         })
+    // }
+}
+
+export {
+    getAllPositionsAction,
+    addPositionAction
+}

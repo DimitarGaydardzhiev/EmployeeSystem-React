@@ -1,9 +1,21 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
-import getAllPositionsAction from '../store/actions/position-actions';
+import { getAllPositionsAction } from '../store/actions/position-actions';
 import AdministrationDataRow from '../components/administration-data-row';
+import { Button } from 'react-bootstrap';
 
 class PositionManagement extends Component {
+    constructor(props) {
+        super(props)
+
+        this.routeChange = this.routeChange.bind(this);
+    }
+
+    routeChange() {
+        let path = `/positions/add`;
+        this.props.history.push(path);
+    }
+
     componentWillMount() {
         this.props.getAllPositions()
     }
@@ -29,6 +41,12 @@ class PositionManagement extends Component {
                         }
                     </tbody>
                 </table>
+                <div class="text-right">
+                    <Button className="px-4"
+                        onClick={this.routeChange}>
+                        Add
+                    </Button>
+                </div>
             </Fragment>
         )
     }

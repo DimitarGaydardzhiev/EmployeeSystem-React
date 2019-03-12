@@ -44,8 +44,8 @@ namespace EmployeeSystem.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "administrator")]
-        public IActionResult Save(DepartmentDto model)
+        //[Authorize(Roles = "administrator")]
+        public IActionResult Save([FromBody] DepartmentDto model)
         {
             ModelState.Remove("Id");
             if (ModelState.IsValid)

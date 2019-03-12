@@ -10,5 +10,7 @@ export default {
   formerEmployees: employeeReducer,
   login: loginReducer,
   //loginError: loginErrorReducer,
-  formerEmployees: employeeReducer
+  formerEmployees: employeeReducer,
+  addDepartment: departmentReducer,
+  addDepartmentError: departmentReducer
 }

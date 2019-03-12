@@ -35,6 +35,20 @@ async function login(email, password) {
     return res
 }
 
+async function addDepartment(name) {
+    const res = await window.fetch(host + 'department/save', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            name
+        })
+    })
+    
+    return res
+}
+
 
 // async function register(username, email, password) {
 //     const res = await window.fetch(host + 'auth/signup', {
@@ -196,5 +210,6 @@ export {
     getAllPositions,
     getAllEmployees,
     getAllFormerEmployees,
-    login
+    login,
+    addDepartment
 }
