@@ -4,6 +4,8 @@ import { connect } from 'react-redux'
 import { addPositionAction } from '../../store/actions/position-actions';
 import Input from '../../common/Input';
 import Button from '../../common/Button';
+import singleNameValidator from '../../utils/singleNameValidator';
+import toastr from 'toastr';
 
 class AddPosition extends Component {
   constructor(props) {
@@ -23,7 +25,7 @@ class AddPosition extends Component {
 
   onSubmit(e) {
     e.preventDefault()
-    //if (!loginValidator(this.state.email, this.state.password)) return
+    if (!singleNameValidator(this.state.name)) return
     this.props.addPosition(this.state.name)
   }
 
@@ -33,7 +35,7 @@ class AddPosition extends Component {
       //toastr.error(nextProps.createProductError.message)
     } else if (nextProps.addPositionSuccess) {
       //this.props.redirect()
-      //toastr.success('Department created successfully')
+      toastr.success('Position created successfully')
       this.props.history.push('/positions/all')
     }
   }

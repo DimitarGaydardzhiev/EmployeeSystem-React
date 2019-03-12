@@ -29,10 +29,10 @@ const Header = (props) => {
                     {
                         loggedIn &&
                         <NavDropdown title="Requests" id="requests">
-                            <NavDropdown.Item href="#action/3.1">My Requests</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">New Requests</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Pending Requests</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Approved Requests</NavDropdown.Item>
+                            <NavDropdown.Item href="/requests/my">My Requests</NavDropdown.Item>
+                            <NavDropdown.Item href="/requests/new">New Requests</NavDropdown.Item>
+                            <NavDropdown.Item href="/requests/pending">Pending Requests</NavDropdown.Item>
+                            <NavDropdown.Item href="/requests/approved">Approved Requests</NavDropdown.Item>
                         </NavDropdown>
                     }
                     {

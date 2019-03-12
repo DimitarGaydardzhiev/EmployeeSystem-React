@@ -5,6 +5,7 @@
   "dependencies": {
     "bootstrap": "^4.3.1",
     "history": "^4.7.2",
+    "jquery": "^3.3.1",
     "jwt-decode": "^2.2.0",
     "rc-datepicker": "^5.0.13",
     "react": "^16.8.4",
@@ -19,6 +20,7 @@
     "react-router-redux": "^4.0.8",
     "react-scripts": "2.1.8",
     "react-thunk": "^1.0.0",
+    "reactjs-toastr": "^1.1.0",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
     "toastr": "^2.1.4"

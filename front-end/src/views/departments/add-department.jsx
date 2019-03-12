@@ -2,9 +2,10 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { addDepartmentAction } from '../../store/actions/department-actions';
-import { toastr } from 'toastr';
+import toastr from 'toastr';
 import Input from '../../common/Input';
 import Button from '../../common/Button';
+import singleNameValidator from '../../utils/singleNameValidator';
 
 class AddDepartment extends Component {
   constructor(props) {
@@ -24,7 +25,7 @@ class AddDepartment extends Component {
 
   onSubmit(e) {
     e.preventDefault()
-    //if (!loginValidator(this.state.email, this.state.password)) return
+    if (!singleNameValidator(this.state.name)) return
     this.props.addDepartment(this.state.name)
   }
 
@@ -34,7 +35,7 @@ class AddDepartment extends Component {
       //toastr.error(nextProps.createProductError.message)
     } else if (nextProps.addDepartmentSuccess) {
       //this.props.redirect()
-      //toastr.success('Department created successfully')
+      toastr.success('Department created successfully')
       this.props.history.push('/departments/all')
     }
   }

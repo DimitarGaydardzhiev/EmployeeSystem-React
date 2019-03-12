@@ -1,5 +1,6 @@
-import { GET_ALL_DEPARTMENTS_SUCCESS, ADD_DEPARTMENT_SUCCESS } from '../constants/action-types';
+import { GET_ALL_DEPARTMENTS_SUCCESS, ADD_DEPARTMENT_SUCCESS, ADD_DEPARTMENT_ERROR } from '../constants/action-types';
 import { getAllDepartments, addDepartment } from '../../services/api-service';
+import errorHandler from '../../utils/errorHandler'
 
 function getAllDepartmentsSuccess(payload) {
     return {
@@ -22,7 +23,12 @@ function addDepartmentAction(name) {
         debugger
         return addDepartment(name)
             .then(payload => {
-                dispatch(addDepartmentSuccess(payload))
+                if (payload.status == 200) {
+                    dispatch(addDepartmentSuccess(payload))
+                } else {
+                    debugger
+                    dispatch(addDepartmentError())
+                }
             })
     }
 }
@@ -30,6 +36,13 @@ function addDepartmentAction(name) {
 function addDepartmentSuccess(payload) {
     return {
         type: ADD_DEPARTMENT_SUCCESS,
+        payload
+    }
+}
+
+function addDepartmentError(payload) {
+    return {
+        type: ADD_DEPARTMENT_ERROR,
         payload
     }
 }
