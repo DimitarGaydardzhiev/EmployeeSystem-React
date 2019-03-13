@@ -4,18 +4,19 @@ import { connect } from 'react-redux'
 import { Button } from 'react-bootstrap';
 import AdministrationDataRow from '../../components/administration-data-row';
 import { getMyRequestsAction } from '../../store/actions/request-actions';
+import RequestDataRow from '../../components/request-data-row';
 
 class MyRequests extends Component {
   constructor(props) {
     super(props)
 
-    //this.routeChange = this.routeChange.bind(this);
+    this.redirect = this.redirect.bind(this);
   }
 
-  // routeChange() {
-  //     let path = `/departments/add`;
-  //     this.props.history.push(path);
-  // }
+  redirect() {
+      let path = `/requests/new`;
+      this.props.history.push(path);
+  }
 
   componentWillMount() {
     this.props.getMyRequests()
@@ -24,9 +25,34 @@ class MyRequests extends Component {
   render() {
     const { myRequests } = this.props.myRequests
     console.log(myRequests)
+
     return (
       <Fragment>
-        <div></div>
+        <h3 className="d-mgmt text-center">My Requests</h3>
+        <table className="table table-hover">
+          <thead>
+            <tr>
+              <th>From</th>
+              <th>To</th>
+              <th>Request Type</th>
+              <th>Description</th>
+              <th>Is Approved</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              myRequests.map(p => (
+                <RequestDataRow key={p.id} data={p} />
+              ))
+            }
+          </tbody>
+        </table>
+        <div className="text-right pr-5">
+          <Button className="px-4"
+            onClick={this.redirect}>
+            Add
+                    </Button>
+        </div>
       </Fragment>
     )
   }
