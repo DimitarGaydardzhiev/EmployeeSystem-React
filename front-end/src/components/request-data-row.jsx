@@ -2,7 +2,7 @@ import React from 'react'
 
 const RequestDataRow = (props) => {
     const { user, from, to, requestType, description, isApproved } = props.data
-    debugger
+    
     return (
         <tr>
             <td>{user}</td>

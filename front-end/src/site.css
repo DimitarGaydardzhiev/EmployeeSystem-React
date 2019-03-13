@@ -1,3 +1,17 @@
 .d-mgmt {
     padding: 1rem;
 }
+
+.center {
+    display: flex;
+    margin: 0 auto;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    width: 30%;
+    padding: 2rem;
+}
