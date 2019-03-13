@@ -18,5 +18,8 @@ export default {
   addPosition: positionReducer,
   addPositionError: positionReducer,
   roles: roleReducer,
-  myRequests: requestReducer
+  myRequests: requestReducer,
+  addRequest: requestReducer,
+  addRequestError: requestReducer,
+  requestTypes: requestReducer
 }

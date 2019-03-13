@@ -7,6 +7,8 @@ using ServiceLayer.ErrorUtils;
 using ServiceLayer.Interfaces;
 using ServiceLayer.Utils;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace EmployeeSystem.Controllers
 {
@@ -16,7 +18,7 @@ namespace EmployeeSystem.Controllers
     {
         private readonly IRequestService service;
 
-        public RequestController(IRequestService service, IToastNotification toastNotification) 
+        public RequestController(IRequestService service, IToastNotification toastNotification)
             : base(toastNotification)
         {
             this.service = service;
@@ -44,12 +46,16 @@ namespace EmployeeSystem.Controllers
             return View();
         }
 
+        [HttpGet]
+        public IEnumerable<BaseDto> GetRequestTypes()
+        {
+            return service.GetRequestTypes();
+        }
+
         [HttpPost]
         [Authorize]
-        public IActionResult Save(RequestDto model)
+        public IActionResult Save([FromBody] RequestDto model)
         {
-            ModelState.Remove("Id");
-            ViewBag.RequestTypes = service.GetRequestTypes();
             if (ModelState.IsValid)
             {
                 try
@@ -65,15 +71,14 @@ namespace EmployeeSystem.Controllers
 
                 return RedirectToAction("MyRequests");
             }
-            
+
             return View("Add", model);
         }
 
         [HttpGet]
-        public IActionResult MyRequests()
+        public IEnumerable<RequestDto> MyRequests()
         {
-            var result = service.GetMyRequests();
-            return View(result);
+            return service.GetMyRequests();
         }
 
         [HttpGet]

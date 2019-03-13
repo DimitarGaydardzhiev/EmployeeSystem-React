@@ -81,7 +81,7 @@ async function getMyRequests() {
         }
     })
 
-    return res
+    return res.json()
 }
 
 async function addPosition(name) {
@@ -96,6 +96,34 @@ async function addPosition(name) {
     })
 
     return res
+}
+
+async function addRequest(from, to, description, requestTypeId) {
+    const res = await window.fetch(host + 'request/save', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'userId': Auth.getUserId(),
+            'Authorization': 'bearer ' + Auth.getToken()
+        },
+        body: JSON.stringify({
+            from, to, description, requestTypeId
+        })
+    })
+
+    return res
+}
+
+async function getRequestTypes() {
+    const res = await window.fetch(host + 'request/getRequestTypes', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'bearer ' + Auth.getToken()
+        }
+    })
+
+    return res.json()
 }
 
 
@@ -264,5 +292,7 @@ export {
     addDepartment,
     addPosition,
     getAllRoles,
-    getMyRequests
+    getMyRequests,
+    addRequest,
+    getRequestTypes
 }

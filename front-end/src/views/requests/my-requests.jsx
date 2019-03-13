@@ -23,7 +23,7 @@ class MyRequests extends Component {
 
   render() {
     const { myRequests } = this.props.myRequests
-
+    console.log(myRequests)
     return (
       <Fragment>
         <div></div>

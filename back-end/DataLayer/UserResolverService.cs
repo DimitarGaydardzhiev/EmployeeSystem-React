@@ -25,16 +25,25 @@ namespace DataLayer
 
         public int GetUserId()
         {
+            //int number = 0;
+            //var aspUserId = context.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+            //if (aspUserId != null)
+            //{
+            //    var user = userManager.Users
+            //            .Include(u => u.EmployeeUser)
+            //            .FirstOrDefaultAsync(u => u.Id == aspUserId).Result;
+
+            //    number = user.EmployeeUser.Id;
+            //}
+
+            //return number;
+
             int number = 0;
-            var aspUserId = context.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
 
-            if (aspUserId != null)
+            if (context.HttpContext.Request.Headers["UserId"].Count > 0)
             {
-                var user = userManager.Users
-                        .Include(u => u.EmployeeUser)
-                        .FirstOrDefaultAsync(u => u.Id == aspUserId).Result;
-
-                number = user.EmployeeUser.Id;
+                bool result = Int32.TryParse(context.HttpContext.Request.Headers["UserId"][0], out number);
             }
 
             return number;
