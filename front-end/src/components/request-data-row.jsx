@@ -1,10 +1,11 @@
 import React from 'react'
 
 const RequestDataRow = (props) => {
-    const { from, to, requestType, description, isApproved } = props.data
+    const { user, from, to, requestType, description, isApproved } = props.data
     debugger
     return (
         <tr>
+            <td>{user}</td>
             <td>{from}</td>
             <td>{to}</td>
             <td>{requestType}</td>

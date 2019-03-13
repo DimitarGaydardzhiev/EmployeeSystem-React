@@ -83,10 +83,9 @@ namespace EmployeeSystem.Controllers
 
         [HttpGet]
         [Authorize(Roles = "administrator")]
-        public IActionResult Pending()
+        public IEnumerable<RequestDto> Pending()
         {
-            var result = service.GetPendingRequests();
-            return View(result);
+            return service.GetPendingRequests();
         }
 
         [HttpPost]
@@ -106,10 +105,9 @@ namespace EmployeeSystem.Controllers
         }
 
         [HttpGet]
-        public IActionResult Approved()
+        public IEnumerable<RequestDto> Approved()
         {
-            var result = service.GetApprovedRequests();
-            return View(result);
+            return service.GetApprovedRequests();
         }
 
         [HttpPost]

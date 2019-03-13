@@ -126,6 +126,30 @@ async function getRequestTypes() {
     return res.json()
 }
 
+async function getPendingRequests() {
+    const res = await window.fetch(host + 'request/pending', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'bearer ' + Auth.getToken()
+        }
+    })
+
+    return res.json()
+}
+
+async function getApprovedRequests() {
+    const res = await window.fetch(host + 'request/approved', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'bearer ' + Auth.getToken()
+        }
+    })
+
+    return res.json()
+}
+
 
 // async function register(username, email, password) {
 //     const res = await window.fetch(host + 'auth/signup', {
@@ -294,5 +318,7 @@ export {
     getAllRoles,
     getMyRequests,
     addRequest,
-    getRequestTypes
+    getRequestTypes,
+    getPendingRequests,
+    getApprovedRequests
 }

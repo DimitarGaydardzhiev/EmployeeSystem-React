@@ -18,6 +18,8 @@ import positionManagement from './views/positions/position-management';
 import AddEmployee from './views/employees/add-employee';
 import MyRequests from './views/requests/my-requests';
 import AddRequest from './views/requests/add-request';
+import PendingRequests from './views/requests/pending-requests';
+import ApprovedRequests from './views/requests/approved-requests';
 
 class App extends Component {
   constructor(props) {
@@ -71,6 +73,8 @@ class App extends Component {
               <PrivateRoute path="/employees/add" exact component={AddEmployee}></PrivateRoute>
               <PrivateRoute path="/requests/my" exact component={MyRequests}></PrivateRoute>
               <PrivateRoute path="/requests/new" exact component={AddRequest}></PrivateRoute>
+              <PrivateRoute path="/requests/pending" exact component={PendingRequests}></PrivateRoute>
+              <PrivateRoute path="/requests/approved" exact component={ApprovedRequests}></PrivateRoute>
               <Route path='/' component={() => <Home loggedIn={this.state.loggedIn} />} />
             </Switch>
             <Footer />

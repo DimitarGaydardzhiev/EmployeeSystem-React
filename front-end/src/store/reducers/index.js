@@ -21,5 +21,7 @@ export default {
   myRequests: requestReducer,
   addRequest: requestReducer,
   addRequestError: requestReducer,
-  requestTypes: requestReducer
+  requestTypes: requestReducer,
+  pendingRequests: requestReducer,
+  approvedRequests: requestReducer
 }
