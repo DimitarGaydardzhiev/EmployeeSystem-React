@@ -50,6 +50,7 @@ function authenticateUser(res) {
       window.localStorage.setItem('authToken', json)
       window.localStorage.setItem('username', tokenPayload.sub)
       window.localStorage.setItem('roles', tokenPayload.role)
+      window.localStorage.setItem('userId', tokenPayload.id)
     })
 }
 

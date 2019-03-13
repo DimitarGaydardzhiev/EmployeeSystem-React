@@ -1,17 +1,17 @@
 class Auth {
-  static isUserAuthenticated () {
+  static isUserAuthenticated() {
     return window.localStorage.getItem('authToken') !== null
   }
 
-  static getToken () {
+  static getToken() {
     return window.localStorage.getItem('authToken')
   }
 
-  static getUsername () {
+  static getUsername() {
     return window.localStorage.getItem('username')
   }
 
-  static isUserAdmin () {
+  static isUserAdmin() {
     let roles = window.localStorage.getItem('roles')
     if (!roles) {
       return false
@@ -23,6 +23,10 @@ class Auth {
     }
 
     return false
+  }
+
+  static getUserId() {
+    return window.localStorage.getItem('userId')
   }
 }
 

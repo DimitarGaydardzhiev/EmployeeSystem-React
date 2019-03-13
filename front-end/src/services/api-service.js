@@ -1,3 +1,5 @@
+import Auth from "../utils/auth";
+
 const host = 'http://localhost:54330/'
 
 async function getAllDepartments() {
@@ -64,6 +66,19 @@ async function addDepartment(name) {
         body: JSON.stringify({
             name
         })
+    })
+
+    return res
+}
+
+async function getMyRequests() {
+    const res = await window.fetch(host + 'request/myRequests', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'userId': Auth.getUserId(),
+            'Authorization': 'bearer ' + Auth.getToken()
+        }
     })
 
     return res
@@ -248,5 +263,6 @@ export {
     register,
     addDepartment,
     addPosition,
-    getAllRoles
+    getAllRoles,
+    getMyRequests
 }

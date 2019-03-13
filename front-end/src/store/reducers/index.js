@@ -3,6 +3,7 @@ import positionReducer from './position-reducer';
 import employeeReducer from './employee-reducer';
 import { loginReducer, loginErrorReducer } from './auth-reducers';
 import roleReducer from './role-reducers';
+import requestReducer from './request-reducers';
 
 export default {
   departments: departmentReducer,
@@ -16,5 +17,6 @@ export default {
   addDepartmentError: departmentReducer,
   addPosition: positionReducer,
   addPositionError: positionReducer,
-  roles: roleReducer
+  roles: roleReducer,
+  myRequests: requestReducer
 }
