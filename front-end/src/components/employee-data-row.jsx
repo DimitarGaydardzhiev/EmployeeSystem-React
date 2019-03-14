@@ -1,7 +1,8 @@
 import React from 'react'
+import DeleteComponent from './delete'
 
 const EmployeeDataRow = (props) => {
-    const { firstName, lastName, position, birthday, startingDate, department, description } = props.data
+    const { firstName, lastName, position, birthday, startingDate, department, description, id } = props.data
     return (
         <tr>
             <td>{firstName} {lastName}</td>
@@ -11,7 +12,7 @@ const EmployeeDataRow = (props) => {
             <td>{department}</td>
             <td>{description}</td>
             <td>
-                <a className="btn btn-danger disabled" role="button">Delete</a>
+                <DeleteComponent id={id} name="employee" />
             </td>
         </tr>
     )

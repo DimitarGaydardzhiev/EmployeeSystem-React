@@ -3,8 +3,8 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Header from './components/header';
 import Footer from './components/footer';
 import Home from './views/home';
-import EmployeeManagement from './views/employees/employee-management.jsx';
-import FormerEmployeeManagement from './views/employees/former-employee-management.jsx';
+import EmployeeManagement from './views/employees/employee-mgmt.jsx';
+import FormerEmployeeManagement from './views/employees/former-employee-mgmt.jsx';
 import Login from './views/login';
 import PrivateRoute from './Routes/PrivateRoute';
 import Auth from './utils/auth';
@@ -14,7 +14,7 @@ import { logoutAction } from './store/actions/auth-actions';
 import DepartmentComponent from './views/departments/department.jsx';
 import DepartmentManagement from './views/departments/departments-mgmt';
 import PositionManagement from './views/positions/position-mgmt';
-import AddEmployee from './views/employees/add-employee';
+import EmployeeComponent from './views/employees/employee';
 import MyRequests from './views/requests/my-requests';
 import AddRequest from './views/requests/add-request';
 import PendingRequests from './views/requests/pending-requests';
@@ -72,7 +72,7 @@ class App extends Component {
               <PrivateRoute path="/positions/:id" exact component={PositionComponent}></PrivateRoute>
               <PrivateRoute path="/employees/all" exact component={EmployeeManagement}></PrivateRoute>
               <PrivateRoute path="/employees/former" exact component={FormerEmployeeManagement}></PrivateRoute>
-              <PrivateRoute path="/employees/add" exact component={AddEmployee}></PrivateRoute>
+              <PrivateRoute path="/employees/add" exact component={EmployeeComponent}></PrivateRoute>
               <PrivateRoute path="/requests/my" exact component={MyRequests}></PrivateRoute>
               <PrivateRoute path="/requests/new" exact component={AddRequest}></PrivateRoute>
               <PrivateRoute path="/requests/pending" exact component={PendingRequests}></PrivateRoute>

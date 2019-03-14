@@ -34,6 +34,12 @@ namespace EmployeeSystem.Controllers
         }
 
         [HttpGet]
+        public IEnumerable<RoleDto> GetRoles()
+        {
+            return service.GetRoles();
+        }
+
+        [HttpGet]
         [Authorize(Roles = "administrator")]
         public IActionResult Add()
         {
@@ -46,6 +52,7 @@ namespace EmployeeSystem.Controllers
 
         [HttpPost]
         [Authorize(Roles = "administrator")]
+        [Route("{id}")]
         public IActionResult Delete(int id)
         {
             if (id == 0)

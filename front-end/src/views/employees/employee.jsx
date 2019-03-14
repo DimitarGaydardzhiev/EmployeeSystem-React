@@ -11,7 +11,7 @@ import { getAllPositionsAction } from '../../store/actions/position-actions';
 import { getAllRolesAction } from '../../store/actions/role-actions';
 import { registerAction } from '../../store/actions/employee-actions';
 
-class AddEmployee extends Component {
+class EmployeeComponent extends Component {
     constructor(props) {
         super(props)
 
@@ -180,4 +180,4 @@ function mapDispatchToProps(dispatch) {
     }
 }
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(AddEmployee));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(EmployeeComponent));
