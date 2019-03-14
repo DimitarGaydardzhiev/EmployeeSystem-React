@@ -44,7 +44,7 @@ namespace EmployeeSystem.Controllers
 
         [HttpPost]
         [Authorize(Roles = "administrator")]
-        public IActionResult Save(PositionDto model)
+        public IActionResult Save([FromBody] PositionDto model)
         {
             ModelState.Remove("Id");
             if (ModelState.IsValid)

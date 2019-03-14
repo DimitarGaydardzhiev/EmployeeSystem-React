@@ -41,7 +41,7 @@ class PositionComponent extends Component {
     } else if (nextProps.addPositionSuccess) {
       //this.props.redirect()
       toastr.success('Position saved successfully')
-      this.props.history.push('/positions/all')
+      window.location='/positions/all'
     } else {
       if (this.positionId && nextProps.positions.positions.length) {
         let position = nextProps.positions.positions.find(d => d.id === this.positionId)

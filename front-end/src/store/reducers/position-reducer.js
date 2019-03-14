@@ -7,7 +7,6 @@ const initialState = {
 function positionReducer(state = initialState, action) {
     switch (action.type) {
         case GET_ALL_POSITIONS_SUCCESS:
-        debugger
             return Object.assign({}, state, {
                 positions: action.payload
             });

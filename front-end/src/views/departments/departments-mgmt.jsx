@@ -22,7 +22,6 @@ class DepartmentManagement extends Component {
 
     render() {
         const { departments } = this.props.departments
-        console.log(departments)
 
         return (
             <Fragment>

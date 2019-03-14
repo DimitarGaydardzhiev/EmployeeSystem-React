@@ -32,7 +32,12 @@ class DepartmentComponent extends Component {
   }
 
   componentWillMount() {
+    debugger
     this.props.getAllDepartments()
+  }
+
+  componentWillUnmount(){
+    debugger
   }
 
   componentWillReceiveProps(nextProps) {
@@ -41,7 +46,8 @@ class DepartmentComponent extends Component {
     } else if (nextProps.addDepartmentSuccess) {
       //this.props.redirect()
       toastr.success('Department saved successfully')
-      this.props.history.push('/departments/all')
+      //this.props.history.push('/departments/all')
+      window.location='/departments/all'
     } else {
       if (this.departmentId && nextProps.departments.departments.length) {
         let department = nextProps.departments.departments.find(d => d.id === this.departmentId)
