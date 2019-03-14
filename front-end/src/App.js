@@ -66,6 +66,7 @@ class App extends Component {
               <Route path='/login' component={() => <Login loggedIn={this.state.loggedIn} />} />
               <PrivateRoute path="/departments/all" exact component={DepartmentManagement}></PrivateRoute>
               <PrivateRoute path="/departments/add" exact component={AddDepartment}></PrivateRoute>
+              <PrivateRoute path="/departments/:id" exact component={AddDepartment}></PrivateRoute>
               <PrivateRoute path="/positions/all" exact component={positionManagement}></PrivateRoute>
               <PrivateRoute path="/positions/add" exact component={AddPosition}></PrivateRoute>
               <PrivateRoute path="/employees/all" exact component={EmployeeManagement}></PrivateRoute>

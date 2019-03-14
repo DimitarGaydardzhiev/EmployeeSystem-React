@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { addDepartmentAction } from '../../store/actions/department-actions';
+import { addDepartmentAction, getAllDepartmentsAction } from '../../store/actions/department-actions';
 import toastr from 'toastr';
 import Input from '../../common/Input';
 import Button from '../../common/Button';
@@ -17,6 +17,7 @@ class AddDepartment extends Component {
 
     this.onChange = this.onChange.bind(this)
     this.onSubmit = this.onSubmit.bind(this)
+    this.departmentId = this.props.match.params.id
   }
 
   onChange(e) {
@@ -27,6 +28,12 @@ class AddDepartment extends Component {
     e.preventDefault()
     if (!singleNameValidator(this.state.name)) return
     this.props.addDepartment(this.state.name)
+  }
+
+  componentWillMount() {
+    if (this.departmentId) {
+      this.props.getAllDepartments()
+    }
   }
 
   componentWillReceiveProps(nextProps) {
@@ -40,7 +47,13 @@ class AddDepartment extends Component {
     }
   }
 
+  getDepartment() {
+    var deparment = this.props.departments.find(d => d.id === this.departmentId)
+    console.log(deparment)
+  }
+
   render() {
+    console.log(this.props.departments)
     return (
       <div className="row">
         <div className="col-md-4"></div>
@@ -67,14 +80,15 @@ class AddDepartment extends Component {
 function mapStateToProps(state) {
   return {
     addDepartmentSuccess: state.addDepartment.success,
-    addDepartmentError: state.addDepartmentError
+    addDepartmentError: state.addDepartmentError,
+    departments: state.departments
   }
 }
 
 function mapDispatchToProps(dispatch) {
   return {
     addDepartment: (name) => dispatch(addDepartmentAction(name)),
-    //redirect: () => dispatch(redirectAction())
+    getAllDepartments: () => dispatch(getAllDepartmentsAction())
   }
 }
 
