@@ -8,7 +8,7 @@ function roleReducer(state = initialState, action) {
     switch (action.type) {
         case GET_ALL_ROLES_SUCCESS:
             return Object.assign({}, state, {
-                roles: state.roles.concat(action.payload)
+                roles: action.payload
             });
         default:
             return state

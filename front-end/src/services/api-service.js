@@ -57,14 +57,16 @@ async function register(firstName, lastName, email, password, confirmPassword, r
     return res
 }
 
-async function addDepartment(name) {
+async function addDepartment(name, id) {
     const res = await window.fetch(host + 'department/save', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authorization': 'bearer ' + Auth.getToken()
         },
         body: JSON.stringify({
-            name
+            name,
+            id
         })
     })
 
@@ -84,14 +86,16 @@ async function getMyRequests() {
     return res.json()
 }
 
-async function addPosition(name) {
+async function addPosition(name, id) {
+    debugger
     const res = await window.fetch(host + 'position/save', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authorization': 'bearer ' + Auth.getToken()
         },
         body: JSON.stringify({
-            name
+            name, id
         })
     })
 

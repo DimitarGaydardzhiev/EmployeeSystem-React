@@ -11,7 +11,7 @@ function requestReducer(state = initialState, action) {
   switch (action.type) {
     case GET_MY_REQUESTS_SUCCESS:
       return Object.assign({}, state, {
-        myRequests: state.myRequests.concat(action.payload)
+        myRequests: action.payload
       });
     case ADD_REQUEST_SUCCESS:
       return Object.assign({}, state, { success: true })
@@ -19,15 +19,15 @@ function requestReducer(state = initialState, action) {
       return Object.assign({}, state, { hasError: true, message: action.payload.text })
     case GET_REQUEST_TYPES_SUCCESS:
       return Object.assign({}, state, {
-        requestTypes: state.requestTypes.concat(action.payload)
+        requestTypes: action.payload
       });
     case GET_PENDING_REQUESTS_SUCCESS:
       return Object.assign({}, state, {
-        pendingRequests: state.pendingRequests.concat(action.payload)
+        pendingRequests: action.payload
       });
     case GET_APPROVED_REQUESTS_SUCCESS:
       return Object.assign({}, state, {
-        approvedRequests: state.approvedRequests.concat(action.payload)
+        approvedRequests: action.payload
       });
     default:
       return state

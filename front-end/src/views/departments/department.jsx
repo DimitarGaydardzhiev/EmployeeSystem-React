@@ -7,17 +7,18 @@ import Input from '../../common/Input';
 import Button from '../../common/Button';
 import singleNameValidator from '../../utils/singleNameValidator';
 
-class AddDepartment extends Component {
+class DepartmentComponent extends Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      name: ''
+      name: '',
+      id: 0
     }
 
     this.onChange = this.onChange.bind(this)
     this.onSubmit = this.onSubmit.bind(this)
-    this.departmentId = this.props.match.params.id
+    this.departmentId = Number(this.props.match.params.id)
   }
 
   onChange(e) {
@@ -27,33 +28,34 @@ class AddDepartment extends Component {
   onSubmit(e) {
     e.preventDefault()
     if (!singleNameValidator(this.state.name)) return
-    this.props.addDepartment(this.state.name)
+    this.props.addDepartment(this.state.name, this.state.id)
   }
 
   componentWillMount() {
-    if (this.departmentId) {
-      this.props.getAllDepartments()
-    }
+    this.props.getAllDepartments()
   }
 
   componentWillReceiveProps(nextProps) {
-    debugger
     if (nextProps.addDepartmentError.hasError) {
       //toastr.error(nextProps.createProductError.message)
     } else if (nextProps.addDepartmentSuccess) {
       //this.props.redirect()
-      toastr.success('Department created successfully')
+      toastr.success('Department saved successfully')
       this.props.history.push('/departments/all')
+    } else {
+      if (this.departmentId && nextProps.departments.departments.length) {
+        let department = nextProps.departments.departments.find(d => d.id === this.departmentId)
+        if (department) {
+          this.setState({
+            name: department.name,
+            id: department.id
+          })
+        }
+      }
     }
   }
 
-  getDepartment() {
-    var deparment = this.props.departments.find(d => d.id === this.departmentId)
-    console.log(deparment)
-  }
-
   render() {
-    console.log(this.props.departments)
     return (
       <div className="row">
         <div className="col-md-4"></div>
@@ -66,7 +68,8 @@ class AddDepartment extends Component {
                 name='name'
                 label='Name'
                 placeholder='Department name'
-                onChange={this.onChange} />
+                onChange={this.onChange}
+                value={this.state.name} />
               <Button type='submit' className='btn btn-primary' value='Save' />
             </form>
           </section>
@@ -87,9 +90,9 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    addDepartment: (name) => dispatch(addDepartmentAction(name)),
+    addDepartment: (name, id) => dispatch(addDepartmentAction(name, id)),
     getAllDepartments: () => dispatch(getAllDepartmentsAction())
   }
 }
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(AddDepartment))
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(DepartmentComponent))

@@ -1,10 +1,10 @@
 import React, { Component, Fragment } from 'react'
-import { getAllDepartmentsAction } from '../../store/actions/department-actions';
 import { connect } from 'react-redux'
+import { getAllPositionsAction } from '../../store/actions/position-actions';
 import { Button } from 'react-bootstrap';
 import AdministrationDataRow from '../../components/administration-data-row';
 
-class DepartmentManagement extends Component {
+class PositionManagement extends Component {
     constructor(props) {
         super(props)
 
@@ -12,36 +12,37 @@ class DepartmentManagement extends Component {
     }
 
     routeChange() {
-        let path = `/departments/add`;
+        let path = `/positions/add`;
         this.props.history.push(path);
     }
 
     componentWillMount() {
-        this.props.getAllDepartments()
+        this.props.getAllPositions()
     }
 
     render() {
-        const { departments } = this.props.departments
+        const { positions } = this.props.positions
 
         return (
             <Fragment>
-                <h3 className="d-mgmt text-center">Departments Management</h3>
+                <h3 className="d-mgmt text-center">Positions Management</h3>
                 <table className="table table-hover">
                     <thead>
                         <tr>
                             <th>Name</th>
                             <th>Employees Count</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         {
-                            departments.map(d => (
-                                <AdministrationDataRow key={d.id} data={d} />
+                            positions.map(p => (
+                                <AdministrationDataRow key={p.id} data={p} tableType="positions" />
                             ))
                         }
                     </tbody>
                 </table>
-                <div className="text-right">
+                <div className="text-right pr-5">
                     <Button className="px-4"
                         onClick={this.routeChange}>
                         Add
@@ -54,14 +55,14 @@ class DepartmentManagement extends Component {
 
 function mapStateToProps(state) {
     return {
-        departments: state.departments
+        positions: state.positions
     }
 }
 
 function mapDispatchToProps(dispatch) {
     return {
-        getAllDepartments: () => dispatch(getAllDepartmentsAction()),
+        getAllPositions: () => dispatch(getAllPositionsAction()),
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(DepartmentManagement);
+export default connect(mapStateToProps, mapDispatchToProps)(PositionManagement);

@@ -7,8 +7,9 @@ const initialState = {
 function positionReducer(state = initialState, action) {
     switch (action.type) {
         case GET_ALL_POSITIONS_SUCCESS:
+        debugger
             return Object.assign({}, state, {
-                positions: state.positions.concat(action.payload)
+                positions: action.payload
             });
         case ADD_POSITION_SUCCESS:
             return Object.assign({}, state, { success: true })

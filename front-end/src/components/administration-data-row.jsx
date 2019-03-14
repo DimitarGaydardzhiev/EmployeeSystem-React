@@ -10,7 +10,7 @@ const AdministrationDataRow = (props) => {
             <td>{employeesCount}</td>
             <td>
                 <Link className="btn btn-warning" to={{
-                    pathname: `/departments/${id}`,
+                    pathname: `/${props.tableType}/${id}`,
                     state: {data: props.data }
                 }}>Edit</Link>
             </td>

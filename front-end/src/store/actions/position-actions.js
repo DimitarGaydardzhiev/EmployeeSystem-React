@@ -17,10 +17,10 @@ function getAllPositionsAction() {
     }
 }
 
-function addPositionAction(name) {
+function addPositionAction(name, id) {
     return async (dispatch) => {
         debugger
-        return addPosition(name)
+        return addPosition(name, id)
             .then(payload => {
                 dispatch(addPositionSuccess(payload))
             })

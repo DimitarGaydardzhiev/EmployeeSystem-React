@@ -18,10 +18,10 @@ function getAllDepartmentsAction() {
     }
 }
 
-function addDepartmentAction(name) {
+function addDepartmentAction(name, id) {
     return async (dispatch) => {
         debugger
-        return addDepartment(name)
+        return addDepartment(name, id)
             .then(payload => {
                 if (payload.status == 200) {
                     dispatch(addDepartmentSuccess(payload))

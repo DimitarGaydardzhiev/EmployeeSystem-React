@@ -11,15 +11,15 @@ import Auth from './utils/auth';
 import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { logoutAction } from './store/actions/auth-actions';
-import AddDepartment from './views/departments/add-department.jsx';
-import AddPosition from './views/positions/add-position.jsx';
-import DepartmentManagement from './views/departments/department-management';
-import positionManagement from './views/positions/position-management';
+import DepartmentComponent from './views/departments/department.jsx';
+import DepartmentManagement from './views/departments/departments-mgmt';
+import PositionManagement from './views/positions/position-mgmt';
 import AddEmployee from './views/employees/add-employee';
 import MyRequests from './views/requests/my-requests';
 import AddRequest from './views/requests/add-request';
 import PendingRequests from './views/requests/pending-requests';
 import ApprovedRequests from './views/requests/approved-requests';
+import PositionComponent from './views/positions/position.jsx';
 
 class App extends Component {
   constructor(props) {
@@ -65,10 +65,11 @@ class App extends Component {
             <Switch>
               <Route path='/login' component={() => <Login loggedIn={this.state.loggedIn} />} />
               <PrivateRoute path="/departments/all" exact component={DepartmentManagement}></PrivateRoute>
-              <PrivateRoute path="/departments/add" exact component={AddDepartment}></PrivateRoute>
-              <PrivateRoute path="/departments/:id" exact component={AddDepartment}></PrivateRoute>
-              <PrivateRoute path="/positions/all" exact component={positionManagement}></PrivateRoute>
-              <PrivateRoute path="/positions/add" exact component={AddPosition}></PrivateRoute>
+              <PrivateRoute path="/departments/add" exact component={DepartmentComponent}></PrivateRoute>
+              <PrivateRoute path="/departments/:id" exact component={DepartmentComponent}></PrivateRoute>
+              <PrivateRoute path="/positions/all" exact component={PositionManagement}></PrivateRoute>
+              <PrivateRoute path="/positions/add" exact component={PositionComponent}></PrivateRoute>
+              <PrivateRoute path="/positions/:id" exact component={PositionComponent}></PrivateRoute>
               <PrivateRoute path="/employees/all" exact component={EmployeeManagement}></PrivateRoute>
               <PrivateRoute path="/employees/former" exact component={FormerEmployeeManagement}></PrivateRoute>
               <PrivateRoute path="/employees/add" exact component={AddEmployee}></PrivateRoute>

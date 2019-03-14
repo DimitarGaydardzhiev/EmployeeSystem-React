@@ -1,22 +1,28 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { addPositionAction } from '../../store/actions/position-actions';
+import { addPositionAction, getAllPositionsAction } from '../../store/actions/position-actions';
 import Input from '../../common/Input';
 import Button from '../../common/Button';
 import singleNameValidator from '../../utils/singleNameValidator';
 import toastr from 'toastr';
 
-class AddPosition extends Component {
+class PositionComponent extends Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      name: ''
+      name: '',
+      id: 0
     }
 
     this.onChange = this.onChange.bind(this)
     this.onSubmit = this.onSubmit.bind(this)
+    this.positionId = Number(this.props.match.params.id)
+  }
+
+  componentWillMount() {
+    this.props.getAllPositions()
   }
 
   onChange(e) {
@@ -26,17 +32,26 @@ class AddPosition extends Component {
   onSubmit(e) {
     e.preventDefault()
     if (!singleNameValidator(this.state.name)) return
-    this.props.addPosition(this.state.name)
+    this.props.addPosition(this.state.name, this.state.id)
   }
 
   componentWillReceiveProps(nextProps) {
-    debugger
     if (nextProps.addPositionError.hasError) {
       //toastr.error(nextProps.createProductError.message)
     } else if (nextProps.addPositionSuccess) {
       //this.props.redirect()
-      toastr.success('Position created successfully')
+      toastr.success('Position saved successfully')
       this.props.history.push('/positions/all')
+    } else {
+      if (this.positionId && nextProps.positions.positions.length) {
+        let position = nextProps.positions.positions.find(d => d.id === this.positionId)
+        if (position) {
+          this.setState({
+            name: position.name,
+            id: position.id
+          })
+        }
+      }
     }
   }
 
@@ -53,7 +68,8 @@ class AddPosition extends Component {
                 name='name'
                 label='Name'
                 placeholder='Position name'
-                onChange={this.onChange} />
+                onChange={this.onChange}
+                value={this.state.name} />
               <Button type='submit' className='btn btn-primary' value='Save' />
             </form>
           </section>
@@ -67,14 +83,16 @@ class AddPosition extends Component {
 function mapStateToProps(state) {
   return {
     addPositionSuccess: state.addPosition.success,
-    addPositionError: state.addPositionError
+    addPositionError: state.addPositionError,
+    positions: state.positions
   }
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    addPosition: (name) => dispatch(addPositionAction(name)),
+    addPosition: (name, id) => dispatch(addPositionAction(name, id)),
+    getAllPositions: () => dispatch(getAllPositionsAction())
   }
 }
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(AddPosition))
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(PositionComponent))
