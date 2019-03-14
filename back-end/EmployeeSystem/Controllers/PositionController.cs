@@ -68,6 +68,7 @@ namespace EmployeeSystem.Controllers
 
         [HttpPost]
         [Authorize(Roles = "administrator")]
+        [Route("{id}")]
         public IActionResult Delete(int id)
         {
             if (id == 0)

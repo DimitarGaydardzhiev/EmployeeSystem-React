@@ -37,7 +37,7 @@ class DepartmentManagement extends Component {
                     <tbody>
                         {
                             departments.map(d => (
-                                <AdministrationDataRow key={d.id} data={d} tableType='departments' />
+                                <AdministrationDataRow key={d.id} data={d} tableType='departments' deleteController="department" />
                             ))
                         }
                     </tbody>

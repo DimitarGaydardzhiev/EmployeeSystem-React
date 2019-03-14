@@ -32,12 +32,13 @@ class PositionManagement extends Component {
                             <th>Name</th>
                             <th>Employees Count</th>
                             <th></th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         {
                             positions.map(p => (
-                                <AdministrationDataRow key={p.id} data={p} tableType="positions" />
+                                <AdministrationDataRow key={p.id} data={p} tableType="positions" deleteController="position" />
                             ))
                         }
                     </tbody>

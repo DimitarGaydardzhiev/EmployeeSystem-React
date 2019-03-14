@@ -12,6 +12,7 @@
     "react-bootstrap": "^1.0.0-beta.5",
     "react-bootstrap-date-picker": "^5.1.0",
     "react-bootstrap-datetimepicker": "0.0.22",
+    "react-confirm-alert": "^2.3.0",
     "react-date-picker-cs": "^0.1.28",
     "react-datepicker": "^2.1.0",
     "react-dom": "^16.8.4",

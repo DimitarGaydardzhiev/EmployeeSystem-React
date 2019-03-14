@@ -4,6 +4,7 @@ import employeeReducer from './employee-reducer';
 import { loginReducer, loginErrorReducer } from './auth-reducers';
 import roleReducer from './role-reducers';
 import requestReducer from './request-reducers';
+import deleteReducer from './delete-reducers';
 
 export default {
   departments: departmentReducer,
@@ -23,5 +24,7 @@ export default {
   addRequestError: requestReducer,
   requestTypes: requestReducer,
   pendingRequests: requestReducer,
-  approvedRequests: requestReducer
+  approvedRequests: requestReducer,
+  deleteSuccess: deleteReducer,
+  deleteError: deleteReducer,
 }

@@ -154,6 +154,17 @@ async function getApprovedRequests() {
     return res.json()
 }
 
+async function deleteItem(id, name) {
+    debugger
+    const res = await window.fetch(host + `${name}/delete/${id}`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'bearer ' + Auth.getToken()
+        }
+    })
+}
+
 
 // async function register(username, email, password) {
 //     const res = await window.fetch(host + 'auth/signup', {
@@ -324,5 +335,6 @@ export {
     addRequest,
     getRequestTypes,
     getPendingRequests,
-    getApprovedRequests
+    getApprovedRequests,
+    deleteItem
 }

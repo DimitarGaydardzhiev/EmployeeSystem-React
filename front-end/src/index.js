@@ -8,7 +8,8 @@ import store from "./store/index";
 import { BrowserRouter } from 'react-router-dom'
 import './site.css';
 import '../node_modules/toastr/build/toastr.min.css'
-import "react-datepicker/dist/react-datepicker.css";
+import "react-datepicker/dist/react-datepicker.css"
+import 'react-confirm-alert/src/react-confirm-alert.css'
 
 ReactDOM.render(
     <Provider store={store}>
