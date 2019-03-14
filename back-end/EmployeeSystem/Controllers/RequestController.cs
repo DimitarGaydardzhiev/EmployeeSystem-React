@@ -90,17 +90,19 @@ namespace EmployeeSystem.Controllers
 
         [HttpPost]
         [Authorize(Roles = "administrator")]
-        public IActionResult Approve(int requestId)
+        [Route("{id}")]
+        public IActionResult Approve(int id)
         {
-            service.ApproveRequest(requestId);
+            service.ApproveRequest(id);
             return RedirectToAction("Pending");
         }
 
         [HttpPost]
         [Authorize(Roles = "administrator")]
-        public IActionResult Unapprove(int requestId)
+        [Route("{id}")]
+        public IActionResult Unapprove(int id)
         {
-            service.UnapproveRequest(requestId);
+            service.UnapproveRequest(id);
             return RedirectToAction("Approved");
         }
 
@@ -111,6 +113,7 @@ namespace EmployeeSystem.Controllers
         }
 
         [HttpPost]
+        [Route("{id}")]
         public IActionResult Delete(int id)
         {
             if (id == 0)

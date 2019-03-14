@@ -1,5 +1,5 @@
-import { GET_MY_REQUESTS_SUCCESS, ADD_REQUEST_SUCCESS, GET_REQUEST_TYPES_SUCCESS, GET_PENDING_REQUESTS_SUCCESS, GET_APPROVED_REQUESTS_SUCCESS } from "../constants/action-types";
-import { getMyRequests, addRequest, getRequestTypes, getPendingRequests, getApprovedRequests } from "../../services/api-service";
+import { GET_MY_REQUESTS_SUCCESS, ADD_REQUEST_SUCCESS, GET_REQUEST_TYPES_SUCCESS, GET_PENDING_REQUESTS_SUCCESS, GET_APPROVED_REQUESTS_SUCCESS, APPROVE_REQUESTS_SUCCESS, UNAPPROVE_REQUESTS_SUCCESS } from "../constants/action-types";
+import { getMyRequests, addRequest, getRequestTypes, getPendingRequests, getApprovedRequests, unapproveRequest, approveRequest } from "../../services/api-service";
 
 function getMyRequestsSuccess(payload) {
     return {
@@ -81,10 +81,44 @@ function getApprovedRequestsSuccess(payload) {
     }
 }
 
+function approveAction(id) {
+    return async (dispatch) => {
+        return approveRequest(id)
+            .then(payload => {
+                dispatch(approveSuccess(payload))
+            })
+    }
+}
+
+function approveSuccess(payload) {
+    return {
+        type: APPROVE_REQUESTS_SUCCESS,
+        payload
+    }
+}
+
+function unapproveAction(id) {
+    return async (dispatch) => {
+        return unapproveRequest(id)
+            .then(payload => {
+                dispatch(unapproveSuccess(payload))
+            })
+    }
+}
+
+function unapproveSuccess(payload) {
+    return {
+        type: UNAPPROVE_REQUESTS_SUCCESS,
+        payload
+    }
+}
+
 export {
     getMyRequestsAction,
     addRequestAction,
     getRequestTypesAction,
     getPendingRequestsAction,
-    getApprovedRequestsAction
+    getApprovedRequestsAction,
+    approveAction,
+    unapproveAction
 }

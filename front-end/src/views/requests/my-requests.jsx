@@ -37,12 +37,14 @@ class MyRequests extends Component {
               <th>Request Type</th>
               <th>Description</th>
               <th>Is Approved</th>
+              <th></th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
             {
               myRequests.map(p => (
-                <RequestDataRow key={p.id} data={p} />
+                <RequestDataRow key={p.id} data={p} canDelete='true' />
               ))
             }
           </tbody>

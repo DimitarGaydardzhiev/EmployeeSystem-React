@@ -13,7 +13,6 @@ class DeleteComponent extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    debugger
     if (nextProps.deleteError.hasError) {
       //toastr.error(nextProps.createProductError.message)
     } else if (nextProps.deleteSuccess) {

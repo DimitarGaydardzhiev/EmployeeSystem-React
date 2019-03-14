@@ -27,4 +27,8 @@ export default {
   approvedRequests: requestReducer,
   deleteSuccess: deleteReducer,
   deleteError: deleteReducer,
+  approveSuccess: requestReducer,
+  unapproveSuccess: requestReducer,
+  approveError: requestReducer,
+  unapproveError: requestReducer,
 }

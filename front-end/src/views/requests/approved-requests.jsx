@@ -36,7 +36,7 @@ class ApprovedRequests extends Component {
                     <tbody>
                         {
                             approvedRequests.map(p => (
-                                <RequestDataRow key={p.id} data={p} />
+                                <RequestDataRow key={p.id} data={p} hasApprovalOptions='true' />
                             ))
                         }
                     </tbody>

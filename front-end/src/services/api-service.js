@@ -155,11 +155,35 @@ async function getApprovedRequests() {
 }
 
 async function deleteItem(id, name) {
-    debugger
     const res = await window.fetch(host + `${name}/delete/${id}`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
+            'userId': Auth.getUserId(),
+            'Authorization': 'bearer ' + Auth.getToken()
+        }
+    })
+}
+
+async function approveRequest(id, name) {
+    debugger
+    const res = await window.fetch(host + `request/approve/${id}`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'userId': Auth.getUserId(),
+            'Authorization': 'bearer ' + Auth.getToken()
+        }
+    })
+}
+
+async function unapproveRequest(id, name) {
+    debugger
+    const res = await window.fetch(host + `request/unapprove/${id}`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'userId': Auth.getUserId(),
             'Authorization': 'bearer ' + Auth.getToken()
         }
     })
@@ -336,5 +360,7 @@ export {
     getRequestTypes,
     getPendingRequests,
     getApprovedRequests,
-    deleteItem
+    deleteItem,
+    approveRequest,
+    unapproveRequest
 }

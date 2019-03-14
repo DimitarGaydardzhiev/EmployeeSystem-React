@@ -1,9 +1,6 @@
 import React, { Component, Fragment } from 'react'
-import { getAllDepartmentsAction } from '../../store/actions/department-actions';
 import { connect } from 'react-redux'
-import { Button } from 'react-bootstrap';
-import AdministrationDataRow from '../../components/administration-data-row';
-import { getMyRequestsAction, getPendingRequestsAction } from '../../store/actions/request-actions';
+import { getPendingRequestsAction } from '../../store/actions/request-actions';
 import RequestDataRow from '../../components/request-data-row';
 
 class PendingRequests extends Component {
@@ -35,7 +32,7 @@ class PendingRequests extends Component {
                     <tbody>
                         {
                             pendingRequests.map(p => (
-                                <RequestDataRow key={p.id} data={p} />
+                                <RequestDataRow key={p.id} data={p} hasApprovalOptions='true' />
                             ))
                         }
                     </tbody>
