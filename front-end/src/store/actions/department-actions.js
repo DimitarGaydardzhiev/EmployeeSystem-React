@@ -1,6 +1,5 @@
 import { GET_ALL_DEPARTMENTS_SUCCESS, ADD_DEPARTMENT_SUCCESS, ADD_DEPARTMENT_ERROR } from '../constants/action-types';
 import { getAllDepartments, addDepartment } from '../../services/api-service';
-import errorHandler from '../../utils/errorHandler'
 
 function getAllDepartmentsSuccess(payload) {
     return {

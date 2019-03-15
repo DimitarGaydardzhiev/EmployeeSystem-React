@@ -10,6 +10,7 @@ import { Form } from 'react-bootstrap'
 import { getAllPositionsAction } from '../../store/actions/position-actions';
 import { getAllRolesAction } from '../../store/actions/role-actions';
 import { registerAction } from '../../store/actions/employee-actions';
+import registerValidator from '../../utils/registerValidator';
 
 class EmployeeComponent extends Component {
     constructor(props) {
@@ -37,7 +38,15 @@ class EmployeeComponent extends Component {
 
     onSubmit(e) {
         e.preventDefault()
-        //if (!loginValidator(this.state.email, this.state.password)) return
+        if (!registerValidator(
+            this.state.firstName,
+            this.state.lastName,
+            this.state.email,
+            this.state.password,
+            this.state.confirmPassword,
+            this.state.roleId,
+            this.state.positionId)) return
+
         this.props.register(
             this.state.firstName,
             this.state.lastName,
@@ -67,7 +76,6 @@ class EmployeeComponent extends Component {
             this.state.departmentId = nextProps.departments.departments[0].id
         }
 
-        debugger
         if (nextProps.addEmployeeError.hasError) {
             toastr.error(`Error: ${nextProps.addEmployeeError.message}`)
         } else if (nextProps.addEmployeeSuccess) {

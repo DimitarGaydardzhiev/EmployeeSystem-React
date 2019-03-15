@@ -1,6 +1,5 @@
 import { LOGIN_SUCCESS, LOGIN_ERROR, LOGOUT_SUCCESS } from "../constants/action-types";
 import { login } from "../../services/api-service";
-import errorHandler from "../../utils/errorHandler";
 import * as decode from 'jwt-decode';
 
 function loginAction(email, password) {
