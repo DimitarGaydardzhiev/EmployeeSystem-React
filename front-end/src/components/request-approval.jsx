@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { confirmAlert } from 'react-confirm-alert';
-import { deleteAction } from '../store/actions/delete-actions'
 import toastr from 'toastr'
 import { approveAction, unapproveAction } from '../store/actions/request-actions';
 
@@ -16,27 +15,26 @@ class RequestApprovalComponent extends Component {
   componentWillReceiveProps(nextProps) {
     debugger
     if (nextProps.approveError.hasError) {
-      //toastr.error(nextProps.createProductError.message)
+      toastr.error(nextProps.approveError.message)
     } else if (nextProps.approveSuccess) {
       window.location = '/requests/approved'
     } else if (nextProps.unapproveError.hasError) {
-      //toastr.error(nextProps.createProductError.message)
+      toastr.error(nextProps.unapproveError.message)
     } else if (nextProps.unapproveSuccess) {
       window.location = '/requests/unapproved'
     }
   }
 
-  unApprove(id, name) {
+  unApprove(id) {
     this.props.unapprove(id)
   }
 
-  approve(id, name) {
+  approve(id) {
     this.props.approve(id)
   }
 
   onAction() {
     const { id, name, isApproved } = this.props
-    debugger
     confirmAlert({
       title: 'Please Confirm',
       message: 'Are you sure to do this.',

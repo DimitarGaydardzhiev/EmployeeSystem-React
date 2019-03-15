@@ -164,6 +164,8 @@ async function deleteItem(id, name) {
             'Authorization': 'bearer ' + Auth.getToken()
         }
     })
+
+    return res;
 }
 
 async function approveRequest(id) {
@@ -176,6 +178,8 @@ async function approveRequest(id) {
             'Authorization': 'bearer ' + Auth.getToken()
         }
     })
+
+    return res;
 }
 
 async function unapproveRequest(id) {
@@ -187,6 +191,8 @@ async function unapproveRequest(id) {
             'Authorization': 'bearer ' + Auth.getToken()
         }
     })
+
+    return res;
 }
 
 export {

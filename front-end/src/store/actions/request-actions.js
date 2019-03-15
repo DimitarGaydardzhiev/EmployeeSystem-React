@@ -1,4 +1,4 @@
-import { GET_MY_REQUESTS_SUCCESS, ADD_REQUEST_SUCCESS, GET_REQUEST_TYPES_SUCCESS, GET_PENDING_REQUESTS_SUCCESS, GET_APPROVED_REQUESTS_SUCCESS, APPROVE_REQUESTS_SUCCESS, UNAPPROVE_REQUESTS_SUCCESS, ADD_REQUEST_ERROR } from "../constants/action-types";
+import { GET_MY_REQUESTS_SUCCESS, ADD_REQUEST_SUCCESS, GET_REQUEST_TYPES_SUCCESS, GET_PENDING_REQUESTS_SUCCESS, GET_APPROVED_REQUESTS_SUCCESS, APPROVE_REQUESTS_SUCCESS, UNAPPROVE_REQUESTS_SUCCESS, ADD_REQUEST_ERROR, APPROVE_REQUESTS_ERROR, UNAPPROVE_REQUESTS_ERROR } from "../constants/action-types";
 import { getMyRequests, addRequest, getRequestTypes, getPendingRequests, getApprovedRequests, unapproveRequest, approveRequest } from "../../services/api-service";
 
 function getMyRequestsSuccess(payload) {
@@ -100,7 +100,15 @@ function approveAction(id) {
     return async (dispatch) => {
         return approveRequest(id)
             .then(payload => {
-                dispatch(approveSuccess(payload))
+                if (payload.status == 200) {
+                    dispatch(approveSuccess(payload))
+                } else {
+                    payload.text()
+                        .then(message => dispatch(approveError(message)))
+                }
+            })
+            .catch(() => {
+                dispatch(approveError("Server error"))
             })
     }
 }
@@ -112,11 +120,26 @@ function approveSuccess(payload) {
     }
 }
 
+function approveError(payload) {
+    return {
+        type: APPROVE_REQUESTS_ERROR,
+        payload
+    }
+}
+
 function unapproveAction(id) {
     return async (dispatch) => {
         return unapproveRequest(id)
             .then(payload => {
-                dispatch(unapproveSuccess(payload))
+                if (payload.status == 200) {
+                    dispatch(unapproveSuccess(payload))
+                } else {
+                    payload.text()
+                        .then(message => dispatch(unapproveError(message)))
+                }
+            })
+            .catch(() => {
+                dispatch(unapproveError("Server error"))
             })
     }
 }
@@ -124,6 +147,13 @@ function unapproveAction(id) {
 function unapproveSuccess(payload) {
     return {
         type: UNAPPROVE_REQUESTS_SUCCESS,
+        payload
+    }
+}
+
+function unapproveError(payload) {
+    return {
+        type: UNAPPROVE_REQUESTS_ERROR,
         payload
     }
 }

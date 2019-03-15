@@ -70,18 +70,16 @@ namespace EmployeeSystem.Controllers
         public IActionResult Delete(int id)
         {
             if (id == 0)
-                return this.BadRequest();
+                return this.BadRequest("Id can not be 0");
 
             try
             {
                 service.Delete(id);
-                ShowNotification(SuccessMessages.SuccesslDelete, ToastrSeverity.Success);
-                return RedirectToAction("All", null);
+                return Ok();
             }
             catch (Exception ex)
             {
-                ShowNotification(ex.Message, ToastrSeverity.Error);
-                return RedirectToAction("All", null);
+                return BadRequest(ex.Message);
             }
         }
     }

@@ -15,3 +15,7 @@ ul li {
     width: 30%;
     padding: 2rem;
 }
+
+.disabled {
+    pointer-events: none;
+}

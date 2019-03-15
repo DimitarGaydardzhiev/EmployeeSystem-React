@@ -68,10 +68,10 @@ class App extends Component {
               username={username} />
             <Switch>
               <Route path='/login' component={() => <Login loggedIn={this.state.loggedIn} />} />
-              <PrivateRoute path="/departments/all" exact component={DepartmentManagement}></PrivateRoute>
+              <Route path="/departments/all" exact component={DepartmentManagement}></Route>
               <AdminRoute path="/departments/add" exact component={DepartmentComponent}></AdminRoute>
               <AdminRoute path="/departments/:id" exact component={DepartmentComponent}></AdminRoute>
-              <PrivateRoute path="/positions/all" exact component={PositionManagement}></PrivateRoute>
+              <Route path="/positions/all" exact component={PositionManagement}></Route>
               <AdminRoute path="/positions/add" exact component={PositionComponent}></AdminRoute>
               <AdminRoute path="/positions/:id" exact component={PositionComponent}></AdminRoute>
               <PrivateRoute path="/employees/all" exact component={EmployeeManagement}></PrivateRoute>

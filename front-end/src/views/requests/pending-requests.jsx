@@ -27,6 +27,7 @@ class PendingRequests extends Component {
                             <th>Request Type</th>
                             <th>Description</th>
                             <th>Is Approved</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>

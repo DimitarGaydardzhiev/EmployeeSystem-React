@@ -56,17 +56,16 @@ namespace EmployeeSystem.Controllers
         public IActionResult Delete(int id)
         {
             if (id == 0)
-                return this.BadRequest();
+                return this.BadRequest("Id can not be 0");
 
             try
             {
                 service.Delete(id);
-                ShowNotification("Employee deleted successfully", ToastrSeverity.Success);
-                return RedirectToAction("All", null);
+                return Ok();
             }
             catch (Exception ex)
             {
-                return this.BadRequest(ex.Message);
+                return BadRequest(ex.Message);
             }
         }
     }

@@ -1,7 +1,7 @@
 import React from 'react'
 
 const HomeCard = (props) => {
-    const { title, btnTitle, description, route } = props
+    const { title, btnTitle, description, route, isLoggedIn } = props
 
     return (
         <div>
@@ -9,7 +9,13 @@ const HomeCard = (props) => {
                 <div className="card-body">
                     <h5 className="card-title">{title}</h5>
                     <p className="card-text">{description}</p>
-                    <a href={route} className="btn btn-primary">{btnTitle}</a>
+                    {
+                        isLoggedIn
+                        ?
+                        <a href={route} className="btn btn-primary">{btnTitle}</a>
+                        :
+                        <a href={route} className="btn btn-primary disabled">{btnTitle}</a>
+                    }
                 </div>
             </div>
         </div>

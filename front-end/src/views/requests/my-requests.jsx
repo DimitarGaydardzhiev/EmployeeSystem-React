@@ -9,6 +9,13 @@ import RequestDataRow from '../../components/request-data-row';
 class MyRequests extends Component {
   constructor(props) {
     super(props)
+
+    this.redirect = this.redirect.bind(this);
+  }
+
+  redirect() {
+    let path = `/requests/new`;
+    this.props.history.push(path);
   }
 
   componentWillMount() {
@@ -28,6 +35,7 @@ class MyRequests extends Component {
               <th>To</th>
               <th>Request Type</th>
               <th>Description</th>
+              <th></th>
               <th>Is Approved</th>
               <th></th>
               <th></th>

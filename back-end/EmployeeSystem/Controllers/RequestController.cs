@@ -92,8 +92,15 @@ namespace EmployeeSystem.Controllers
         [Route("{id}")]
         public IActionResult Approve(int id)
         {
-            service.ApproveRequest(id);
-            return RedirectToAction("Pending");
+            try
+            {
+                service.ApproveRequest(id);
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
         }
 
         [HttpPost]
@@ -101,8 +108,15 @@ namespace EmployeeSystem.Controllers
         [Route("{id}")]
         public IActionResult Unapprove(int id)
         {
-            service.UnapproveRequest(id);
-            return RedirectToAction("Approved");
+            try
+            {
+                service.UnapproveRequest(id);
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
         }
 
         [HttpGet]
@@ -116,25 +130,22 @@ namespace EmployeeSystem.Controllers
         public IActionResult Delete(int id)
         {
             if (id == 0)
-                return this.BadRequest();
+                return this.BadRequest("Id can not be 0");
 
             bool canEdit = service.CanEdit(id);
             if (!canEdit)
             {
-                ShowNotification(ErrorMessages.CanNotEditAnotherUserRequest, ToastrSeverity.Error);
-                return RedirectToAction("MyRequests", null);
+                return this.BadRequest("You can not edit this request");
             }
 
             try
             {
                 service.Delete(id);
-                ShowNotification(SuccessMessages.SuccesslDelete, ToastrSeverity.Success);
-                return RedirectToAction("MyRequests", null);
+                return Ok();
             }
             catch (Exception ex)
             {
-                ShowNotification(ex.Message, ToastrSeverity.Error);
-                return RedirectToAction("MyRequests", null);
+                return BadRequest(ex.Message);
             }
         }
     }
