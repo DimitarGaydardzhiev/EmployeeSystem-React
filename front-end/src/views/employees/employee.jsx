@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { getAllDepartmentsAction } from '../../store/actions/department-actions';
-import { toastr } from 'toastr';
+import toastr from 'toastr';
 import Input from '../../common/Input';
 import Button from '../../common/Button';
 import Textarea from '../../common/Textarea';
@@ -65,6 +65,14 @@ class EmployeeComponent extends Component {
         }
         if (nextProps.departments.departments.length) {
             this.state.departmentId = nextProps.departments.departments[0].id
+        }
+
+        debugger
+        if (nextProps.addEmployeeError.hasError) {
+            toastr.error(`Error: ${nextProps.addEmployeeError.message}`)
+        } else if (nextProps.addEmployeeSuccess) {
+            toastr.success('Employee saved successfully')
+            window.location = '/employees/all'
         }
     }
 
@@ -156,6 +164,8 @@ class EmployeeComponent extends Component {
 
 function mapStateToProps(state) {
     return {
+        addEmployeeSuccess: state.addEmployee.success,
+        addEmployeeError: state.addEmployeeError,
         departments: state.departments,
         positions: state.positions,
         roles: state.roles

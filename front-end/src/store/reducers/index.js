@@ -7,13 +7,15 @@ import requestReducer from './request-reducers';
 import deleteReducer from './delete-reducers';
 
 export default {
+  login: loginReducer,
   departments: departmentReducer,
   positions: positionReducer,
   employees: employeeReducer,
   formerEmployees: employeeReducer,
-  login: loginReducer,
   //loginError: loginErrorReducer,
   formerEmployees: employeeReducer,
+  addEmployee: employeeReducer,
+  addEmployeeError: employeeReducer,
   addDepartment: departmentReducer,
   addDepartmentError: departmentReducer,
   addPosition: positionReducer,

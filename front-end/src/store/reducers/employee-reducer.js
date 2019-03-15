@@ -1,4 +1,4 @@
-import { GET_ALL_EMPLOYEES_SUCCESS, GET_ALL_FORMER_EMPLOYEES_SUCCESS, REGISTER_SUCCESS } from "../constants/action-types";
+import { GET_ALL_EMPLOYEES_SUCCESS, GET_ALL_FORMER_EMPLOYEES_SUCCESS, REGISTER_SUCCESS, REGISTER_ERROR } from "../constants/action-types";
 
 const initialState = {
     employees: [],
@@ -17,6 +17,8 @@ function employeeReducer(state = initialState, action) {
             });
         case REGISTER_SUCCESS:
             return Object.assign({}, state, { success: true })
+        case REGISTER_ERROR:
+            return Object.assign({}, state, { hasError: true, message: action.payload })
         default:
             return state
     }

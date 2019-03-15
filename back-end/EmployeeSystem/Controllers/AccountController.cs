@@ -9,6 +9,7 @@ using NToastNotify;
 using ServiceLayer.Interfaces;
 using ServiceLayer.Utils;
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace EmployeeSystem.Controllers
@@ -81,14 +82,15 @@ namespace EmployeeSystem.Controllers
                 if (result.Succeeded)
                 {
                     ShowNotification(SuccessMessages.SuccessAdd, ToastrSeverity.Success);
-                    return RedirectToAction("All", "Employee");
+                    return Ok();
                 }
-
-                ShowNotification("Invalid Data", ToastrSeverity.Error);
-                AddErrors(result);
+                else
+                {
+                    return BadRequest(string.Join(", ", result.Errors));
+                }
             }
 
-            return RedirectToAction("Add", "Employee", ModelState);
+            return BadRequest(string.Join(Environment.NewLine, ModelState.SelectMany(e => e.Value.Errors.Select(er => er.ErrorMessage))));
         }
 
         [HttpPost]

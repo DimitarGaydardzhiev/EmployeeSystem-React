@@ -1,4 +1,4 @@
-import { GET_ALL_EMPLOYEES_SUCCESS, GET_ALL_FORMER_EMPLOYEES_SUCCESS, REGISTER_SUCCESS } from '../constants/action-types';
+import { GET_ALL_EMPLOYEES_SUCCESS, GET_ALL_FORMER_EMPLOYEES_SUCCESS, REGISTER_SUCCESS, REGISTER_ERROR } from '../constants/action-types';
 import { getAllEmployees, getAllFormerEmployees, register } from '../../services/api-service';
 
 function getAllEmployeesAction() {
@@ -37,7 +37,16 @@ function registerAction(firstName, lastName, email, password, confirmPassword, r
     return async (dispatch) => {
         return register(firstName, lastName, email, password, confirmPassword, roleId, positionId, departmentId, description)
             .then(payload => {
-                dispatch(registerSuccess(payload))
+                debugger
+                if (payload.status === 200) {
+                    dispatch(registerSuccess())
+                } else {
+                    payload.text()
+                        .then(message => dispatch(registerError(message)))
+                }
+            })
+            .catch(() => {
+                dispatch(registerError("Server error"))
             })
     }
 }
@@ -45,6 +54,13 @@ function registerAction(firstName, lastName, email, password, confirmPassword, r
 function registerSuccess(payload) {
     return {
         type: REGISTER_SUCCESS,
+        payload
+    }
+}
+
+function registerError(payload) {
+    return {
+        type: REGISTER_ERROR,
         payload
     }
 }
