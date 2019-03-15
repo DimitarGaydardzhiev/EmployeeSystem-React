@@ -47,7 +47,8 @@ async function register(firstName, lastName, email, password, confirmPassword, r
     const res = await window.fetch(host + 'account/register', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authorization': 'bearer ' + Auth.getToken()
         },
         body: JSON.stringify({
             firstName, lastName, email, password, confirmPassword, roleId, positionId, departmentId, description

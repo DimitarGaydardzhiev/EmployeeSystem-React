@@ -85,17 +85,24 @@ namespace ServiceLayer.Services
                 user.EmployeeUser = new EmployeeUser()
                 {
                     IsActive = true,
-                    Birthday = model.DateOfBirth,
+                    //Birthday = model.DateOfBirth,
                     DepartmentId = model.DepartmentId,
                     EmployeePositionId = model.PositionId,
                     FirstName = model.FirstName,
                     LastName = model.LastName,
-                    InCompanyFrom = model.StartingDate,
+                    //InCompanyFrom = model.StartingDate,
                     PersonalDescription = model.Description,
-                    ManagerId = model.ManagerId,
+                    //ManagerId = model.ManagerId,
                 };
 
-                await userManager.UpdateAsync(user);
+                try
+                {
+                    await userManager.UpdateAsync(user);
+                }
+                catch (Exception ex)
+                {
+
+                }
             }
 
             return result;
