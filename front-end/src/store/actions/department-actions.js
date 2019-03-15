@@ -25,9 +25,12 @@ function addDepartmentAction(name, id) {
                 if (payload.status == 200) {
                     dispatch(addDepartmentSuccess(payload))
                 } else {
-                    debugger
-                    dispatch(addDepartmentError())
+                    payload.text()
+                        .then(message => dispatch(addDepartmentError(message)))
                 }
+            })
+            .catch(() => {
+                dispatch(addDepartmentError("Server error"))
             })
     }
 }

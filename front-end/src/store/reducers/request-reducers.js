@@ -16,7 +16,7 @@ function requestReducer(state = initialState, action) {
     case ADD_REQUEST_SUCCESS:
       return Object.assign({}, state, { success: true })
     case ADD_REQUEST_ERROR:
-      return Object.assign({}, state, { hasError: true, message: action.payload.text })
+      return Object.assign({}, state, { hasError: true, message: action.payload })
     case GET_REQUEST_TYPES_SUCCESS:
       return Object.assign({}, state, {
         requestTypes: action.payload

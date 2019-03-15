@@ -1,4 +1,4 @@
-import { GET_ALL_POSITIONS_SUCCESS, ADD_POSITION_SUCCESS } from '../constants/action-types';
+import { GET_ALL_POSITIONS_SUCCESS, ADD_POSITION_SUCCESS, ADD_POSITION_ERROR } from '../constants/action-types';
 import { getAllPositions, addPosition } from '../../services/api-service';
 
 function getAllPositionsSuccess(payload) {
@@ -19,10 +19,17 @@ function getAllPositionsAction() {
 
 function addPositionAction(name, id) {
     return async (dispatch) => {
-        debugger
         return addPosition(name, id)
             .then(payload => {
-                dispatch(addPositionSuccess(payload))
+                if (payload.status == 200) {
+                    dispatch(addPositionSuccess(payload))
+                } else {
+                    payload.text()
+                        .then(message => dispatch(addPositionError(message)))
+                }
+            })
+            .catch(() => {
+                dispatch(addPositionError("Server error"))
             })
     }
 }
@@ -30,6 +37,13 @@ function addPositionAction(name, id) {
 function addPositionSuccess(payload) {
     return {
         type: ADD_POSITION_SUCCESS,
+        payload
+    }
+}
+
+function addPositionError(payload) {
+    return {
+        type: ADD_POSITION_ERROR,
         payload
     }
 }

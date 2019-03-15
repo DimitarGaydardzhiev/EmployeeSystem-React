@@ -13,7 +13,7 @@ function departmentReducer(state = initialState, action) {
         case ADD_DEPARTMENT_SUCCESS:
             return Object.assign({}, state, { success: true })
         case ADD_DEPARTMENT_ERROR:
-            return Object.assign({}, state, { hasError: true, message: action.payload.text })
+            return Object.assign({}, state, { hasError: true, message: action.payload })
         default:
             return state
     }

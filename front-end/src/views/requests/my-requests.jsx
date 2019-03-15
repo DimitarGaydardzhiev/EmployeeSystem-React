@@ -9,13 +9,6 @@ import RequestDataRow from '../../components/request-data-row';
 class MyRequests extends Component {
   constructor(props) {
     super(props)
-
-    this.redirect = this.redirect.bind(this);
-  }
-
-  redirect() {
-      let path = `/requests/new`;
-      this.props.history.push(path);
   }
 
   componentWillMount() {
@@ -24,7 +17,6 @@ class MyRequests extends Component {
 
   render() {
     const { myRequests } = this.props.myRequests
-    console.log(myRequests)
 
     return (
       <Fragment>
@@ -53,7 +45,7 @@ class MyRequests extends Component {
           <Button className="px-4"
             onClick={this.redirect}>
             Add
-                    </Button>
+          </Button>
         </div>
       </Fragment>
     )

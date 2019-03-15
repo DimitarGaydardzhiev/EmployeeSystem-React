@@ -7,6 +7,7 @@ import EmployeeManagement from './views/employees/employee-mgmt.jsx';
 import FormerEmployeeManagement from './views/employees/former-employee-mgmt.jsx';
 import Login from './views/login';
 import PrivateRoute from './Routes/PrivateRoute';
+import AdminRoute from './Routes/AdminRoute';
 import Auth from './utils/auth';
 import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
@@ -20,6 +21,7 @@ import AddRequest from './views/requests/add-request';
 import PendingRequests from './views/requests/pending-requests';
 import ApprovedRequests from './views/requests/approved-requests';
 import PositionComponent from './views/positions/position.jsx';
+import toastr from 'toastr'
 
 class App extends Component {
   constructor(props) {
@@ -46,13 +48,14 @@ class App extends Component {
 
   logout() {
     this.props.logout()
-    //toastr.success('Logout successful')
+    toastr.success('Logout successful')
     this.props.history.push('/login')
     this.setState({ loggedIn: false })
   }
 
   render() {
     const isAdmin = Auth.isUserAdmin()
+    const username = Auth.getUsername()
 
     return (
       <div>
@@ -61,22 +64,23 @@ class App extends Component {
             <Header
               loggedIn={this.state.loggedIn}
               isAdmin={isAdmin}
-              logout={this.logout} />
+              logout={this.logout}
+              username={username} />
             <Switch>
               <Route path='/login' component={() => <Login loggedIn={this.state.loggedIn} />} />
               <PrivateRoute path="/departments/all" exact component={DepartmentManagement}></PrivateRoute>
-              <PrivateRoute path="/departments/add" exact component={DepartmentComponent}></PrivateRoute>
-              <PrivateRoute path="/departments/:id" exact component={DepartmentComponent}></PrivateRoute>
+              <AdminRoute path="/departments/add" exact component={DepartmentComponent}></AdminRoute>
+              <AdminRoute path="/departments/:id" exact component={DepartmentComponent}></AdminRoute>
               <PrivateRoute path="/positions/all" exact component={PositionManagement}></PrivateRoute>
-              <PrivateRoute path="/positions/add" exact component={PositionComponent}></PrivateRoute>
-              <PrivateRoute path="/positions/:id" exact component={PositionComponent}></PrivateRoute>
+              <AdminRoute path="/positions/add" exact component={PositionComponent}></AdminRoute>
+              <AdminRoute path="/positions/:id" exact component={PositionComponent}></AdminRoute>
               <PrivateRoute path="/employees/all" exact component={EmployeeManagement}></PrivateRoute>
               <PrivateRoute path="/employees/former" exact component={FormerEmployeeManagement}></PrivateRoute>
-              <PrivateRoute path="/employees/add" exact component={EmployeeComponent}></PrivateRoute>
+              <AdminRoute path="/employees/add" exact component={EmployeeComponent}></AdminRoute>
               <PrivateRoute path="/requests/my" exact component={MyRequests}></PrivateRoute>
-              <PrivateRoute path="/requests/new" exact component={AddRequest}></PrivateRoute>
-              <PrivateRoute path="/requests/pending" exact component={PendingRequests}></PrivateRoute>
-              <PrivateRoute path="/requests/approved" exact component={ApprovedRequests}></PrivateRoute>
+              <AdminRoute path="/requests/new" exact component={AddRequest}></AdminRoute>
+              <AdminRoute path="/requests/pending" exact component={PendingRequests}></AdminRoute>
+              <AdminRoute path="/requests/approved" exact component={ApprovedRequests}></AdminRoute>
               <Route path='/' component={() => <Home loggedIn={this.state.loggedIn} />} />
             </Switch>
             <Footer />

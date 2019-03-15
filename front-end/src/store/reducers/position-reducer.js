@@ -13,7 +13,7 @@ function positionReducer(state = initialState, action) {
         case ADD_POSITION_SUCCESS:
             return Object.assign({}, state, { success: true })
         case ADD_POSITION_ERROR:
-            return Object.assign({}, state, { hasError: true, message: action.error })
+            return Object.assign({}, state, { hasError: true, message: action.payload })
         default:
             return state
     }

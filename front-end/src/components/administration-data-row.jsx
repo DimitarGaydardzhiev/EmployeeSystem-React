@@ -15,9 +15,15 @@ const AdministrationDataRow = (props) => {
                     state: { data: props.data }
                 }}>Edit</Link>
             </td>
-            <td>
-                <DeleteComponent id={id} name={props.deleteController}/>
-            </td>
+            {
+                props.isAdmin ?
+                    <td>
+                        <DeleteComponent id={id} name={props.deleteController} />
+                    </td>
+                    :
+                    <td></td>
+            }
+
         </tr>
     )
 }

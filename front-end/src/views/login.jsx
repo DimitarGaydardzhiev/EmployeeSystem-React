@@ -24,7 +24,7 @@ class Login extends Component {
       }
     }
   }
-  
+
   onChange(e) {
     this.setState({ [e.target.name]: e.target.value })
   }
@@ -33,6 +33,9 @@ class Login extends Component {
     e.preventDefault()
     if (!loginValidator(this.state.email, this.state.password)) return
     this.props.login(this.state.email, this.state.password)
+      .then(() => {
+        window.location.reload();
+      })
   }
 
   render() {

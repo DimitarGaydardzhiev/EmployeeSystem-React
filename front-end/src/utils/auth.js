@@ -12,13 +12,13 @@ class Auth {
   }
 
   static isUserAdmin() {
-    let roles = window.localStorage.getItem('roles')
-    if (!roles) {
+    let role = window.localStorage.getItem('roles')
+    if (!role) {
       return false
     }
+    debugger
 
-    roles = roles.split(',')
-    if (roles.includes('Admin')) {
+    if (role === 'administrator') {
       return true
     }
 

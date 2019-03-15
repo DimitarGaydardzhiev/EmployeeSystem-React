@@ -3,6 +3,7 @@ import { getAllDepartmentsAction } from '../../store/actions/department-actions'
 import { connect } from 'react-redux'
 import { Button } from 'react-bootstrap';
 import AdministrationDataRow from '../../components/administration-data-row';
+import Auth from '../../utils/auth';
 
 class DepartmentManagement extends Component {
     constructor(props) {
@@ -22,6 +23,7 @@ class DepartmentManagement extends Component {
 
     render() {
         const { departments } = this.props.departments
+        const isAdmin = Auth.isUserAdmin()
 
         return (
             <Fragment>
@@ -37,7 +39,7 @@ class DepartmentManagement extends Component {
                     <tbody>
                         {
                             departments.map(d => (
-                                <AdministrationDataRow key={d.id} data={d} tableType='departments' deleteController="department" />
+                                <AdministrationDataRow key={d.id} data={d} isAdmin={isAdmin} tableType='departments' deleteController="department" />
                             ))
                         }
                     </tbody>

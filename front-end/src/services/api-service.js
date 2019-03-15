@@ -166,7 +166,7 @@ async function deleteItem(id, name) {
     })
 }
 
-async function approveRequest(id, name) {
+async function approveRequest(id) {
     debugger
     const res = await window.fetch(host + `request/approve/${id}`, {
         method: 'POST',
@@ -178,8 +178,7 @@ async function approveRequest(id, name) {
     })
 }
 
-async function unapproveRequest(id, name) {
-    debugger
+async function unapproveRequest(id) {
     const res = await window.fetch(host + `request/unapprove/${id}`, {
         method: 'POST',
         headers: {
@@ -189,162 +188,6 @@ async function unapproveRequest(id, name) {
         }
     })
 }
-
-
-// async function register(username, email, password) {
-//     const res = await window.fetch(host + 'auth/signup', {
-//         method: 'POST',
-//         headers: {
-//             'Content-Type': 'application/json'
-//         },
-//         body: JSON.stringify({
-//             username,
-//             email,
-//             password
-//         })
-//     })
-
-//     return res.json()
-// }
-
-// async function login(email, password) {
-//     const res = await window.fetch(host + 'auth/login', {
-//         method: 'POST',
-//         headers: {
-//             'Content-Type': 'application/json'
-//         },
-//         body: JSON.stringify({
-//             email,
-//             password
-//         })
-//     })
-
-//     return res.json()
-// }
-
-// async function fetchStats() {
-//     const res = await window.fetch(host + 'stats')
-//     return res.json()
-// }
-
-// async function fetchProducts() {
-//     const res = await window.fetch(host + 'book/all')
-//     return res.json()
-// }
-
-// async function createProduct(data) {
-//     const res = await window.fetch(host + 'book/create', {
-//         method: 'POST',
-//         headers: {
-//             'Content-Type': 'application/json',
-//             'Authorization': 'bearer ' + Auth.getToken()
-//         },
-//         body: JSON.stringify(data)
-//     })
-
-//     return res.json()
-// }
-
-// async function editProduct(id, data) {
-//     const res = await window.fetch(host + `book/edit/${id}`, {
-//         method: 'POST',
-//         headers: {
-//             'Content-Type': 'application/json',
-//             'Authorization': 'bearer ' + Auth.getToken()
-//         },
-//         body: JSON.stringify(data)
-//     })
-
-//     return res.json()
-// }
-
-// async function deleteProduct(id) {
-//     const res = await window.fetch(host + `book/delete/${id}`, {
-//         method: 'DELETE',
-//         headers: {
-//             'Authorization': 'bearer ' + Auth.getToken()
-//         }
-//     })
-
-//     return res.json()
-// }
-
-// async function createReview(id, data) {
-//     const res = await window.fetch(host + `book/review/${id}`, {
-//         method: 'POST',
-//         headers: {
-//             'Content-Type': 'application/json',
-//             'Authorization': 'bearer ' + Auth.getToken()
-//         },
-//         body: JSON.stringify(data)
-//     })
-
-//     return res.json()
-// }
-
-// async function likeProduct(id) {
-//     const res = await window.fetch(host + `book/like/${id}`, {
-//         method: 'POST',
-//         headers: {
-//             'Authorization': 'bearer ' + Auth.getToken()
-//         }
-//     })
-
-//     return res.json()
-// }
-
-// async function unlikeProduct(id) {
-//     const res = await window.fetch(host + `book/unlike/${id}`, {
-//         method: 'POST',
-//         headers: {
-//             'Authorization': 'bearer ' + Auth.getToken()
-//         }
-//     })
-
-//     return res.json()
-// }
-
-// async function submitOrder(data) {
-//     const res = await window.fetch(host + 'orders/submit', {
-//         method: 'POST',
-//         headers: {
-//             'Content-Type': 'application/json',
-//             'Authorization': 'bearer ' + Auth.getToken()
-//         },
-//         body: JSON.stringify(data)
-//     })
-
-//     return res.json()
-// }
-
-// async function fetchUserOrders() {
-//     const res = await window.fetch(host + 'orders/user', {
-//         headers: {
-//             'Authorization': 'bearer ' + Auth.getToken()
-//         }
-//     })
-//     return res.json()
-// }
-
-// async function fetchPendingOrders() {
-//     const res = await window.fetch(host + 'orders/pending', {
-//         headers: {
-//             'Authorization': 'bearer ' + Auth.getToken()
-//         }
-//     })
-//     return res.json()
-// }
-
-// async function approveOrder(id) {
-//     const res = await window.fetch(host + `orders/approve/${id}`, {
-//         method: 'POST',
-//         headers: {
-//             'Authorization': 'bearer ' + Auth.getToken()
-//         }
-//     })
-
-//     return res.json()
-// }
 
 export {
     getAllDepartments,

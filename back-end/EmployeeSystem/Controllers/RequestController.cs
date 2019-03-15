@@ -9,6 +9,7 @@ using ServiceLayer.Utils;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace EmployeeSystem.Controllers
 {
@@ -61,18 +62,16 @@ namespace EmployeeSystem.Controllers
                 try
                 {
                     service.Save(model);
+                    return Ok();
                 }
                 catch (Exception e)
                 {
-                    ShowNotification(e.Message, ToastrSeverity.Error);
-                    return View("Add", model);
+                    return BadRequest(e.Message);
                 }
-                ShowNotification(SuccessMessages.SuccessAdd, ToastrSeverity.Success);
 
-                return RedirectToAction("MyRequests");
             }
 
-            return View("Add", model);
+            return BadRequest(string.Join(Environment.NewLine, ModelState.SelectMany(e => e.Value.Errors.Select(er => er.ErrorMessage))));
         }
 
         [HttpGet]

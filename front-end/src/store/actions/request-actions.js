@@ -1,4 +1,4 @@
-import { GET_MY_REQUESTS_SUCCESS, ADD_REQUEST_SUCCESS, GET_REQUEST_TYPES_SUCCESS, GET_PENDING_REQUESTS_SUCCESS, GET_APPROVED_REQUESTS_SUCCESS, APPROVE_REQUESTS_SUCCESS, UNAPPROVE_REQUESTS_SUCCESS } from "../constants/action-types";
+import { GET_MY_REQUESTS_SUCCESS, ADD_REQUEST_SUCCESS, GET_REQUEST_TYPES_SUCCESS, GET_PENDING_REQUESTS_SUCCESS, GET_APPROVED_REQUESTS_SUCCESS, APPROVE_REQUESTS_SUCCESS, UNAPPROVE_REQUESTS_SUCCESS, ADD_REQUEST_ERROR } from "../constants/action-types";
 import { getMyRequests, addRequest, getRequestTypes, getPendingRequests, getApprovedRequests, unapproveRequest, approveRequest } from "../../services/api-service";
 
 function getMyRequestsSuccess(payload) {
@@ -21,7 +21,15 @@ function addRequestAction(from, to, description, requestTypeId) {
     return async (dispatch) => {
         return addRequest(from, to, description, requestTypeId)
             .then(payload => {
-                dispatch(addRequestSuccess(payload))
+                if (payload.status == 200) {
+                    dispatch(addRequestSuccess(payload))
+                } else {
+                    payload.text()
+                        .then(message => dispatch(addRequestError(message)))
+                }
+            })
+            .catch(() => {
+                dispatch(addRequestError("Server error"))
             })
     }
 }
@@ -29,6 +37,13 @@ function addRequestAction(from, to, description, requestTypeId) {
 function addRequestSuccess(payload) {
     return {
         type: ADD_REQUEST_SUCCESS,
+        payload
+    }
+}
+
+function addRequestError(payload) {
+    return {
+        type: ADD_REQUEST_ERROR,
         payload
     }
 }

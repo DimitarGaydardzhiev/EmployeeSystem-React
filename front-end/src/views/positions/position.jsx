@@ -37,11 +37,10 @@ class PositionComponent extends Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.addPositionError.hasError) {
-      //toastr.error(nextProps.createProductError.message)
+      toastr.error(`Error: ${nextProps.addPositionError.message}`)
     } else if (nextProps.addPositionSuccess) {
-      //this.props.redirect()
       toastr.success('Position saved successfully')
-      window.location='/positions/all'
+      window.location = '/positions/all'
     } else {
       if (this.positionId && nextProps.positions.positions.length) {
         let position = nextProps.positions.positions.find(d => d.id === this.positionId)

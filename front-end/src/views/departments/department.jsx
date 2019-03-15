@@ -37,11 +37,10 @@ class DepartmentComponent extends Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.addDepartmentError.hasError) {
-      //toastr.error(nextProps.createProductError.message)
+      toastr.error(`Error: ${nextProps.addDepartmentError.message}`)
     } else if (nextProps.addDepartmentSuccess) {
-      //this.props.redirect()
       toastr.success('Department saved successfully')
-      window.location='/departments/all'
+      window.location = '/departments/all'
     } else {
       if (this.departmentId && nextProps.departments.departments.length) {
         let department = nextProps.departments.departments.find(d => d.id === this.departmentId)

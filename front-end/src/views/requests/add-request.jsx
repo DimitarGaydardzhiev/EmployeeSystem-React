@@ -58,14 +58,12 @@ class AddRequest extends Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.requestTypes.requestTypes.length) {
-      debugger
       this.state.requestTypeId = nextProps.requestTypes.requestTypes[0].id
     }
 
     if (nextProps.addRequestError.hasError) {
-      //toastr.error(nextProps.createProductError.message)
+      toastr.error(`Error: ${nextProps.addRequestError.message}`)
     } else if (nextProps.addRequestSuccess) {
-      //this.props.redirect()
       toastr.success('Request created successfully')
       this.props.history.push('/requests/my')
     }

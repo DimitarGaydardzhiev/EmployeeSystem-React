@@ -75,13 +75,11 @@ namespace EmployeeSystem.Controllers
         [Authorize(Roles = "administrator")]
         public async Task<IActionResult> Register([FromBody] EmployeeDto model, string returnUrl = null)
         {
-            ViewData["ReturnUrl"] = returnUrl;
             if (ModelState.IsValid)
             {
                 var result = await service.Register(model);
                 if (result.Succeeded)
                 {
-                    ShowNotification(SuccessMessages.SuccessAdd, ToastrSeverity.Success);
                     return Ok();
                 }
                 else
