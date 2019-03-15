@@ -3,6 +3,7 @@ import DeleteComponent from './delete'
 
 const EmployeeDataRow = (props) => {
     const { firstName, lastName, position, birthday, startingDate, department, description, id } = props.data
+    
     return (
         <tr>
             <td>{firstName} {lastName}</td>
@@ -11,9 +12,15 @@ const EmployeeDataRow = (props) => {
             <td>{startingDate}</td>
             <td>{department}</td>
             <td>{description}</td>
-            <td>
-                <DeleteComponent id={id} name="employee" />
-            </td>
+            {
+                props.isAdmin
+                    ?
+                    < td >
+                        <DeleteComponent id={id} name="employee" />
+                    </td>
+                    :
+                    <td></td>
+            }
         </tr>
     )
 }

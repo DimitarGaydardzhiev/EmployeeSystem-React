@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { getAllPositionsAction } from '../../store/actions/position-actions';
 import { Button } from 'react-bootstrap';
 import AdministrationDataRow from '../../components/administration-data-row';
+import Auth from '../../utils/auth';
 
 class PositionManagement extends Component {
     constructor(props) {
@@ -22,6 +23,7 @@ class PositionManagement extends Component {
 
     render() {
         const { positions } = this.props.positions
+        const isAdmin = Auth.isUserAdmin()
 
         return (
             <Fragment>
@@ -38,7 +40,7 @@ class PositionManagement extends Component {
                     <tbody>
                         {
                             positions.map(p => (
-                                <AdministrationDataRow key={p.id} data={p} tableType="positions" deleteController="position" />
+                                <AdministrationDataRow key={p.id} data={p} isAdmin={isAdmin} tableType="positions" deleteController="position" />
                             ))
                         }
                     </tbody>

@@ -34,6 +34,7 @@ class DepartmentManagement extends Component {
                             <th>Name</th>
                             <th>Employees Count</th>
                             <th></th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>

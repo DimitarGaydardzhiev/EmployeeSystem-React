@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
 import EmployeeDataRow from '../../components/employee-data-row';
 import { getAllEmployeesAction } from '../../store/actions/employee-actions';
+import Auth from '../../utils/auth';
 
 class EmployeeManagement extends Component {
     componentWillMount() {
@@ -10,6 +11,7 @@ class EmployeeManagement extends Component {
 
     render() {
         const { employees } = this.props.employees
+        const isAdmin = Auth.isUserAdmin()
 
         return (
             <Fragment>
@@ -23,13 +25,13 @@ class EmployeeManagement extends Component {
                             <th>In Company From</th>
                             <th>Department</th>
                             <th>Description</th>
-                            <th>TODO: Check isAdmin</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         {
                             employees.map(e => (
-                                <EmployeeDataRow key={e.id} data={e} />
+                                <EmployeeDataRow key={e.id} data={e} isAdmin={isAdmin} />
                             ))
                         }
                     </tbody>

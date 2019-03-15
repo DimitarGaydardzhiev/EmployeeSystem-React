@@ -44,7 +44,7 @@ class DeleteComponent extends Component {
 
   render() {
     return (
-      <button className="btn btn-danger" onClick={this.onDelete}>Delete</button>
+      <button className="btn btn-danger" disabled={this.props.disabled} onClick={this.onDelete}>Delete</button>
     )
   }
 }
