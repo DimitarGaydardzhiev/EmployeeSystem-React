@@ -37,7 +37,6 @@ function registerAction(firstName, lastName, email, password, confirmPassword, r
     return async (dispatch) => {
         return register(firstName, lastName, email, password, confirmPassword, roleId, positionId, departmentId, description)
             .then(payload => {
-                debugger
                 if (payload.status === 200) {
                     dispatch(registerSuccess())
                 } else {

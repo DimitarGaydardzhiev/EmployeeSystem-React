@@ -15,6 +15,7 @@ import { logoutAction } from './store/actions/auth-actions';
 import DepartmentComponent from './views/departments/department.jsx';
 import DepartmentManagement from './views/departments/departments-mgmt';
 import PositionManagement from './views/positions/position-mgmt';
+import ProjectManagement from './views/projects/projects-mgmt';
 import EmployeeComponent from './views/employees/employee';
 import MyRequests from './views/requests/my-requests';
 import AddRequest from './views/requests/add-request';
@@ -37,7 +38,6 @@ class App extends Component {
   }
 
   componentWillMount() {
-    debugger
     if (Auth.isUserAuthenticated()) {
       this.setState({
         loggedIn: true,
@@ -48,7 +48,6 @@ class App extends Component {
   }
 
   componentWillReceiveProps(props) {
-    debugger
     if (props.loginSuccess) {
       this.setState({
         loggedIn: true,
@@ -91,6 +90,7 @@ class App extends Component {
               <AdminRoute path="/requests/new" exact component={AddRequest}></AdminRoute>
               <AdminRoute path="/requests/pending" exact component={PendingRequests}></AdminRoute>
               <AdminRoute path="/requests/approved" exact component={ApprovedRequests}></AdminRoute>
+              <PrivateRoute path="/projects/all" exact component={ProjectManagement}></PrivateRoute>
               <Route path='/' component={() => <Home loggedIn={this.state.loggedIn} />} />
             </Switch>
             <Footer />

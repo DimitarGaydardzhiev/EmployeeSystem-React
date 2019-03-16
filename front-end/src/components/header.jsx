@@ -44,7 +44,7 @@ const Header = (props) => {
                     {
                         loggedIn &&
                         <NavDropdown title="Projects" id="projects">
-                            <NavDropdown.Item href="#action/3.1">All Projects</NavDropdown.Item>
+                            <NavDropdown.Item href="/projects/all">All Projects</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">My Projects</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">Add Project</NavDropdown.Item>
                         </NavDropdown>

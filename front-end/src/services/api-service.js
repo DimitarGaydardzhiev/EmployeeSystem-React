@@ -17,6 +17,21 @@ async function getAllEmployees() {
     return res.json()
 }
 
+async function getAllProjects() {
+    // const res = await window.fetch(host + 'project/all')
+    // return res.json()
+
+    const res = await window.fetch(host + 'project/all', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'bearer ' + Auth.getToken()
+        }
+    })
+
+    return res.json()
+}
+
 async function getAllFormerEmployees() {
     const res = await window.fetch(host + 'employee/former')
     return res.json()
@@ -43,7 +58,6 @@ async function login(email, password) {
 }
 
 async function register(firstName, lastName, email, password, confirmPassword, roleId, positionId, departmentId, description) {
-    debugger
     const res = await window.fetch(host + 'account/register', {
         method: 'POST',
         headers: {
@@ -88,7 +102,6 @@ async function getMyRequests() {
 }
 
 async function addPosition(name, id) {
-    debugger
     const res = await window.fetch(host + 'position/save', {
         method: 'POST',
         headers: {
@@ -169,7 +182,6 @@ async function deleteItem(id, name) {
 }
 
 async function approveRequest(id) {
-    debugger
     const res = await window.fetch(host + `request/approve/${id}`, {
         method: 'POST',
         headers: {
@@ -212,5 +224,6 @@ export {
     getApprovedRequests,
     deleteItem,
     approveRequest,
-    unapproveRequest
+    unapproveRequest,
+    getAllProjects
 }

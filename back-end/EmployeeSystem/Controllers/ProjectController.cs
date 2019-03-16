@@ -6,6 +6,7 @@ using NToastNotify;
 using ServiceLayer.Interfaces;
 using ServiceLayer.Utils;
 using System;
+using System.Collections.Generic;
 
 namespace EmployeeSystem.Controllers
 {
@@ -22,10 +23,9 @@ namespace EmployeeSystem.Controllers
         }
 
         [HttpGet]
-        public IActionResult All()
+        public IEnumerable<ProjectDto> All()
         {
-            var result = service.GetCompanyProjects();
-            return View(result);
+           return service.GetCompanyProjects();
         }
 
         [HttpGet]

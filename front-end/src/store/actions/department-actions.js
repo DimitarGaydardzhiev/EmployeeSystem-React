@@ -19,7 +19,6 @@ function getAllDepartmentsAction() {
 
 function addDepartmentAction(name, id) {
     return async (dispatch) => {
-        debugger
         return addDepartment(name, id)
             .then(payload => {
                 if (payload.status == 200) {

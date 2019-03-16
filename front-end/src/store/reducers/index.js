@@ -5,6 +5,7 @@ import loginReducer from './auth-reducers';
 import roleReducer from './role-reducers';
 import requestReducer from './request-reducers';
 import deleteReducer from './delete-reducers';
+import projectReducer from './project-reducers';
 
 export default {
   login: loginReducer,
@@ -33,4 +34,5 @@ export default {
   unapproveSuccess: requestReducer,
   approveError: requestReducer,
   unapproveError: requestReducer,
+  projects: projectReducer
 }

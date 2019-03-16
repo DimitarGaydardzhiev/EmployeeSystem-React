@@ -8,7 +8,6 @@ class Auth {
   }
 
   static getUsername() {
-    debugger
     return window.localStorage.getItem('username')
   }
 
@@ -17,7 +16,6 @@ class Auth {
     if (!role) {
       return false
     }
-    debugger
 
     if (role === 'administrator') {
       return true

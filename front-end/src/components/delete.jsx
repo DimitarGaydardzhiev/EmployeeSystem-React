@@ -26,7 +26,6 @@ class DeleteComponent extends Component {
 
   onDelete() {
     const { id, name } = this.props
-    debugger
     confirmAlert({
       title: 'Please Confirm',
       message: 'Are you sure to do this.',

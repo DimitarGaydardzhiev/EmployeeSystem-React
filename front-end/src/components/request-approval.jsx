@@ -13,7 +13,6 @@ class RequestApprovalComponent extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    debugger
     if (nextProps.approveError.hasError) {
       toastr.error(nextProps.approveError.message)
     } else if (nextProps.approveSuccess) {
