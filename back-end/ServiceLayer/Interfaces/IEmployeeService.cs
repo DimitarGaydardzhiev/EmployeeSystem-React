@@ -1,4 +1,5 @@
-﻿using DTOs.Models;
+﻿using DTOs.Model;
+using DTOs.Models;
 using System.Collections.Generic;
 
 namespace ServiceLayer.Interfaces
@@ -18,5 +19,7 @@ namespace ServiceLayer.Interfaces
         IEnumerable<EmployeeDto> GetFormerEmployees();
 
         void Delete(int employeeId);
+
+        ProfileInfoDto GetProfileInfo();
     }
 }

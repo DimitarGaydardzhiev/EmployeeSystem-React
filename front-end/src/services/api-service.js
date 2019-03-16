@@ -233,6 +233,19 @@ async function getMyProjects() {
     return res.json()
 }
 
+async function getProfileInfo() {
+    const res = await window.fetch(host + 'employee/info', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'userId': Auth.getUserId(),
+            'Authorization': 'bearer ' + Auth.getToken()
+        }
+    })
+
+    return res.json()
+}
+
 export {
     getAllDepartments,
     getAllPositions,
@@ -253,5 +266,6 @@ export {
     unapproveRequest,
     getAllProjects,
     addProject,
-    getMyProjects
+    getMyProjects,
+    getProfileInfo
 }

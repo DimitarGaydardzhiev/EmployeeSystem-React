@@ -1,4 +1,5 @@
 ﻿using DTOs.Enums;
+using DTOs.Model;
 using DTOs.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -37,6 +38,12 @@ namespace EmployeeSystem.Controllers
         public IEnumerable<RoleDto> GetRoles()
         {
             return service.GetRoles();
+        }
+
+        [HttpGet]
+        public ProfileInfoDto Info()
+        {
+            return service.GetProfileInfo();
         }
 
         [HttpGet]

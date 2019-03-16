@@ -6,6 +6,7 @@ import roleReducer from './role-reducers';
 import requestReducer from './request-reducers';
 import deleteReducer from './delete-reducers';
 import projectReducer from './project-reducers';
+import profileReducer from './profile-redicers';
 
 export default {
   login: loginReducer,
@@ -37,5 +38,6 @@ export default {
   projects: projectReducer,
   addProject: projectReducer,
   addProjectError: projectReducer,
-  myProjects: projectReducer
+  myProjects: projectReducer,
+  profileInfo: profileReducer
 }

@@ -25,6 +25,7 @@ import ApprovedRequests from './views/requests/approved-requests';
 import PositionComponent from './views/positions/position.jsx';
 import toastr from 'toastr'
 import MyProjects from './views/projects/my-projects';
+import ProfileComponent from './views/profile/profile';
 
 class App extends Component {
   constructor(props) {
@@ -95,6 +96,7 @@ class App extends Component {
               <PrivateRoute path="/projects/all" exact component={ProjectManagement}></PrivateRoute>
               <PrivateRoute path="/projects/add" exact component={ProjectComponent}></PrivateRoute>
               <PrivateRoute path="/projects/my" exact component={MyProjects}></PrivateRoute>
+              <PrivateRoute path="/profile" exact component={ProfileComponent}></PrivateRoute>
               <Route path='/' component={() => <Home loggedIn={this.state.loggedIn} />} />
             </Switch>
             <Footer />

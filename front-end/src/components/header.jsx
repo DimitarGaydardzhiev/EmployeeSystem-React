@@ -49,7 +49,7 @@ const Header = (props) => {
                             <NavDropdown.Item href="/projects/add">Add Project</NavDropdown.Item>
                         </NavDropdown>
                     }
-                    {loggedIn && <Nav.Link href="/" className="">Hello, {username}</Nav.Link>}
+                    {loggedIn && <Nav.Link href="/profile" className="">Hello, {username}</Nav.Link>}
                     {loggedIn && <a href='javascript:void(0)' className="btn btn-info" onClick={logout}>Logout</a>}
                     {!loggedIn && <Link className="btn btn-info" to="/login">Login</Link>}
                 </Nav>
