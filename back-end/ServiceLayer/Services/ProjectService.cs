@@ -81,6 +81,7 @@ namespace ServiceLayer.Services
             result.ProjectStatusId = (int)DTOs.ProjectStatus.NotStarted;
             result.StartDate = model.StartDate;
             result.EndDate = model.EndDate;
+            result.Description = model.Description;
 
             var projectId = repository.Save(result);
 
@@ -91,18 +92,31 @@ namespace ServiceLayer.Services
                 .Where(eup => eup.ProjectId == projectId)
                 .ToList();
 
-            model.Employees.Where(e => e.IsSelected)
-                .ToList()
-                .ForEach(e =>
-              {
-                  var employeeUserProject = new EmployeeUserProject()
-                  {
-                      EmployeeUserId = e.Id,
-                      ProjectId = projectId
-                  };
+            //model.Employees.Where(e => e.IsSelected)
+            //    .ToList()
+            //    .ForEach(e =>
+            //  {
+            //      var employeeUserProject = new EmployeeUserProject()
+            //      {
+            //          EmployeeUserId = e.Id,
+            //          ProjectId = projectId
+            //      };
 
-                  listEup.Add(employeeUserProject);
-              });
+            //      listEup.Add(employeeUserProject);
+            //  });
+
+            model.EmployeeIds
+                .ToList()
+                .ForEach(id =>
+                {
+                    var employeeUserProject = new EmployeeUserProject()
+                    {
+                        EmployeeUserId = id,
+                        ProjectId = projectId
+                    };
+
+                    listEup.Add(employeeUserProject);
+                });
 
             employeeUserProjects = listEup;
             result.EmployeeUserProjects = employeeUserProjects;

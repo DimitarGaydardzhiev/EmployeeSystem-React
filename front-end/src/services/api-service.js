@@ -18,9 +18,6 @@ async function getAllEmployees() {
 }
 
 async function getAllProjects() {
-    // const res = await window.fetch(host + 'project/all')
-    // return res.json()
-
     const res = await window.fetch(host + 'project/all', {
         method: 'GET',
         headers: {
@@ -132,6 +129,22 @@ async function addRequest(from, to, description, requestTypeId) {
     return res
 }
 
+async function addProject(name, id, startDate, endDate, description, employeeIds) {
+    debugger
+    const res = await window.fetch(host + 'project/save', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'bearer ' + Auth.getToken()
+        },
+        body: JSON.stringify({
+            name, id, startDate, endDate, description, employeeIds
+        })
+    })
+
+    return res
+}
+
 async function getRequestTypes() {
     const res = await window.fetch(host + 'request/getRequestTypes', {
         method: 'GET',
@@ -225,5 +238,6 @@ export {
     deleteItem,
     approveRequest,
     unapproveRequest,
-    getAllProjects
+    getAllProjects,
+    addProject
 }

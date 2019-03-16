@@ -15,6 +15,7 @@ import { logoutAction } from './store/actions/auth-actions';
 import DepartmentComponent from './views/departments/department.jsx';
 import DepartmentManagement from './views/departments/departments-mgmt';
 import PositionManagement from './views/positions/position-mgmt';
+import ProjectComponent from './views/projects/project.jsx';
 import ProjectManagement from './views/projects/projects-mgmt';
 import EmployeeComponent from './views/employees/employee';
 import MyRequests from './views/requests/my-requests';
@@ -91,6 +92,7 @@ class App extends Component {
               <AdminRoute path="/requests/pending" exact component={PendingRequests}></AdminRoute>
               <AdminRoute path="/requests/approved" exact component={ApprovedRequests}></AdminRoute>
               <PrivateRoute path="/projects/all" exact component={ProjectManagement}></PrivateRoute>
+              <PrivateRoute path="/projects/add" exact component={ProjectComponent}></PrivateRoute>
               <Route path='/' component={() => <Home loggedIn={this.state.loggedIn} />} />
             </Switch>
             <Footer />

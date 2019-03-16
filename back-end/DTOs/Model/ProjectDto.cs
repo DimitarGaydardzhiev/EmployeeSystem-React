@@ -11,6 +11,8 @@ namespace DTOs.Models
 
         public List<MultiSelectDto> Employees { get; set; }
 
+        public List<int> EmployeeIds { get; set; }
+
         public string Status { get; set; }
 
         [DataType(DataType.Date)]

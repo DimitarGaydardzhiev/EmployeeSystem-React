@@ -34,5 +34,7 @@ export default {
   unapproveSuccess: requestReducer,
   approveError: requestReducer,
   unapproveError: requestReducer,
-  projects: projectReducer
+  projects: projectReducer,
+  addProject: projectReducer,
+  addProjectError: projectReducer,
 }

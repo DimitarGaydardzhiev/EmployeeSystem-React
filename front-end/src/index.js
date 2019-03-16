@@ -10,6 +10,7 @@ import './site.css';
 import '../node_modules/toastr/build/toastr.min.css'
 import "react-datepicker/dist/react-datepicker.css"
 import 'react-confirm-alert/src/react-confirm-alert.css'
+import "@kenshooui/react-multi-select/dist/style.css"
 
 ReactDOM.render(
     <Provider store={store}>

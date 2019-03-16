@@ -7,6 +7,7 @@ using ServiceLayer.Interfaces;
 using ServiceLayer.Utils;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace EmployeeSystem.Controllers
 {
@@ -47,11 +48,8 @@ namespace EmployeeSystem.Controllers
 
         [HttpPost]
         [Authorize(Roles = "administrator")]
-        public IActionResult Save(ProjectDto model)
+        public IActionResult Save([FromBody] ProjectDto model)
         {
-            ModelState.Remove("Id");
-            ModelState.Remove("StartDate");
-            ModelState.Remove("EndDate");
             if (ModelState.IsValid)
             {
                 try
@@ -60,15 +58,13 @@ namespace EmployeeSystem.Controllers
                 }
                 catch (Exception e)
                 {
-                    ShowNotification(e.Message, ToastrSeverity.Error);
-                    return View("Add", model);
+                    return BadRequest(e.Message);
                 }
-                ShowNotification(SuccessMessages.SuccessAdd, ToastrSeverity.Success);
 
-                return RedirectToAction("All");
+                return Ok();
             }
 
-            return View("Add", model);
+            return BadRequest(string.Join(Environment.NewLine, ModelState.SelectMany(e => e.Value.Errors.Select(er => er.ErrorMessage))));
         }
 
         [HttpGet]
@@ -80,21 +76,20 @@ namespace EmployeeSystem.Controllers
 
         [HttpPost]
         [Authorize(Roles = "administrator")]
+        [Route("{id}")]
         public IActionResult Delete(int id)
         {
             if (id == 0)
-                return this.BadRequest();
+                return this.BadRequest("Id not found");
 
             try
             {
                 service.Delete(id);
-                ShowNotification(SuccessMessages.SuccesslDelete, ToastrSeverity.Success);
-                return RedirectToAction("All", null);
+                return Ok();
             }
             catch (Exception ex)
             {
-                ShowNotification(ex.Message, ToastrSeverity.Error);
-                return RedirectToAction("All", null);
+                return BadRequest(ex.Message);
             }
         }
     }
