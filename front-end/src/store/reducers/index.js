@@ -37,4 +37,5 @@ export default {
   projects: projectReducer,
   addProject: projectReducer,
   addProjectError: projectReducer,
+  myProjects: projectReducer
 }

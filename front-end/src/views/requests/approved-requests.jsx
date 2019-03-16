@@ -17,7 +17,6 @@ class ApprovedRequests extends Component {
 
     render() {
         const { approvedRequests } = this.props.approvedRequests
-        console.log(approvedRequests)
 
         return (
             <Fragment>

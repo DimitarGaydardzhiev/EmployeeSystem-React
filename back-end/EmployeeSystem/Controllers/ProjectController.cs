@@ -68,10 +68,9 @@ namespace EmployeeSystem.Controllers
         }
 
         [HttpGet]
-        public IActionResult My()
+        public IEnumerable<ProjectDto> My()
         {
-            var result = service.GetUserProjects();
-            return View(result);
+            return service.GetUserProjects();
         }
 
         [HttpPost]

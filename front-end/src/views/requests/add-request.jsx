@@ -75,7 +75,7 @@ class AddRequest extends Component {
 
   render() {
     const { requestTypes } = this.props.requestTypes
-    console.log(requestTypes)
+    
     return (
       <div className="row">
         <div className="col-md-2"></div>

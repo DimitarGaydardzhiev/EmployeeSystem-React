@@ -220,6 +220,19 @@ async function unapproveRequest(id) {
     return res;
 }
 
+async function getMyProjects() {
+    const res = await window.fetch(host + 'project/my', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'userId': Auth.getUserId(),
+            'Authorization': 'bearer ' + Auth.getToken()
+        }
+    })
+
+    return res.json()
+}
+
 export {
     getAllDepartments,
     getAllPositions,
@@ -239,5 +252,6 @@ export {
     approveRequest,
     unapproveRequest,
     getAllProjects,
-    addProject
+    addProject,
+    getMyProjects
 }

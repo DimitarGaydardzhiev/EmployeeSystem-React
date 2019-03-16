@@ -24,7 +24,6 @@ class DepartmentManagement extends Component {
     render() {
         const { departments } = this.props.departments
         const isAdmin = Auth.isUserAdmin()
-        console.log(isAdmin)
 
         return (
             <Fragment>

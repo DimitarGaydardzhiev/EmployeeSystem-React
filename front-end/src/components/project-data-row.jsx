@@ -3,7 +3,6 @@ import DeleteComponent from './delete'
 
 const ProjectDataRow = (props) => {
     const { id, name, startDate, endDate, status, description, employees } = props.data
-    console.log(employees)
 
     return (
         <tr>
