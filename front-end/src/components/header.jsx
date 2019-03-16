@@ -11,14 +11,11 @@ const Header = (props) => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
-                    {loggedIn && <Nav.Link href="/">Home</Nav.Link>}
-                    {
-                        loggedIn &&
-                        <NavDropdown title="Administration" id="administration">
-                            <NavDropdown.Item href="/departments/all">Departments</NavDropdown.Item>
-                            <NavDropdown.Item href="/positions/all">Positions</NavDropdown.Item>
-                        </NavDropdown>
-                    }
+                    <Nav.Link href="/">Home</Nav.Link>
+                    <NavDropdown title="Administration" id="administration">
+                        <NavDropdown.Item href="/departments/all">Departments</NavDropdown.Item>
+                        <NavDropdown.Item href="/positions/all">Positions</NavDropdown.Item>
+                    </NavDropdown>
                     {
                         loggedIn &&
                         <NavDropdown title="Employees" id="employees">

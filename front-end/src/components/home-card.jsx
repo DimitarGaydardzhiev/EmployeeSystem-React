@@ -9,13 +9,7 @@ const HomeCard = (props) => {
                 <div className="card-body">
                     <h5 className="card-title">{title}</h5>
                     <p className="card-text">{description}</p>
-                    {
-                        isLoggedIn
-                        ?
-                        <a href={route} className="btn btn-primary">{btnTitle}</a>
-                        :
-                        <a href={route} className="btn btn-primary disabled">{btnTitle}</a>
-                    }
+                    <a href={route} className="btn btn-primary">{btnTitle}</a>
                 </div>
             </div>
         </div>

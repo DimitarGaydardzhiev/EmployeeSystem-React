@@ -24,6 +24,7 @@ class DepartmentManagement extends Component {
     render() {
         const { departments } = this.props.departments
         const isAdmin = Auth.isUserAdmin()
+        console.log(isAdmin)
 
         return (
             <Fragment>
@@ -46,10 +47,13 @@ class DepartmentManagement extends Component {
                     </tbody>
                 </table>
                 <div className="text-right">
-                    <Button className="px-4"
-                        onClick={this.routeChange}>
-                        Add
-                    </Button>
+                    {
+                        isAdmin &&
+                        <Button className="px-4"
+                            onClick={this.routeChange}>
+                            Add
+                        </Button>
+                    }
                 </div>
             </Fragment>
         )

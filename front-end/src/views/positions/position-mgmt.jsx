@@ -46,10 +46,13 @@ class PositionManagement extends Component {
                     </tbody>
                 </table>
                 <div className="text-right pr-5">
-                    <Button className="px-4"
-                        onClick={this.routeChange}>
-                        Add
-                    </Button>
+                    {
+                        isAdmin &&
+                        <Button className="px-4"
+                            onClick={this.routeChange}>
+                            Add
+                        </Button>
+                    }
                 </div>
             </Fragment>
         )
