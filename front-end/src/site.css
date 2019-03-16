@@ -18,3 +18,7 @@ ul li {
 .disabled {
     pointer-events: none;
 }
+
+.card-img-top {
+    height: 210px;
+}
