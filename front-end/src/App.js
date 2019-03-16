@@ -90,11 +90,11 @@ class App extends Component {
               <PrivateRoute path="/employees/former" exact component={FormerEmployeeManagement}></PrivateRoute>
               <AdminRoute path="/employees/add" exact component={EmployeeComponent}></AdminRoute>
               <PrivateRoute path="/requests/my" exact component={MyRequests}></PrivateRoute>
-              <AdminRoute path="/requests/new" exact component={AddRequest}></AdminRoute>
+              <PrivateRoute path="/requests/new" exact component={AddRequest}></PrivateRoute>
               <AdminRoute path="/requests/pending" exact component={PendingRequests}></AdminRoute>
               <AdminRoute path="/requests/approved" exact component={ApprovedRequests}></AdminRoute>
               <PrivateRoute path="/projects/all" exact component={ProjectManagement}></PrivateRoute>
-              <PrivateRoute path="/projects/add" exact component={ProjectComponent}></PrivateRoute>
+              <AdminRoute path="/projects/add" exact component={ProjectComponent}></AdminRoute>
               <PrivateRoute path="/projects/my" exact component={MyProjects}></PrivateRoute>
               <PrivateRoute path="/profile" exact component={ProfileComponent}></PrivateRoute>
               <Route path='/' component={() => <Home loggedIn={this.state.loggedIn} />} />

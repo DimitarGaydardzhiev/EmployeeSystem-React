@@ -31,10 +31,10 @@ const Header = (props) => {
                         loggedIn &&
                         <NavDropdown title="Requests" id="requests">
                             <NavDropdown.Item href="/requests/my">My Requests</NavDropdown.Item>
+                            <NavDropdown.Item href="/requests/new">New Request</NavDropdown.Item>
                             {
                                 isAdmin &&
                                 <Fragment>
-                                    <NavDropdown.Item href="/requests/new">New Request</NavDropdown.Item>
                                     <NavDropdown.Item href="/requests/pending">Pending Requests</NavDropdown.Item>
                                     <NavDropdown.Item href="/requests/approved">Approved Requests</NavDropdown.Item>
                                 </Fragment>
@@ -46,7 +46,10 @@ const Header = (props) => {
                         <NavDropdown title="Projects" id="projects">
                             <NavDropdown.Item href="/projects/all">All Projects</NavDropdown.Item>
                             <NavDropdown.Item href="/projects/my">My Projects</NavDropdown.Item>
-                            <NavDropdown.Item href="/projects/add">Add Project</NavDropdown.Item>
+                            {
+                                isAdmin &&
+                                <NavDropdown.Item href="/projects/add">Add Project</NavDropdown.Item>
+                            }
                         </NavDropdown>
                     }
                     {loggedIn && <Nav.Link href="/profile" className="">Hello, {username}</Nav.Link>}

@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
 import { getAllFormerEmployeesAction } from '../../store/actions/employee-actions';
-import FormerEmployeeDataRow from '../../components/former-employee-data-row';
+import FormerEmployeeDataRow from '../../components/former-employee-data-row.jsx';
 
 class FormerEmployeeManagement extends Component {
     componentWillMount() {

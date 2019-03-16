@@ -14,7 +14,7 @@ class DeleteComponent extends Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.deleteError.hasError) {
-      //toastr.error(nextProps.createProductError.message)
+      toastr.error(nextProps.deleteError.message)
     } else if (nextProps.deleteSuccess) {
       window.location = `${this.props.location.pathname}`
     }
