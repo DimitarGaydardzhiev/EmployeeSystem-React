@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import loginValidator from '../utils/loginValidator';
 import { loginAction } from '../store/actions/auth-actions';
 import { Redirect } from 'react-router-dom'
-import Auth from '../utils/auth';
 import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
+import toastr from 'toastr'
 
 class Login extends Component {
   constructor(props) {
@@ -20,7 +20,7 @@ class Login extends Component {
 
     this.renderRedirect = () => {
       if (props.loggedIn) {
-        return <Redirect to='/' />
+        this.props.history.push('/')
       }
     }
   }
@@ -33,9 +33,12 @@ class Login extends Component {
     e.preventDefault()
     if (!loginValidator(this.state.email, this.state.password)) return
     this.props.login(this.state.email, this.state.password)
-      .then(() => {
-        window.location.reload();
-      })
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.loginError.hasError) {
+      toastr.error(`Error: ${nextProps.loginError.message}`)
+    }
   }
 
   render() {
@@ -78,8 +81,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    login: (email, password) => dispatch(loginAction(email, password)),
-    //redirect: () => dispatch(redirectAction())
+    login: (email, password) => dispatch(loginAction(email, password))
   }
 }
 

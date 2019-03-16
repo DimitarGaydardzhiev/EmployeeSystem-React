@@ -28,21 +28,34 @@ class App extends Component {
     super(props)
 
     this.state = {
-      loggedIn: false
+      loggedIn: false,
+      username: '',
+      isAdmin: false
     }
 
     this.logout = this.logout.bind(this)
   }
 
   componentWillMount() {
+    debugger
     if (Auth.isUserAuthenticated()) {
-      this.setState({ loggedIn: true })
+      this.setState({
+        loggedIn: true,
+        username: Auth.getUsername(),
+        isAdmin: Auth.isUserAdmin()
+      })
     }
   }
 
   componentWillReceiveProps(props) {
+    debugger
     if (props.loginSuccess) {
-      this.setState({ loggedIn: true })
+      this.setState({
+        loggedIn: true,
+        username: Auth.getUsername(),
+        isAdmin: Auth.isUserAdmin()
+      })
+      toastr.success('Login successfully')
     }
   }
 
@@ -54,18 +67,15 @@ class App extends Component {
   }
 
   render() {
-    const isAdmin = Auth.isUserAdmin()
-    const username = Auth.getUsername()
-
     return (
       <div>
         <BrowserRouter>
           <Fragment>
             <Header
               loggedIn={this.state.loggedIn}
-              isAdmin={isAdmin}
+              isAdmin={this.state.isAdmin}
               logout={this.logout}
-              username={username} />
+              username={this.state.username} />
             <Switch>
               <Route path='/login' component={() => <Login loggedIn={this.state.loggedIn} />} />
               <Route path="/departments/all" exact component={DepartmentManagement}></Route>

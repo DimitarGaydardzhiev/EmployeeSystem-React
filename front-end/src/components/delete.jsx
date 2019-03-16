@@ -14,9 +14,8 @@ class DeleteComponent extends Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.deleteError.hasError) {
-      toastr.error(nextProps.deleteError.message)
+      //toastr.error(nextProps.createProductError.message)
     } else if (nextProps.deleteSuccess) {
-      toastr.success("Delete successfull!")
       window.location = `${this.props.location.pathname}`
     }
   }
@@ -27,7 +26,7 @@ class DeleteComponent extends Component {
 
   onDelete() {
     const { id, name } = this.props
-
+    debugger
     confirmAlert({
       title: 'Please Confirm',
       message: 'Are you sure to do this.',
@@ -45,7 +44,7 @@ class DeleteComponent extends Component {
 
   render() {
     return (
-      <button className="btn btn-danger" disabled={this.props.disabled} onClick={this.onDelete}>Delete</button>
+      <button className="btn btn-danger" onClick={this.onDelete}>Delete</button>
     )
   }
 }
@@ -53,7 +52,7 @@ class DeleteComponent extends Component {
 function mapStateToProps(state) {
   return {
     deleteError: state.deleteError,
-    deleteSuccess: state.deleteSuccess.success,
+    deleteSuccess: state.deleteSuccess,
   }
 }
 

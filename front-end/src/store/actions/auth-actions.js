@@ -5,13 +5,20 @@ import * as decode from 'jwt-decode';
 function loginAction(email, password) {
   return (dispatch) => {
     return login(email, password)
-      .then(res => {
-        if (res.status == 200) {
-          authenticateUser(res)
-          dispatch(loginSuccess())
+      .then(payload => {
+        if (payload.status == 200) {
+          payload.json()
+            .then(res => {
+              authenticateUser(res)
+              dispatch(loginSuccess())
+            })
         } else {
-
+          payload.text()
+            .then(message => dispatch(loginError(message)))
         }
+      })
+      .catch(() => {
+        dispatch(loginError("Server error"))
       })
   }
 }
@@ -28,10 +35,10 @@ function logoutSuccess() {
   }
 }
 
-function loginError(error) {
+function loginError(payload) {
   return {
     type: LOGIN_ERROR,
-    error
+    payload
   }
 }
 
@@ -43,14 +50,11 @@ function logoutAction() {
 }
 
 function authenticateUser(res) {
-  res.json()
-    .then(json => {
-      const tokenPayload = decode(json)
-      window.localStorage.setItem('authToken', json)
-      window.localStorage.setItem('username', tokenPayload.sub)
-      window.localStorage.setItem('roles', tokenPayload.role)
-      window.localStorage.setItem('userId', tokenPayload.id)
-    })
+  const tokenPayload = decode(res)
+  window.localStorage.setItem('authToken', res)
+  window.localStorage.setItem('username', tokenPayload.sub)
+  window.localStorage.setItem('roles', tokenPayload.role)
+  window.localStorage.setItem('userId', tokenPayload.id)
 }
 
 function deauthenticateUser() {

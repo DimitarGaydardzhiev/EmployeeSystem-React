@@ -1,18 +1,18 @@
 import departmentReducer from './department-reducer';
 import positionReducer from './position-reducer';
 import employeeReducer from './employee-reducer';
-import { loginReducer, loginErrorReducer } from './auth-reducers';
+import loginReducer from './auth-reducers';
 import roleReducer from './role-reducers';
 import requestReducer from './request-reducers';
 import deleteReducer from './delete-reducers';
 
 export default {
   login: loginReducer,
+  loginError: loginReducer,
   departments: departmentReducer,
   positions: positionReducer,
   employees: employeeReducer,
   formerEmployees: employeeReducer,
-  //loginError: loginErrorReducer,
   formerEmployees: employeeReducer,
   addEmployee: employeeReducer,
   addEmployeeError: employeeReducer,

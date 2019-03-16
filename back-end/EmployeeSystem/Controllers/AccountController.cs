@@ -48,12 +48,16 @@ namespace EmployeeSystem.Controllers
 
             if (!this.ModelState.IsValid)
             {
-                return this.BadRequest(this.ModelState);
+                return BadRequest(string.Join(Environment.NewLine, ModelState.SelectMany(e => e.Value.Errors.Select(er => er.ErrorMessage))));
             }
 
             try
             {
                 result = await this.service.Login(model);
+                if (result == null)
+                {
+                    return BadRequest("Wrong Email address or password!");
+                }
             }
             catch (Exception ex)
             {

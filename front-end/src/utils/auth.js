@@ -8,6 +8,7 @@ class Auth {
   }
 
   static getUsername() {
+    debugger
     return window.localStorage.getItem('username')
   }
 
