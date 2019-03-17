@@ -130,7 +130,6 @@ async function addRequest(from, to, description, requestTypeId) {
 }
 
 async function addProject(name, id, startDate, endDate, description, employeeIds) {
-    debugger
     const res = await window.fetch(host + 'project/save', {
         method: 'POST',
         headers: {

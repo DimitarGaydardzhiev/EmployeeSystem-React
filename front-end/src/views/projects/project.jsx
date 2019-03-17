@@ -66,7 +66,7 @@ class ProjectComponent extends Component {
                 employees: allEmployees
             })
         }
-        debugger
+        
         if (nextProps.addProjectError.hasError) {
             toastr.error(`Error: ${nextProps.addProjectError.message}`)
         } else if (nextProps.addProjectSuccess) {
@@ -103,7 +103,7 @@ class ProjectComponent extends Component {
 
     render() {
         return (
-            <div className="row">
+            <div className="row add-project">
                 <div className="col-md-4"></div>
                 <div className="col-md-4">
                     <section>

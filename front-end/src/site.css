@@ -22,3 +22,7 @@ ul li {
 .card-img-top {
     height: 210px;
 }
+
+.add-project {
+    width: 100%;
+}
